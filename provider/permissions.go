@@ -2,9 +2,9 @@ package provider
 
 import (
 	"context"
+	"github.com/denniskniep/terraform-provider-keycloak/keycloak"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"github.com/mrparkers/terraform-provider-keycloak/keycloak"
 )
 
 func setOpenidClientScopePermissionPolicy(ctx context.Context, keycloakClient *keycloak.KeycloakClient, realmId string, realmManagementClientId string, authorizationPermissionId string, scopeDataSet *schema.Set) error {
