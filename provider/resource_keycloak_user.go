@@ -7,9 +7,9 @@ import (
 	"github.com/imdario/mergo"
 	"strings"
 
+	"github.com/denniskniep/terraform-provider-keycloak/keycloak"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/mrparkers/terraform-provider-keycloak/keycloak"
 )
 
 const MULTIVALUE_ATTRIBUTE_SEPARATOR = "##"
