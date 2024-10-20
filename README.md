@@ -47,14 +47,14 @@ The following versions are used when running acceptance tests in CI:
 ## Releases
 
 This provider uses [GoReleaser](https://goreleaser.com/) to build and publish releases. Each release published to GitHub
-contains binary files for Linux, macOS (darwin), and Windows, as configured within the [`.goreleaser.yml`](https://github.com/mrparkers/terraform-provider-keycloak/blob/master/.goreleaser.yml)
+contains binary files for Linux, macOS (darwin), and Windows, as configured within the [`.goreleaser.yml`](https://github.com/denniskniep/terraform-provider-keycloak/blob/master/.goreleaser.yml)
 file.
 
 Each release also contains a `terraform-provider-keycloak_${RELEASE_VERSION}_SHA256SUMS` file, accompanied by a signature
 created by a PGP key with the fingerprint `C508 6791 5E11 6CD2`. This key can be found on my Keybase account at https://keybase.io/mrparkers.
 
-You can find the list of releases [here](https://github.com/mrparkers/terraform-provider-keycloak/releases).
-You can find the changelog for each version [here](https://github.com/mrparkers/terraform-provider-keycloak/blob/master/CHANGELOG.md).
+You can find the list of releases [here](https://github.com/denniskniep/terraform-provider-keycloak/releases).
+You can find the changelog for each version [here](https://github.com/denniskniep/terraform-provider-keycloak/blob/master/CHANGELOG.md).
 
 Note: Prior to v2.0.0, a statically linked build for use within Alpine linux was included with each release. This is no longer
 done due to [GoReleaser not supporting CGO](https://goreleaser.com/limitations/cgo/). Instead of using a statically linked,
@@ -69,7 +69,7 @@ After cloning the repository, you can build the project by running `make build`.
 
 ### Local Environment
 
-You can spin up a local developer environment via [Docker Compose](https://docs.docker.com/compose/) by running `make local`.
+You can spin up a local developer environment via [Docker Compose](https://docs.docker.com/compose/) by running `make user-federation-example` and `make local`.
 This will spin up a few containers for Keycloak, PostgreSQL, and OpenLDAP, which can be used for testing the provider.
 This environment and its setup via `make local` is not intended for production use.
 
@@ -92,6 +92,16 @@ KEYCLOAK_URL="http://localhost:8080" \
 make testacc
 ```
 
+### Install and test new version
+
+To build/install a new version of this provider on your local machine, set `GOOS` and `GOARCH` according to your system,
+then run `make build-example && cd example`.
+
 ## License
 
-[MIT](https://github.com/mrparkers/terraform-provider-keycloak/blob/master/LICENSE)
+This software is licensed under either of the following, at your option:
+
+- Apache License, Version 2.0, (LICENSE-APACHE-2.0 or https://www.apache.org/licenses/LICENSE-2.0)
+- MIT License (LICENSE-MIT or https://opensource.org/licenses/MIT)
+
+Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in this software by you shall be dual licensed under the MIT License and Apache License, Version 2.0, without any additional terms or conditions.
