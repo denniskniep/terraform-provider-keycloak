@@ -170,7 +170,8 @@ type SmtpServer struct {
 
 func (keycloakClient *KeycloakClient) NewRealm(ctx context.Context, realm *Realm) error {
 	_, _, err := keycloakClient.post(ctx, "/realms", realm)
-
+	// Permissions are not sufficient for the old access token!!!
+	keycloakClient.refresh(ctx)
 	return err
 }
 

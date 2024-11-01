@@ -29,9 +29,15 @@ var requiredEnvironmentVariables = []string{
 func init() {
 	testCtx = context.Background()
 	userAgent := fmt.Sprintf("HashiCorp Terraform/%s (+https://www.terraform.io) Terraform Plugin SDK/%s", schema.Provider{}.TerraformVersion, meta.SDKVersionString())
-	keycloakClient, _ = keycloak.NewKeycloakClient(testCtx, os.Getenv("KEYCLOAK_URL"), "", os.Getenv("KEYCLOAK_CLIENT_ID"), os.Getenv("KEYCLOAK_CLIENT_SECRET"), os.Getenv("KEYCLOAK_REALM"), "", "", true, 5, "", false, userAgent, false, map[string]string{
+	var err error = nil
+	keycloakClient, err = keycloak.NewKeycloakClient(testCtx, os.Getenv("KEYCLOAK_URL"), "", os.Getenv("KEYCLOAK_CLIENT_ID"), os.Getenv("KEYCLOAK_CLIENT_SECRET"), os.Getenv("KEYCLOAK_REALM"), "", "", true, 5, "", false, userAgent, false, map[string]string{
 		"foo": "bar",
 	})
+
+	if err != nil {
+		os.Exit(1)
+	}
+
 	testAccProvider = KeycloakProvider(keycloakClient)
 	testAccProviderFactories = map[string]func() (*schema.Provider, error){
 		"keycloak": func() (*schema.Provider, error) {
