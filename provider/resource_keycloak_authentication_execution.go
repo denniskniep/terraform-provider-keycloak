@@ -50,6 +50,12 @@ func resourceKeycloakAuthenticationExecution() *schema.Resource {
 				Default:  false,
 				ForceNew: true,
 			},
+			"priority": {
+				Type:     schema.TypeInt,
+				Optional: true,
+				Default:  nil,
+				ForceNew: false,
+			},
 		},
 	}
 }
@@ -61,6 +67,7 @@ func mapFromDataToAuthenticationExecution(data *schema.ResourceData) *keycloak.A
 		ParentFlowAlias: data.Get("parent_flow_alias").(string),
 		Authenticator:   data.Get("authenticator").(string),
 		Requirement:     data.Get("requirement").(string),
+		Priority:        data.Get("priority").(int),
 	}
 
 	return authenticationExecution
@@ -73,6 +80,7 @@ func mapFromAuthenticationExecutionToData(data *schema.ResourceData, authenticat
 	data.Set("parent_flow_alias", authenticationExecution.ParentFlowAlias)
 	data.Set("authenticator", authenticationExecution.Authenticator)
 	data.Set("requirement", authenticationExecution.Requirement)
+	data.Set("priority", authenticationExecution.Priority)
 }
 
 func mapFromAuthenticationExecutionInfoToData(data *schema.ResourceData, authenticationExecutionInfo *keycloak.AuthenticationExecutionInfo) {

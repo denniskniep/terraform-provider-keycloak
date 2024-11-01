@@ -18,6 +18,7 @@ type authenticationExecutionRequirementUpdate struct {
 	ParentFlowAlias string `json:"-"`
 	Id              string `json:"id"`
 	Requirement     string `json:"requirement"`
+	Priority        int    `json:"priority"`
 }
 
 // this type is returned by GET /realms/${realmId}/authentication/flows/${flowAlias}/executions
@@ -200,6 +201,7 @@ func (keycloakClient *KeycloakClient) UpdateAuthenticationExecution(ctx context.
 		ParentFlowAlias: execution.ParentFlowAlias,
 		Id:              execution.Id,
 		Requirement:     execution.Requirement,
+		Priority:        execution.Priority,
 	}
 	return keycloakClient.UpdateAuthenticationExecutionRequirement(ctx, authenticationExecutionUpdateRequirement)
 }

@@ -28,4 +28,5 @@ resource "keycloak_authentication_execution" "imported-execution" {
   import = true
   # changed attributes
   requirement = "REQUIRED" # default: ALTERNATIVE
+  priority = 16
 }
