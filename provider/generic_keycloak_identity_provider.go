@@ -114,7 +114,7 @@ func resourceKeycloakIdentityProvider() *schema.Resource {
 			"sync_mode": {
 				Type:         schema.TypeString,
 				Optional:     true,
-				Default:      "",
+				Default:      "LEGACY", // Default by KC impl: https://github.com/keycloak/keycloak/blob/af434d6bc1ae904da2538f207bf5313098757114/server-spi/src/main/java/org/keycloak/models/IdentityProviderMapperModel.java#L75
 				ValidateFunc: validation.StringInSlice(syncModes, false),
 				Description:  "Sync Mode",
 			},
