@@ -1,0 +1,2480 @@
+=== RUN   TestAccKeycloakApiClientRefresh
+    keycloak_client_test.go:60: 
+--- SKIP: TestAccKeycloakApiClientRefresh (0.03s)
+=== RUN   TestLocationHeaderParseForClient
+--- PASS: TestLocationHeaderParseForClient (0.00s)
+=== RUN   TestLocationHeaderParseForComponent
+--- PASS: TestLocationHeaderParseForComponent (0.00s)
+PASS
+ok  	github.com/denniskniep/terraform-provider-keycloak/keycloak	(cached)
+=== RUN   TestAccKeycloakDataSourceAuthenticationExecution_basic
+=== PAUSE TestAccKeycloakDataSourceAuthenticationExecution_basic
+=== RUN   TestAccKeycloakDataSourceAuthenticationExecution_errorNoExecutions
+=== PAUSE TestAccKeycloakDataSourceAuthenticationExecution_errorNoExecutions
+=== RUN   TestAccKeycloakDataSourceAuthenticationExecution_errorWrongProviderId
+=== PAUSE TestAccKeycloakDataSourceAuthenticationExecution_errorWrongProviderId
+=== RUN   TestAccKeycloakDataSourceAuthenticationFlow_basic
+=== PAUSE TestAccKeycloakDataSourceAuthenticationFlow_basic
+=== RUN   TestAccKeycloakDataSourceAuthenticationExecution_wrongAlias
+=== PAUSE TestAccKeycloakDataSourceAuthenticationExecution_wrongAlias
+=== RUN   TestAccKeycloakDataSourceClientDescriptionConverter_basic
+=== PAUSE TestAccKeycloakDataSourceClientDescriptionConverter_basic
+=== RUN   TestAccKeycloakDataSourceGroup_basic
+=== PAUSE TestAccKeycloakDataSourceGroup_basic
+=== RUN   TestAccKeycloakDataSourceGroup_nested
+=== PAUSE TestAccKeycloakDataSourceGroup_nested
+=== RUN   TestAccKeycloakDataSourceOpenidClientAuthorizationPolicy_basic
+=== PAUSE TestAccKeycloakDataSourceOpenidClientAuthorizationPolicy_basic
+=== RUN   TestAccKeycloakDataSourceOpenidClientScope_basic
+=== PAUSE TestAccKeycloakDataSourceOpenidClientScope_basic
+=== RUN   TestAccKeycloakDataSourceOpenidClientServiceAccountUser_basic
+=== PAUSE TestAccKeycloakDataSourceOpenidClientServiceAccountUser_basic
+=== RUN   TestAccKeycloakDataSourceOpenidClient_basic
+=== PAUSE TestAccKeycloakDataSourceOpenidClient_basic
+=== RUN   TestAccKeycloakDataSourceOpenidClient_extraConfig
+=== PAUSE TestAccKeycloakDataSourceOpenidClient_extraConfig
+=== RUN   TestAccKeycloakDataSourceRealmKeys_basic
+=== PAUSE TestAccKeycloakDataSourceRealmKeys_basic
+=== RUN   TestAccKeycloakDataSourceRealmKeys_filterByAlgorithms
+=== PAUSE TestAccKeycloakDataSourceRealmKeys_filterByAlgorithms
+=== RUN   TestAccKeycloakDataSourceRealm_basic
+--- PASS: TestAccKeycloakDataSourceRealm_basic (2.60s)
+=== RUN   TestAccKeycloakDataSourceRole_basic
+=== PAUSE TestAccKeycloakDataSourceRole_basic
+=== RUN   TestAccKeycloakDataSourceSamlClientInstallationProvider_basic
+=== PAUSE TestAccKeycloakDataSourceSamlClientInstallationProvider_basic
+=== RUN   TestAccKeycloakDataSourceSamlClient_basic
+=== PAUSE TestAccKeycloakDataSourceSamlClient_basic
+=== RUN   TestAccKeycloakDataSourceUserRoles
+=== PAUSE TestAccKeycloakDataSourceUserRoles
+=== RUN   TestAccKeycloakDataSourceUser
+=== PAUSE TestAccKeycloakDataSourceUser
+=== RUN   TestAccKeycloakDataSourceUser_gracefulError
+=== PAUSE TestAccKeycloakDataSourceUser_gracefulError
+=== RUN   TestAccKeycloakOpenIdFullNameProtocolMapper_clientDuplicateNameValidation
+=== PAUSE TestAccKeycloakOpenIdFullNameProtocolMapper_clientDuplicateNameValidation
+=== RUN   TestAccKeycloakOpenIdFullNameProtocolMapper_clientScopeDuplicateNameValidation
+=== PAUSE TestAccKeycloakOpenIdFullNameProtocolMapper_clientScopeDuplicateNameValidation
+=== RUN   TestAccKeycloakOpenIdGroupMembershipProtocolMapper_clientDuplicateNameValidation
+=== PAUSE TestAccKeycloakOpenIdGroupMembershipProtocolMapper_clientDuplicateNameValidation
+=== RUN   TestAccKeycloakOpenIdGroupMembershipProtocolMapper_clientScopeDuplicateNameValidation
+=== PAUSE TestAccKeycloakOpenIdGroupMembershipProtocolMapper_clientScopeDuplicateNameValidation
+=== RUN   TestAccKeycloakOpenIdUserAttributeProtocolMapper_clientDuplicateNameValidation
+=== PAUSE TestAccKeycloakOpenIdUserAttributeProtocolMapper_clientDuplicateNameValidation
+=== RUN   TestAccKeycloakOpenIdUserAttributeProtocolMapper_clientScopeDuplicateNameValidation
+=== PAUSE TestAccKeycloakOpenIdUserAttributeProtocolMapper_clientScopeDuplicateNameValidation
+=== RUN   TestAccKeycloakOpenIdUserPropertyProtocolMapper_clientDuplicateNameValidation
+=== PAUSE TestAccKeycloakOpenIdUserPropertyProtocolMapper_clientDuplicateNameValidation
+=== RUN   TestAccKeycloakOpenIdUserPropertyProtocolMapper_clientScopeDuplicateNameValidation
+=== PAUSE TestAccKeycloakOpenIdUserPropertyProtocolMapper_clientScopeDuplicateNameValidation
+=== RUN   TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_clientDuplicateNameValidation
+=== PAUSE TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_clientDuplicateNameValidation
+=== RUN   TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_clientScopeDuplicateNameValidation
+=== PAUSE TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_clientScopeDuplicateNameValidation
+=== RUN   TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_clientScopeDuplicateNameValidation
+=== PAUSE TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_clientScopeDuplicateNameValidation
+=== RUN   TestAccKeycloakOpenIdUserClientRoleProtocolMapper_clientScopeDuplicateNameValidation
+=== PAUSE TestAccKeycloakOpenIdUserClientRoleProtocolMapper_clientScopeDuplicateNameValidation
+=== RUN   TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_clientDuplicateNameValidation
+=== PAUSE TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_clientDuplicateNameValidation
+=== RUN   TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_clientScopeDuplicateNameValidation
+=== PAUSE TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_clientScopeDuplicateNameValidation
+=== RUN   TestAccKeycloakOpenIdFullNameProtocolMapper_validateClientOrClientScopeSet
+=== PAUSE TestAccKeycloakOpenIdFullNameProtocolMapper_validateClientOrClientScopeSet
+=== RUN   TestAccKeycloakOpenIdGroupMembershipProtocolMapper_validateClientOrClientScopeSet
+=== PAUSE TestAccKeycloakOpenIdGroupMembershipProtocolMapper_validateClientOrClientScopeSet
+=== RUN   TestAccKeycloakOpenIdUserAttributeProtocolMapper_validateClientOrClientScopeSet
+=== PAUSE TestAccKeycloakOpenIdUserAttributeProtocolMapper_validateClientOrClientScopeSet
+=== RUN   TestAccKeycloakOpenIdUserPropertyProtocolMapper_validateClientOrClientScopeSet
+=== PAUSE TestAccKeycloakOpenIdUserPropertyProtocolMapper_validateClientOrClientScopeSet
+=== RUN   TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_validateClientOrClientScopeSet
+=== PAUSE TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_validateClientOrClientScopeSet
+=== RUN   TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_validateClientOrClientScopeSet
+=== PAUSE TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_validateClientOrClientScopeSet
+=== RUN   TestAccKeycloakOpenIdUserClientRoleProtocolMapper_validateClientOrClientScopeSet
+=== PAUSE TestAccKeycloakOpenIdUserClientRoleProtocolMapper_validateClientOrClientScopeSet
+=== RUN   TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_validateClientOrClientScopeSet
+=== PAUSE TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_validateClientOrClientScopeSet
+=== RUN   TestAccKeycloakProvider_passwordGrant
+=== PAUSE TestAccKeycloakProvider_passwordGrant
+=== RUN   TestProvider
+=== PAUSE TestProvider
+=== RUN   TestAccKeycloakAttributeImporterIdentityProviderMapper_basic
+=== PAUSE TestAccKeycloakAttributeImporterIdentityProviderMapper_basic
+=== RUN   TestAccKeycloakAttributeImporterIdentityProviderMapper_withExtraConfig
+=== PAUSE TestAccKeycloakAttributeImporterIdentityProviderMapper_withExtraConfig
+=== RUN   TestAccKeycloakAttributeImporterIdentityProviderMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakAttributeImporterIdentityProviderMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakAttributeImporterIdentityProviderMapper_withExtraConfig_createAfterManualDestroy
+=== PAUSE TestAccKeycloakAttributeImporterIdentityProviderMapper_withExtraConfig_createAfterManualDestroy
+=== RUN   TestAccKeycloakAttributeImporterIdentityProviderMapper_basicUpdateAll
+=== PAUSE TestAccKeycloakAttributeImporterIdentityProviderMapper_basicUpdateAll
+=== RUN   TestAccKeycloakAttributeToRoleIdentityProviderMapper_basic
+=== PAUSE TestAccKeycloakAttributeToRoleIdentityProviderMapper_basic
+=== RUN   TestAccKeycloakAttributeToRoleIdentityProviderMapper_withExtraConfig
+=== PAUSE TestAccKeycloakAttributeToRoleIdentityProviderMapper_withExtraConfig
+=== RUN   TestAccKeycloakAttributeToRoleIdentityProviderMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakAttributeToRoleIdentityProviderMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakAttributeToRoleIdentityProviderMapper_withExtraConfig_createAfterManualDestroy
+=== PAUSE TestAccKeycloakAttributeToRoleIdentityProviderMapper_withExtraConfig_createAfterManualDestroy
+=== RUN   TestAccKeycloakAttributeToRoleIdentityProviderMapper_basicUpdateAll
+=== PAUSE TestAccKeycloakAttributeToRoleIdentityProviderMapper_basicUpdateAll
+=== RUN   TestAccKeycloakAuthenticationBindings_browser
+--- PASS: TestAccKeycloakAuthenticationBindings_browser (1.18s)
+=== RUN   TestAccKeycloakAuthenticationBindings_browserWithRealm
+--- PASS: TestAccKeycloakAuthenticationBindings_browserWithRealm (2.96s)
+=== RUN   TestAccKeycloakAuthenticationBindings_registration
+--- PASS: TestAccKeycloakAuthenticationBindings_registration (1.16s)
+=== RUN   TestAccKeycloakAuthenticationBindings_directGrant
+--- PASS: TestAccKeycloakAuthenticationBindings_directGrant (1.16s)
+=== RUN   TestAccKeycloakAuthenticationBindings_resetCredentialsGrant
+--- PASS: TestAccKeycloakAuthenticationBindings_resetCredentialsGrant (1.20s)
+=== RUN   TestAccKeycloakAuthenticationBindings_clientAuthenticationGrant
+--- PASS: TestAccKeycloakAuthenticationBindings_clientAuthenticationGrant (1.19s)
+=== RUN   TestAccKeycloakAuthenticationBindings_dockerAuthenticationGrant
+--- PASS: TestAccKeycloakAuthenticationBindings_dockerAuthenticationGrant (1.17s)
+=== RUN   TestAccKeycloakAuthenticationBindings_existingFlow
+--- PASS: TestAccKeycloakAuthenticationBindings_existingFlow (1.08s)
+=== RUN   TestAccKeycloakAuthenticationExecutionConfig_basic
+=== PAUSE TestAccKeycloakAuthenticationExecutionConfig_basic
+=== RUN   TestAccKeycloakAuthenticationExecutionConfig_updateForcesNew
+=== PAUSE TestAccKeycloakAuthenticationExecutionConfig_updateForcesNew
+=== RUN   TestAccKeycloakAuthenticationExecutionConfig_import
+=== PAUSE TestAccKeycloakAuthenticationExecutionConfig_import
+=== RUN   TestAccKeycloakAuthenticationExecution_basic
+=== PAUSE TestAccKeycloakAuthenticationExecution_basic
+=== RUN   TestAccKeycloakAuthenticationExecution_import
+=== PAUSE TestAccKeycloakAuthenticationExecution_import
+=== RUN   TestAccKeycloakAuthenticationExecution_createAfterManualDestroy
+=== PAUSE TestAccKeycloakAuthenticationExecution_createAfterManualDestroy
+=== RUN   TestAccKeycloakAuthenticationExecution_updateAuthenticationExecutionRequirement
+=== PAUSE TestAccKeycloakAuthenticationExecution_updateAuthenticationExecutionRequirement
+=== RUN   TestAccKeycloakAuthenticationFlow_basic
+=== PAUSE TestAccKeycloakAuthenticationFlow_basic
+=== RUN   TestAccKeycloakAuthenticationFlow_createAfterManualDestroy
+=== PAUSE TestAccKeycloakAuthenticationFlow_createAfterManualDestroy
+=== RUN   TestAccKeycloakAuthenticationFlow_updateAuthenticationFlow
+=== PAUSE TestAccKeycloakAuthenticationFlow_updateAuthenticationFlow
+=== RUN   TestAccKeycloakAuthenticationFlow_updateRealm
+=== PAUSE TestAccKeycloakAuthenticationFlow_updateRealm
+=== RUN   TestAccKeycloakAuthenticationFlow_import
+=== PAUSE TestAccKeycloakAuthenticationFlow_import
+=== RUN   TestAccKeycloakAuthenticationSubFlow_basic
+=== PAUSE TestAccKeycloakAuthenticationSubFlow_basic
+=== RUN   TestAccKeycloakAuthenticationSubFlow_createAfterManualDestroy
+=== PAUSE TestAccKeycloakAuthenticationSubFlow_createAfterManualDestroy
+=== RUN   TestAccKeycloakAuthenticationSubFlow_updateAuthenticationSubFlow
+=== PAUSE TestAccKeycloakAuthenticationSubFlow_updateAuthenticationSubFlow
+=== RUN   TestAccKeycloakAuthenticationSubFlow_updateAuthenticationSubFlowRequirement
+=== PAUSE TestAccKeycloakAuthenticationSubFlow_updateAuthenticationSubFlowRequirement
+=== RUN   TestAccKeycloakAuthenticationSubFlowImport
+=== PAUSE TestAccKeycloakAuthenticationSubFlowImport
+=== RUN   TestAccKeycloakCustomIdentityProviderMapper_basic
+=== PAUSE TestAccKeycloakCustomIdentityProviderMapper_basic
+=== RUN   TestAccKeycloakCustomIdentityProviderMapper_withExtraConfig
+=== PAUSE TestAccKeycloakCustomIdentityProviderMapper_withExtraConfig
+=== RUN   TestAccKeycloakCustomIdentityProviderMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakCustomIdentityProviderMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakCustomIdentityProviderMapper_withExtraConfig_createAfterManualDestroy
+=== PAUSE TestAccKeycloakCustomIdentityProviderMapper_withExtraConfig_createAfterManualDestroy
+=== RUN   TestAccKeycloakCustomIdentityProviderMapper_basicUpdateAll
+=== PAUSE TestAccKeycloakCustomIdentityProviderMapper_basicUpdateAll
+=== RUN   TestAccKeycloakCustomUserFederation_basic
+=== PAUSE TestAccKeycloakCustomUserFederation_basic
+=== RUN   TestAccKeycloakCustomUserFederation_customConfig
+=== PAUSE TestAccKeycloakCustomUserFederation_customConfig
+=== RUN   TestAccKeycloakCustomUserFederation_createAfterManualDestroy
+=== PAUSE TestAccKeycloakCustomUserFederation_createAfterManualDestroy
+=== RUN   TestAccKeycloakCustomUserFederation_validation
+=== PAUSE TestAccKeycloakCustomUserFederation_validation
+=== RUN   TestAccKeycloakCustomUserFederation_ParentIdDifferentFromRealmName
+--- PASS: TestAccKeycloakCustomUserFederation_ParentIdDifferentFromRealmName (1.66s)
+=== RUN   TestAccKeycloakDefaultGroups_basic
+--- PASS: TestAccKeycloakDefaultGroups_basic (3.95s)
+=== RUN   TestAccKeycloakDefaultGroups_import
+--- PASS: TestAccKeycloakDefaultGroups_import (3.25s)
+=== RUN   TestAccKeycloakDefaultGroups_updateInPlace
+--- PASS: TestAccKeycloakDefaultGroups_updateInPlace (5.10s)
+=== RUN   TestAccKeycloakDefaultRoles_basic
+--- PASS: TestAccKeycloakDefaultRoles_basic (3.47s)
+=== RUN   TestAccKeycloakDefaultRoles_updateDefaultRoles
+--- PASS: TestAccKeycloakDefaultRoles_updateDefaultRoles (4.37s)
+=== RUN   TestAccKeycloakGenericClientProtocolMapper_basicClient
+=== PAUSE TestAccKeycloakGenericClientProtocolMapper_basicClient
+=== RUN   TestAccKeycloakGenericClientProtocolMapper_basicClientScope
+=== PAUSE TestAccKeycloakGenericClientProtocolMapper_basicClientScope
+=== RUN   TestAccKeycloakGenericClientProtocolMapper_import
+=== PAUSE TestAccKeycloakGenericClientProtocolMapper_import
+=== RUN   TestAccKeycloakGenericClientProtocolMapper_update
+=== PAUSE TestAccKeycloakGenericClientProtocolMapper_update
+=== RUN   TestAccKeycloakGenericClientRoleMapper_basic
+=== PAUSE TestAccKeycloakGenericClientRoleMapper_basic
+=== RUN   TestAccKeycloakGenericClientRoleMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakGenericClientRoleMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakGenericClientRoleMapper_import
+=== PAUSE TestAccKeycloakGenericClientRoleMapper_import
+=== RUN   TestAccKeycloakGenericClientRoleMapper_basicClientScope
+=== PAUSE TestAccKeycloakGenericClientRoleMapper_basicClientScope
+=== RUN   TestAccKeycloakGenericClientRoleMapper_importClientScope
+=== PAUSE TestAccKeycloakGenericClientRoleMapper_importClientScope
+=== RUN   TestAccKeycloakGenericClientRoleMapper_basicClientScopeRealmRole
+=== PAUSE TestAccKeycloakGenericClientRoleMapper_basicClientScopeRealmRole
+=== RUN   TestAccKeycloakGenericProtocolMapper_basicClient
+=== PAUSE TestAccKeycloakGenericProtocolMapper_basicClient
+=== RUN   TestAccKeycloakGenericProtocolMapper_basicClientScope
+=== PAUSE TestAccKeycloakGenericProtocolMapper_basicClientScope
+=== RUN   TestAccKeycloakGenericProtocolMapper_import
+=== PAUSE TestAccKeycloakGenericProtocolMapper_import
+=== RUN   TestAccKeycloakGenericProtocolMapper_update
+=== PAUSE TestAccKeycloakGenericProtocolMapper_update
+=== RUN   TestAccKeycloakGenericRoleMapper_basic
+=== PAUSE TestAccKeycloakGenericRoleMapper_basic
+=== RUN   TestAccKeycloakGenericRoleMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakGenericRoleMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakGenericRoleMapper_import
+=== PAUSE TestAccKeycloakGenericRoleMapper_import
+=== RUN   TestAccKeycloakGenericRoleMapper_basicClientScope
+=== PAUSE TestAccKeycloakGenericRoleMapper_basicClientScope
+=== RUN   TestAccKeycloakGenericRoleMapper_importClientScope
+=== PAUSE TestAccKeycloakGenericRoleMapper_importClientScope
+=== RUN   TestAccKeycloakGenericRoleMapper_basicClientScopeRealmRole
+=== PAUSE TestAccKeycloakGenericRoleMapper_basicClientScopeRealmRole
+=== RUN   TestAccKeycloakGenericRoleMapper_deleteIndividualMappers
+=== PAUSE TestAccKeycloakGenericRoleMapper_deleteIndividualMappers
+=== RUN   TestAccKeycloakGroupMemberships_basic
+=== PAUSE TestAccKeycloakGroupMemberships_basic
+=== RUN   TestAccKeycloakGroupMemberships_basicUserWithBackslash
+=== PAUSE TestAccKeycloakGroupMemberships_basicUserWithBackslash
+=== RUN   TestAccKeycloakGroupMemberships_moreThan100members
+=== PAUSE TestAccKeycloakGroupMemberships_moreThan100members
+=== RUN   TestAccKeycloakGroupMemberships_updateGroupForceNew
+=== PAUSE TestAccKeycloakGroupMemberships_updateGroupForceNew
+=== RUN   TestAccKeycloakGroupMemberships_updateInPlace
+=== PAUSE TestAccKeycloakGroupMemberships_updateInPlace
+=== RUN   TestAccKeycloakGroupMemberships_userDoesNotExist
+=== PAUSE TestAccKeycloakGroupMemberships_userDoesNotExist
+=== RUN   TestAccKeycloakGroupMemberships_authoritativeAdd
+=== PAUSE TestAccKeycloakGroupMemberships_authoritativeAdd
+=== RUN   TestAccKeycloakGroupMemberships_authoritativeRemove
+=== PAUSE TestAccKeycloakGroupMemberships_authoritativeRemove
+=== RUN   TestAccKeycloakGroupMemberships_noImportNeeded
+=== PAUSE TestAccKeycloakGroupMemberships_noImportNeeded
+=== RUN   TestAccKeycloakGroupMemberships_validateLowercaseUsernames
+=== PAUSE TestAccKeycloakGroupMemberships_validateLowercaseUsernames
+=== RUN   TestAccKeycloakGroupMemberships_createAfterManualDestroy
+=== PAUSE TestAccKeycloakGroupMemberships_createAfterManualDestroy
+=== RUN   TestAccKeycloakGroupPermission_basic
+--- PASS: TestAccKeycloakGroupPermission_basic (2.59s)
+=== RUN   TestAccKeycloakGroupRoles_basic
+=== PAUSE TestAccKeycloakGroupRoles_basic
+=== RUN   TestAccKeycloakGroupRoles_createAfterManualDestroy
+=== PAUSE TestAccKeycloakGroupRoles_createAfterManualDestroy
+=== RUN   TestAccKeycloakGroupRoles_update
+=== PAUSE TestAccKeycloakGroupRoles_update
+=== RUN   TestAccKeycloakGroupRoles_basicNonExhaustive
+=== PAUSE TestAccKeycloakGroupRoles_basicNonExhaustive
+=== RUN   TestAccKeycloakGroupRoles_updateNonExhaustive
+=== PAUSE TestAccKeycloakGroupRoles_updateNonExhaustive
+=== RUN   TestAccKeycloakGroupRoles_simultaneousRoleAndAssignmentUpdate
+=== PAUSE TestAccKeycloakGroupRoles_simultaneousRoleAndAssignmentUpdate
+=== RUN   TestAccKeycloakGroup_basic
+=== PAUSE TestAccKeycloakGroup_basic
+=== RUN   TestAccKeycloakGroup_basicGroupNameContainsBackSlash
+=== PAUSE TestAccKeycloakGroup_basicGroupNameContainsBackSlash
+=== RUN   TestAccKeycloakGroup_createAfterManualDestroy
+=== PAUSE TestAccKeycloakGroup_createAfterManualDestroy
+=== RUN   TestAccKeycloakGroup_updateGroupName
+=== PAUSE TestAccKeycloakGroup_updateGroupName
+=== RUN   TestAccKeycloakGroup_updateRealm
+=== PAUSE TestAccKeycloakGroup_updateRealm
+=== RUN   TestAccKeycloakGroup_nested
+=== PAUSE TestAccKeycloakGroup_nested
+=== RUN   TestAccKeycloakGroup_nestedGroupNameContainsBackSlash
+=== PAUSE TestAccKeycloakGroup_nestedGroupNameContainsBackSlash
+=== RUN   TestAccKeycloakGroup_unsetOptionalAttributes
+=== PAUSE TestAccKeycloakGroup_unsetOptionalAttributes
+=== RUN   TestAccKeycloakHardcodedAttributeIdentityProviderMapper_basic
+=== PAUSE TestAccKeycloakHardcodedAttributeIdentityProviderMapper_basic
+=== RUN   TestAccKeycloakHardcodedAttributeIdentityProviderMapper_withExtraConfig
+=== PAUSE TestAccKeycloakHardcodedAttributeIdentityProviderMapper_withExtraConfig
+=== RUN   TestAccKeycloakHardcodedAttributeIdentityProviderMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakHardcodedAttributeIdentityProviderMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakHardcodedAttributeIdentityProviderMapper_withExtraConfig_createAfterManualDestroy
+=== PAUSE TestAccKeycloakHardcodedAttributeIdentityProviderMapper_withExtraConfig_createAfterManualDestroy
+=== RUN   TestAccKeycloakHardcodedAttributeIdentityProviderMapper_basicUpdateAll
+=== PAUSE TestAccKeycloakHardcodedAttributeIdentityProviderMapper_basicUpdateAll
+=== RUN   TestAccKeycloakHardcodedRoleIdentityProviderMapper_basic
+=== PAUSE TestAccKeycloakHardcodedRoleIdentityProviderMapper_basic
+=== RUN   TestAccKeycloakHardcodedRoleIdentityProviderMapper_withExtraConfig
+=== PAUSE TestAccKeycloakHardcodedRoleIdentityProviderMapper_withExtraConfig
+=== RUN   TestAccKeycloakHardcodedRoleIdentityProviderMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakHardcodedRoleIdentityProviderMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakHardcodedRoleIdentityProviderMapper_withExtraConfig_createAfterManualDestroy
+=== PAUSE TestAccKeycloakHardcodedRoleIdentityProviderMapper_withExtraConfig_createAfterManualDestroy
+=== RUN   TestAccKeycloakHardcodedRoleIdentityProviderMapper_basicUpdateAll
+=== PAUSE TestAccKeycloakHardcodedRoleIdentityProviderMapper_basicUpdateAll
+=== RUN   TestAccKeycloakIdpTokenExchangeScopePermission_basic
+=== PAUSE TestAccKeycloakIdpTokenExchangeScopePermission_basic
+=== RUN   TestAccKeycloakIdpTokenExchangeScopePermission_createAfterManualDestroy
+=== PAUSE TestAccKeycloakIdpTokenExchangeScopePermission_createAfterManualDestroy
+=== RUN   TestAccKeycloakIdpTokenExchangeScopePermission_import
+=== PAUSE TestAccKeycloakIdpTokenExchangeScopePermission_import
+=== RUN   TestAccKeycloakIdpTokenExchangeScopePermission_updatePolicyMultipleClients
+=== PAUSE TestAccKeycloakIdpTokenExchangeScopePermission_updatePolicyMultipleClients
+=== RUN   TestAccKeycloakIdpTokenExchangeScopePermission_rolePolicy
+=== PAUSE TestAccKeycloakIdpTokenExchangeScopePermission_rolePolicy
+=== RUN   TestAccKeycloakLdapCustomMapper_basic
+=== PAUSE TestAccKeycloakLdapCustomMapper_basic
+=== RUN   TestAccKeycloakLdapCustomMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakLdapCustomMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakLdapCustomMapper_updateLdapUserFederation
+=== PAUSE TestAccKeycloakLdapCustomMapper_updateLdapUserFederation
+=== RUN   TestAccKeycloakLdapCustomMapper_updateInPlace
+=== PAUSE TestAccKeycloakLdapCustomMapper_updateInPlace
+=== RUN   TestAccKeycloakLdapFullNameMapper_basic
+=== PAUSE TestAccKeycloakLdapFullNameMapper_basic
+=== RUN   TestAccKeycloakLdapFullNameMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakLdapFullNameMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakLdapFullNameMapper_readWriteValidation
+=== PAUSE TestAccKeycloakLdapFullNameMapper_readWriteValidation
+=== RUN   TestAccKeycloakLdapFullNameMapper_writableValidation
+=== PAUSE TestAccKeycloakLdapFullNameMapper_writableValidation
+=== RUN   TestAccKeycloakLdapFullNameMapper_updateLdapUserFederation
+=== PAUSE TestAccKeycloakLdapFullNameMapper_updateLdapUserFederation
+=== RUN   TestAccKeycloakLdapGroupMapper_basic
+=== PAUSE TestAccKeycloakLdapGroupMapper_basic
+=== RUN   TestAccKeycloakLdapGroupMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakLdapGroupMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakLdapGroupMapper_modeValidation
+=== PAUSE TestAccKeycloakLdapGroupMapper_modeValidation
+=== RUN   TestAccKeycloakLdapGroupMapper_membershipAttributeTypeValidation
+=== PAUSE TestAccKeycloakLdapGroupMapper_membershipAttributeTypeValidation
+=== RUN   TestAccKeycloakLdapGroupMapper_userRolesRetrieveStrategyValidation
+=== PAUSE TestAccKeycloakLdapGroupMapper_userRolesRetrieveStrategyValidation
+=== RUN   TestAccKeycloakLdapGroupMapper_groupsLdapFilterValidation
+=== PAUSE TestAccKeycloakLdapGroupMapper_groupsLdapFilterValidation
+=== RUN   TestAccKeycloakLdapGroupMapper_groupInheritanceValidation
+=== PAUSE TestAccKeycloakLdapGroupMapper_groupInheritanceValidation
+=== RUN   TestAccKeycloakLdapGroupMapper_updateLdapUserFederationForceNew
+=== PAUSE TestAccKeycloakLdapGroupMapper_updateLdapUserFederationForceNew
+=== RUN   TestAccKeycloakLdapGroupMapper_updateLdapUserFederationInPlace
+=== PAUSE TestAccKeycloakLdapGroupMapper_updateLdapUserFederationInPlace
+=== RUN   TestAccKeycloakLdapGroupMapper_groupsPath
+=== PAUSE TestAccKeycloakLdapGroupMapper_groupsPath
+=== RUN   TestAccKeycloakLdapHardcodedAttributeMapper_basic
+=== PAUSE TestAccKeycloakLdapHardcodedAttributeMapper_basic
+=== RUN   TestAccKeycloakLdapHardcodedAttributeMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakLdapHardcodedAttributeMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakLdapHardcodedGroupMapper_basic
+=== PAUSE TestAccKeycloakLdapHardcodedGroupMapper_basic
+=== RUN   TestAccKeycloakLdapHardcodedGroupMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakLdapHardcodedGroupMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakLdapHardcodedRoleMapper_basic
+=== PAUSE TestAccKeycloakLdapHardcodedRoleMapper_basic
+=== RUN   TestAccKeycloakLdapHardcodedRoleMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakLdapHardcodedRoleMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakLdapMsadLdsUserAccountControlMapper_basic
+=== PAUSE TestAccKeycloakLdapMsadLdsUserAccountControlMapper_basic
+=== RUN   TestAccKeycloakLdapMsadLdsUserAccountControlMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakLdapMsadLdsUserAccountControlMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakLdapMsadLdsUserAccountControlMapper_updateLdapUserFederation
+=== PAUSE TestAccKeycloakLdapMsadLdsUserAccountControlMapper_updateLdapUserFederation
+=== RUN   TestAccKeycloakLdapMsadUserAccountControlMapper_basic
+=== PAUSE TestAccKeycloakLdapMsadUserAccountControlMapper_basic
+=== RUN   TestAccKeycloakLdapMsadUserAccountControlMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakLdapMsadUserAccountControlMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakLdapMsadUserAccountControlMapper_updateLdapUserFederation
+=== PAUSE TestAccKeycloakLdapMsadUserAccountControlMapper_updateLdapUserFederation
+=== RUN   TestAccKeycloakLdapMsadUserAccountControlMapper_updateInPlace
+=== PAUSE TestAccKeycloakLdapMsadUserAccountControlMapper_updateInPlace
+=== RUN   TestAccKeycloakLdapRoleMapper_basic
+=== PAUSE TestAccKeycloakLdapRoleMapper_basic
+=== RUN   TestAccKeycloakLdapRoleMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakLdapRoleMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakLdapRoleMapper_modeValidation
+=== PAUSE TestAccKeycloakLdapRoleMapper_modeValidation
+=== RUN   TestAccKeycloakLdapRoleMapper_membershipAttributeTypeValidation
+=== PAUSE TestAccKeycloakLdapRoleMapper_membershipAttributeTypeValidation
+=== RUN   TestAccKeycloakLdapRoleMapper_userRolesRetrieveStrategyValidation
+=== PAUSE TestAccKeycloakLdapRoleMapper_userRolesRetrieveStrategyValidation
+=== RUN   TestAccKeycloakLdapRoleMapper_rolesLdapFilterValidation
+=== PAUSE TestAccKeycloakLdapRoleMapper_rolesLdapFilterValidation
+=== RUN   TestAccKeycloakLdapRoleMapper_updateLdapUserFederationForceNew
+=== PAUSE TestAccKeycloakLdapRoleMapper_updateLdapUserFederationForceNew
+=== RUN   TestAccKeycloakLdapRoleMapper_updateLdapUserFederationInPlace
+=== PAUSE TestAccKeycloakLdapRoleMapper_updateLdapUserFederationInPlace
+=== RUN   TestAccKeycloakLdapUserAttributeMapper_basic
+=== PAUSE TestAccKeycloakLdapUserAttributeMapper_basic
+=== RUN   TestAccKeycloakLdapUserAttributeMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakLdapUserAttributeMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakLdapUserAttributeMapper_updateLdapUserFederation
+=== PAUSE TestAccKeycloakLdapUserAttributeMapper_updateLdapUserFederation
+=== RUN   TestAccKeycloakLdapUserAttributeMapper_updateInPlace
+=== PAUSE TestAccKeycloakLdapUserAttributeMapper_updateInPlace
+=== RUN   TestAccKeycloakLdapUserFederation_basic
+=== PAUSE TestAccKeycloakLdapUserFederation_basic
+=== RUN   TestAccKeycloakLdapUserFederation_import
+=== PAUSE TestAccKeycloakLdapUserFederation_import
+=== RUN   TestAccKeycloakLdapUserFederation_createAfterManualDestroy
+=== PAUSE TestAccKeycloakLdapUserFederation_createAfterManualDestroy
+=== RUN   TestAccKeycloakLdapUserFederation_basicUpdateRealm
+=== PAUSE TestAccKeycloakLdapUserFederation_basicUpdateRealm
+=== RUN   TestAccKeycloakLdapUserFederation_deleteDefaultMappers
+=== PAUSE TestAccKeycloakLdapUserFederation_deleteDefaultMappers
+=== RUN   TestAccKeycloakLdapUserFederation_basicUpdateKerberosSettings
+=== PAUSE TestAccKeycloakLdapUserFederation_basicUpdateKerberosSettings
+=== RUN   TestAccKeycloakLdapUserFederation_basicUpdateAll
+=== PAUSE TestAccKeycloakLdapUserFederation_basicUpdateAll
+=== RUN   TestAccKeycloakLdapUserFederation_unsetTimeoutDurationStrings
+=== PAUSE TestAccKeycloakLdapUserFederation_unsetTimeoutDurationStrings
+=== RUN   TestAccKeycloakLdapUserFederation_editModeValidation
+=== PAUSE TestAccKeycloakLdapUserFederation_editModeValidation
+=== RUN   TestAccKeycloakLdapUserFederation_vendorValidation
+=== PAUSE TestAccKeycloakLdapUserFederation_vendorValidation
+=== RUN   TestAccKeycloakLdapUserFederation_searchScopeValidation
+=== PAUSE TestAccKeycloakLdapUserFederation_searchScopeValidation
+=== RUN   TestAccKeycloakLdapUserFederation_useTrustStoreValidation
+=== PAUSE TestAccKeycloakLdapUserFederation_useTrustStoreValidation
+=== RUN   TestAccKeycloakLdapUserFederation_bindValidation
+=== PAUSE TestAccKeycloakLdapUserFederation_bindValidation
+=== RUN   TestAccKeycloakLdapUserFederation_syncPeriodValidation
+=== PAUSE TestAccKeycloakLdapUserFederation_syncPeriodValidation
+=== RUN   TestAccKeycloakLdapUserFederation_bindCredential
+=== PAUSE TestAccKeycloakLdapUserFederation_bindCredential
+=== RUN   TestAccKeycloakOidcGoogleIdentityProvider_basic
+--- PASS: TestAccKeycloakOidcGoogleIdentityProvider_basic (1.12s)
+=== RUN   TestAccKeycloakOidcGoogleIdentityProvider_extraConfig
+--- PASS: TestAccKeycloakOidcGoogleIdentityProvider_extraConfig (1.07s)
+=== RUN   TestAccKeycloakOidcGoogleIdentityProvider_extraConfigInvalid
+--- PASS: TestAccKeycloakOidcGoogleIdentityProvider_extraConfigInvalid (0.18s)
+=== RUN   TestAccKeycloakOidcGoogleIdentityProvider_createAfterManualDestroy
+--- PASS: TestAccKeycloakOidcGoogleIdentityProvider_createAfterManualDestroy (1.85s)
+=== RUN   TestAccKeycloakOidcGoogleIdentityProvider_basicUpdateAll
+--- PASS: TestAccKeycloakOidcGoogleIdentityProvider_basicUpdateAll (1.85s)
+=== RUN   TestAccKeycloakOidcIdentityProvider_basic
+=== PAUSE TestAccKeycloakOidcIdentityProvider_basic
+=== RUN   TestAccKeycloakOidcIdentityProvider_extraConfig
+=== PAUSE TestAccKeycloakOidcIdentityProvider_extraConfig
+=== RUN   TestAccKeycloakOidcIdentityProvider_extraConfigInvalid
+=== PAUSE TestAccKeycloakOidcIdentityProvider_extraConfigInvalid
+=== RUN   TestAccKeycloakOidcIdentityProvider_keyDefaultScopes
+=== PAUSE TestAccKeycloakOidcIdentityProvider_keyDefaultScopes
+=== RUN   TestAccKeycloakOidcIdentityProvider_createAfterManualDestroy
+=== PAUSE TestAccKeycloakOidcIdentityProvider_createAfterManualDestroy
+=== RUN   TestAccKeycloakOidcIdentityProvider_basicUpdateAll
+=== PAUSE TestAccKeycloakOidcIdentityProvider_basicUpdateAll
+=== RUN   TestAccKeycloakOpenIdAudienceProtocolMapper_basicClient
+=== PAUSE TestAccKeycloakOpenIdAudienceProtocolMapper_basicClient
+=== RUN   TestAccKeycloakOpenIdAudienceProtocolMapper_basicClientScope
+=== PAUSE TestAccKeycloakOpenIdAudienceProtocolMapper_basicClientScope
+=== RUN   TestAccKeycloakOpenIdAudienceProtocolMapper_import
+=== PAUSE TestAccKeycloakOpenIdAudienceProtocolMapper_import
+=== RUN   TestAccKeycloakOpenIdAudienceProtocolMapper_update
+=== PAUSE TestAccKeycloakOpenIdAudienceProtocolMapper_update
+=== RUN   TestAccKeycloakOpenIdAudienceProtocolMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakOpenIdAudienceProtocolMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakOpenIdAudienceProtocolMapper_updateClientIdForceNew
+=== PAUSE TestAccKeycloakOpenIdAudienceProtocolMapper_updateClientIdForceNew
+=== RUN   TestAccKeycloakOpenIdAudienceProtocolMapper_updateClientScopeForceNew
+=== PAUSE TestAccKeycloakOpenIdAudienceProtocolMapper_updateClientScopeForceNew
+=== RUN   TestAccKeycloakOpenIdAudienceProtocolMapper_updateRealmIdForceNew
+=== PAUSE TestAccKeycloakOpenIdAudienceProtocolMapper_updateRealmIdForceNew
+=== RUN   TestAccKeycloakOpenIdAudienceProtocolMapper_validateClientAudienceExists
+=== PAUSE TestAccKeycloakOpenIdAudienceProtocolMapper_validateClientAudienceExists
+=== RUN   TestAccKeycloakOpenIdAudienceResolveProtocolMapper_basicClient
+=== PAUSE TestAccKeycloakOpenIdAudienceResolveProtocolMapper_basicClient
+=== RUN   TestAccKeycloakOpenIdAudienceResolveProtocolMapper_basicClientScope
+=== PAUSE TestAccKeycloakOpenIdAudienceResolveProtocolMapper_basicClientScope
+=== RUN   TestAccKeycloakOpenIdAudienceResolveProtocolMapper_import
+=== PAUSE TestAccKeycloakOpenIdAudienceResolveProtocolMapper_import
+=== RUN   TestAccKeycloakOpenIdAudienceResolveProtocolMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakOpenIdAudienceResolveProtocolMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakOpenIdAudienceResolveProtocolMapper_updateClientScopeForceNew
+=== PAUSE TestAccKeycloakOpenIdAudienceResolveProtocolMapper_updateClientScopeForceNew
+=== RUN   TestAccKeycloakOpenidClientAuthorizationAggregatePolicy
+=== PAUSE TestAccKeycloakOpenidClientAuthorizationAggregatePolicy
+=== RUN   TestAccKeycloakOpenidClientAuthorizationClientPolicy
+=== PAUSE TestAccKeycloakOpenidClientAuthorizationClientPolicy
+=== RUN   TestAccKeycloakOpenidClientAuthorizationGroupPolicy
+=== PAUSE TestAccKeycloakOpenidClientAuthorizationGroupPolicy
+=== RUN   TestAccKeycloakOpenidClientAuthorizationJSPolicy
+    resource_keycloak_openid_script_protocol_mapper_test.go:20: 
+--- SKIP: TestAccKeycloakOpenidClientAuthorizationJSPolicy (0.00s)
+=== RUN   TestAccKeycloakOpenidClientAuthorizationPermission_basic
+=== PAUSE TestAccKeycloakOpenidClientAuthorizationPermission_basic
+=== RUN   TestAccKeycloakOpenidClientAuthorizationPermission_resourceType
+=== PAUSE TestAccKeycloakOpenidClientAuthorizationPermission_resourceType
+=== RUN   TestAccKeycloakOpenidClientAuthorizationPermission_createAfterManualDestroy
+=== PAUSE TestAccKeycloakOpenidClientAuthorizationPermission_createAfterManualDestroy
+=== RUN   TestAccKeycloakOpenidClientAuthorizationPermission_basicUpdateAll
+=== PAUSE TestAccKeycloakOpenidClientAuthorizationPermission_basicUpdateAll
+=== RUN   TestAccKeycloakOpenidClientAuthorizationResource_basic
+=== PAUSE TestAccKeycloakOpenidClientAuthorizationResource_basic
+=== RUN   TestAccKeycloakOpenidClientAuthorizationResource_createAfterManualDestroy
+=== PAUSE TestAccKeycloakOpenidClientAuthorizationResource_createAfterManualDestroy
+=== RUN   TestAccKeycloakOpenidClientAuthorizationResource_basicUpdateAll
+=== PAUSE TestAccKeycloakOpenidClientAuthorizationResource_basicUpdateAll
+=== RUN   TestAccKeycloakOpenidClientAuthorizationRolePolicy_basic
+=== PAUSE TestAccKeycloakOpenidClientAuthorizationRolePolicy_basic
+=== RUN   TestAccKeycloakOpenidClientAuthorizationRolePolicy_multiple
+=== PAUSE TestAccKeycloakOpenidClientAuthorizationRolePolicy_multiple
+=== RUN   TestAccKeycloakOpenidClientAuthorizationScope_basic
+=== PAUSE TestAccKeycloakOpenidClientAuthorizationScope_basic
+=== RUN   TestAccKeycloakOpenidClientAuthorizationScope_createAfterManualDestroy
+=== PAUSE TestAccKeycloakOpenidClientAuthorizationScope_createAfterManualDestroy
+=== RUN   TestAccKeycloakOpenidClientAuthorizationScope_basicUpdateAll
+=== PAUSE TestAccKeycloakOpenidClientAuthorizationScope_basicUpdateAll
+=== RUN   TestAccKeycloakOpenidClientAuthorizationTimePolicy
+=== PAUSE TestAccKeycloakOpenidClientAuthorizationTimePolicy
+=== RUN   TestAccKeycloakOpenidClientAuthorizationUserPolicy
+=== PAUSE TestAccKeycloakOpenidClientAuthorizationUserPolicy
+=== RUN   TestAccKeycloakOpenidClientDefaultScopes_basic
+=== PAUSE TestAccKeycloakOpenidClientDefaultScopes_basic
+=== RUN   TestAccKeycloakOpenidClientDefaultScopes_updateClientForceNew
+=== PAUSE TestAccKeycloakOpenidClientDefaultScopes_updateClientForceNew
+=== RUN   TestAccKeycloakOpenidClientDefaultScopes_updateInPlace
+=== PAUSE TestAccKeycloakOpenidClientDefaultScopes_updateInPlace
+=== RUN   TestAccKeycloakOpenidClientDefaultScopes_validateClientDoesNotExist
+=== PAUSE TestAccKeycloakOpenidClientDefaultScopes_validateClientDoesNotExist
+=== RUN   TestAccKeycloakOpenidClientDefaultScopes_validateClientAccessType
+=== PAUSE TestAccKeycloakOpenidClientDefaultScopes_validateClientAccessType
+=== RUN   TestAccKeycloakOpenidClientDefaultScopes_authoritativeAdd
+=== PAUSE TestAccKeycloakOpenidClientDefaultScopes_authoritativeAdd
+=== RUN   TestAccKeycloakOpenidClientDefaultScopes_authoritativeRemove
+=== PAUSE TestAccKeycloakOpenidClientDefaultScopes_authoritativeRemove
+=== RUN   TestAccKeycloakOpenidClientDefaultScopes_noImportNeeded
+=== PAUSE TestAccKeycloakOpenidClientDefaultScopes_noImportNeeded
+=== RUN   TestAccKeycloakOpenidClientDefaultScopes_validateDuplicateScopeAssignment
+=== PAUSE TestAccKeycloakOpenidClientDefaultScopes_validateDuplicateScopeAssignment
+=== RUN   TestAccKeycloakOpenidClientOptionalScopes_basic
+=== PAUSE TestAccKeycloakOpenidClientOptionalScopes_basic
+=== RUN   TestAccKeycloakOpenidClientOptionalScopes_updateClientForceNew
+=== PAUSE TestAccKeycloakOpenidClientOptionalScopes_updateClientForceNew
+=== RUN   TestAccKeycloakOpenidClientOptionalScopes_updateInPlace
+=== PAUSE TestAccKeycloakOpenidClientOptionalScopes_updateInPlace
+=== RUN   TestAccKeycloakOpenidClientOptionalScopes_validateClientDoesNotExist
+=== PAUSE TestAccKeycloakOpenidClientOptionalScopes_validateClientDoesNotExist
+=== RUN   TestAccKeycloakOpenidClientOptionalScopes_validateClientAccessType
+=== PAUSE TestAccKeycloakOpenidClientOptionalScopes_validateClientAccessType
+=== RUN   TestAccKeycloakOpenidClientOptionalScopes_authoritativeAdd
+=== PAUSE TestAccKeycloakOpenidClientOptionalScopes_authoritativeAdd
+=== RUN   TestAccKeycloakOpenidClientOptionalScopes_authoritativeRemove
+=== PAUSE TestAccKeycloakOpenidClientOptionalScopes_authoritativeRemove
+=== RUN   TestAccKeycloakOpenidClientOptionalScopes_noImportNeeded
+=== PAUSE TestAccKeycloakOpenidClientOptionalScopes_noImportNeeded
+=== RUN   TestAccKeycloakOpenidClientOptionalScopes_validateDuplicateScopeAssignment
+=== PAUSE TestAccKeycloakOpenidClientOptionalScopes_validateDuplicateScopeAssignment
+=== RUN   TestAccKeycloakOpenidClientPermission_basic
+=== PAUSE TestAccKeycloakOpenidClientPermission_basic
+=== RUN   TestAccKeycloakClientScope_basic
+=== PAUSE TestAccKeycloakClientScope_basic
+=== RUN   TestAccKeycloakClientScope_createAfterManualDestroy
+=== PAUSE TestAccKeycloakClientScope_createAfterManualDestroy
+=== RUN   TestAccKeycloakClientScope_updateRealm
+=== PAUSE TestAccKeycloakClientScope_updateRealm
+=== RUN   TestAccKeycloakClientScope_consentScreenText
+=== PAUSE TestAccKeycloakClientScope_consentScreenText
+=== RUN   TestAccKeycloakClientScope_includeInTokenScope
+=== PAUSE TestAccKeycloakClientScope_includeInTokenScope
+=== RUN   TestAccKeycloakClientScope_guiOrder
+=== PAUSE TestAccKeycloakClientScope_guiOrder
+=== RUN   TestAccKeycloakOpenidClientServiceAccountRealmRole_basic
+=== PAUSE TestAccKeycloakOpenidClientServiceAccountRealmRole_basic
+=== RUN   TestAccKeycloakOpenidClientServiceAccountRealmRole_createAfterManualDestroy
+=== PAUSE TestAccKeycloakOpenidClientServiceAccountRealmRole_createAfterManualDestroy
+=== RUN   TestAccKeycloakOpenidClientServiceAccountRole_basic
+=== PAUSE TestAccKeycloakOpenidClientServiceAccountRole_basic
+=== RUN   TestAccKeycloakOpenidClientServiceAccountRole_createAfterManualDestroy
+=== PAUSE TestAccKeycloakOpenidClientServiceAccountRole_createAfterManualDestroy
+=== RUN   TestAccKeycloakOpenidClientServiceAccountRole_enableAfterCreate
+=== PAUSE TestAccKeycloakOpenidClientServiceAccountRole_enableAfterCreate
+=== RUN   TestAccKeycloakOpenidClient_basic
+=== PAUSE TestAccKeycloakOpenidClient_basic
+=== RUN   TestAccKeycloakOpenidClient_basic_with_consent
+=== PAUSE TestAccKeycloakOpenidClient_basic_with_consent
+=== RUN   TestAccKeycloakOpenidClient_createAfterManualDestroy
+=== PAUSE TestAccKeycloakOpenidClient_createAfterManualDestroy
+=== RUN   TestAccKeycloakOpenidClient_updateRealm
+=== PAUSE TestAccKeycloakOpenidClient_updateRealm
+=== RUN   TestAccKeycloakOpenidClient_accessType
+=== PAUSE TestAccKeycloakOpenidClient_accessType
+=== RUN   TestAccKeycloakOpenidClient_clientAuthenticatorType
+=== PAUSE TestAccKeycloakOpenidClient_clientAuthenticatorType
+=== RUN   TestAccKeycloakOpenidClient_updateInPlace
+=== PAUSE TestAccKeycloakOpenidClient_updateInPlace
+=== RUN   TestAccKeycloakOpenidClient_backChannel
+=== PAUSE TestAccKeycloakOpenidClient_backChannel
+=== RUN   TestAccKeycloakOpenidClient_frontChannel
+=== PAUSE TestAccKeycloakOpenidClient_frontChannel
+=== RUN   TestAccKeycloakOpenidClient_AccessToken_basic
+=== PAUSE TestAccKeycloakOpenidClient_AccessToken_basic
+=== RUN   TestAccKeycloakOpenidClient_ClientTimeouts_basic
+=== PAUSE TestAccKeycloakOpenidClient_ClientTimeouts_basic
+=== RUN   TestAccKeycloakOpenidClient_Device_basic
+=== PAUSE TestAccKeycloakOpenidClient_Device_basic
+=== RUN   TestAccKeycloakOpenidClient_secret
+=== PAUSE TestAccKeycloakOpenidClient_secret
+=== RUN   TestAccKeycloakOpenidClient_redirectUrisValidation
+=== PAUSE TestAccKeycloakOpenidClient_redirectUrisValidation
+=== RUN   TestAccKeycloakOpenidClient_publicClientCredentialsValidation
+=== PAUSE TestAccKeycloakOpenidClient_publicClientCredentialsValidation
+=== RUN   TestAccKeycloakOpenidClient_bearerClientNoGrantsValidation
+=== PAUSE TestAccKeycloakOpenidClient_bearerClientNoGrantsValidation
+=== RUN   TestAccKeycloakOpenidClient_pkceCodeChallengeMethod
+=== PAUSE TestAccKeycloakOpenidClient_pkceCodeChallengeMethod
+=== RUN   TestAccKeycloakOpenidClient_excludeSessionStateFromAuthResponse
+=== PAUSE TestAccKeycloakOpenidClient_excludeSessionStateFromAuthResponse
+=== RUN   TestAccKeycloakOpenidClient_authenticationFlowBindingOverrides
+=== PAUSE TestAccKeycloakOpenidClient_authenticationFlowBindingOverrides
+=== RUN   TestAccKeycloakOpenidClient_loginTheme
+=== PAUSE TestAccKeycloakOpenidClient_loginTheme
+=== RUN   TestAccKeycloakOpenidClient_import
+=== PAUSE TestAccKeycloakOpenidClient_import
+=== RUN   TestAccKeycloakOpenidClient_useRefreshTokens
+=== PAUSE TestAccKeycloakOpenidClient_useRefreshTokens
+=== RUN   TestAccKeycloakOpenidClient_useRefreshTokensClientCredentials
+=== PAUSE TestAccKeycloakOpenidClient_useRefreshTokensClientCredentials
+=== RUN   TestAccKeycloakOpenidClient_extraConfig
+=== PAUSE TestAccKeycloakOpenidClient_extraConfig
+=== RUN   TestAccKeycloakOpenidClient_extraConfigInvalid
+=== PAUSE TestAccKeycloakOpenidClient_extraConfigInvalid
+=== RUN   TestAccKeycloakOpenidClient_oauth2DeviceAuthorizationGrantEnabled
+=== PAUSE TestAccKeycloakOpenidClient_oauth2DeviceAuthorizationGrantEnabled
+=== RUN   TestAccKeycloakOpenIdFullNameProtocolMapper_basicClient
+=== PAUSE TestAccKeycloakOpenIdFullNameProtocolMapper_basicClient
+=== RUN   TestAccKeycloakOpenIdFullNameProtocolMapper_basicClientScope
+=== PAUSE TestAccKeycloakOpenIdFullNameProtocolMapper_basicClientScope
+=== RUN   TestAccKeycloakOpenIdFullNameProtocolMapper_import
+=== PAUSE TestAccKeycloakOpenIdFullNameProtocolMapper_import
+=== RUN   TestAccKeycloakOpenIdFullNameProtocolMapper_update
+=== PAUSE TestAccKeycloakOpenIdFullNameProtocolMapper_update
+=== RUN   TestAccKeycloakOpenIdFullNameProtocolMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakOpenIdFullNameProtocolMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakOpenIdFullNameProtocolMapper_updateMapperNameForceNew
+=== PAUSE TestAccKeycloakOpenIdFullNameProtocolMapper_updateMapperNameForceNew
+=== RUN   TestAccKeycloakOpenIdFullNameProtocolMapper_updateClientIdForceNew
+=== PAUSE TestAccKeycloakOpenIdFullNameProtocolMapper_updateClientIdForceNew
+=== RUN   TestAccKeycloakOpenIdFullNameProtocolMapper_updateClientScopeForceNew
+=== PAUSE TestAccKeycloakOpenIdFullNameProtocolMapper_updateClientScopeForceNew
+=== RUN   TestAccKeycloakOpenIdGroupMembershipProtocolMapper_basicClient
+=== PAUSE TestAccKeycloakOpenIdGroupMembershipProtocolMapper_basicClient
+=== RUN   TestAccKeycloakOpenIdGroupMembershipProtocolMapper_basicClientScope
+=== PAUSE TestAccKeycloakOpenIdGroupMembershipProtocolMapper_basicClientScope
+=== RUN   TestAccKeycloakOpenIdGroupMembershipProtocolMapper_import
+=== PAUSE TestAccKeycloakOpenIdGroupMembershipProtocolMapper_import
+=== RUN   TestAccKeycloakOpenIdGroupMembershipProtocolMapper_update
+=== PAUSE TestAccKeycloakOpenIdGroupMembershipProtocolMapper_update
+=== RUN   TestAccKeycloakOpenIdGroupMembershipProtocolMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakOpenIdGroupMembershipProtocolMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakOpenIdGroupMembershipProtocolMapper_updateMapperNameForceNew
+=== PAUSE TestAccKeycloakOpenIdGroupMembershipProtocolMapper_updateMapperNameForceNew
+=== RUN   TestAccKeycloakOpenIdGroupMembershipProtocolMapper_updateClientIdForceNew
+=== PAUSE TestAccKeycloakOpenIdGroupMembershipProtocolMapper_updateClientIdForceNew
+=== RUN   TestAccKeycloakOpenIdGroupMembershipProtocolMapper_updateClientScopeForceNew
+=== PAUSE TestAccKeycloakOpenIdGroupMembershipProtocolMapper_updateClientScopeForceNew
+=== RUN   TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_basicClient
+=== PAUSE TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_basicClient
+=== RUN   TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_basicClientScope
+=== PAUSE TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_basicClientScope
+=== RUN   TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_import
+=== PAUSE TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_import
+=== RUN   TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_update
+=== PAUSE TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_update
+=== RUN   TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_validateClaimValueType
+=== PAUSE TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_validateClaimValueType
+=== RUN   TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_updateClientIdForceNew
+=== PAUSE TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_updateClientIdForceNew
+=== RUN   TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_updateClientScopeForceNew
+=== PAUSE TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_updateClientScopeForceNew
+=== RUN   TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_updateRealmIdForceNew
+=== PAUSE TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_updateRealmIdForceNew
+=== RUN   TestAccKeycloakOpenIdHardcodedRoleProtocolMapper_basicRealmRole_client
+=== PAUSE TestAccKeycloakOpenIdHardcodedRoleProtocolMapper_basicRealmRole_client
+=== RUN   TestAccKeycloakOpenIdHardcodedRoleProtocolMapper_basicClientRole_client
+=== PAUSE TestAccKeycloakOpenIdHardcodedRoleProtocolMapper_basicClientRole_client
+=== RUN   TestAccKeycloakOpenIdHardcodedRoleProtocolMapper_basicRealmRole_clientScope
+=== PAUSE TestAccKeycloakOpenIdHardcodedRoleProtocolMapper_basicRealmRole_clientScope
+=== RUN   TestAccKeycloakOpenIdHardcodedRoleProtocolMapper_import
+=== PAUSE TestAccKeycloakOpenIdHardcodedRoleProtocolMapper_import
+=== RUN   TestAccKeycloakOpenIdHardcodedRoleProtocolMapper_update
+=== PAUSE TestAccKeycloakOpenIdHardcodedRoleProtocolMapper_update
+=== RUN   TestAccKeycloakOpenIdHardcodedRoleProtocolMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakOpenIdHardcodedRoleProtocolMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakOpenIdScriptProtocolMapper_basicClient
+    resource_keycloak_openid_script_protocol_mapper_test.go:20: 
+--- SKIP: TestAccKeycloakOpenIdScriptProtocolMapper_basicClient (0.00s)
+=== RUN   TestAccKeycloakOpenIdScriptProtocolMapper_basicClientScope
+    resource_keycloak_openid_script_protocol_mapper_test.go:20: 
+--- SKIP: TestAccKeycloakOpenIdScriptProtocolMapper_basicClientScope (0.00s)
+=== RUN   TestAccKeycloakOpenIdScriptProtocolMapper_import
+    resource_keycloak_openid_script_protocol_mapper_test.go:20: 
+--- SKIP: TestAccKeycloakOpenIdScriptProtocolMapper_import (0.00s)
+=== RUN   TestAccKeycloakOpenIdScriptProtocolMapper_update
+    resource_keycloak_openid_script_protocol_mapper_test.go:20: 
+--- SKIP: TestAccKeycloakOpenIdScriptProtocolMapper_update (0.00s)
+=== RUN   TestAccKeycloakOpenIdScriptProtocolMapper_createAfterManualDestroy
+    resource_keycloak_openid_script_protocol_mapper_test.go:20: 
+--- SKIP: TestAccKeycloakOpenIdScriptProtocolMapper_createAfterManualDestroy (0.00s)
+=== RUN   TestAccKeycloakOpenIdScriptProtocolMapper_validateClaimValueType
+    resource_keycloak_openid_script_protocol_mapper_test.go:20: 
+--- SKIP: TestAccKeycloakOpenIdScriptProtocolMapper_validateClaimValueType (0.00s)
+=== RUN   TestAccKeycloakOpenIdScriptProtocolMapper_updateClientIdForceNew
+    resource_keycloak_openid_script_protocol_mapper_test.go:20: 
+--- SKIP: TestAccKeycloakOpenIdScriptProtocolMapper_updateClientIdForceNew (0.00s)
+=== RUN   TestAccKeycloakOpenIdScriptProtocolMapper_updateClientScopeForceNew
+    resource_keycloak_openid_script_protocol_mapper_test.go:20: 
+--- SKIP: TestAccKeycloakOpenIdScriptProtocolMapper_updateClientScopeForceNew (0.00s)
+=== RUN   TestAccKeycloakOpenIdUserAttributeProtocolMapper_basicClient
+=== PAUSE TestAccKeycloakOpenIdUserAttributeProtocolMapper_basicClient
+=== RUN   TestAccKeycloakOpenIdUserAttributeProtocolMapper_basicClientScope
+=== PAUSE TestAccKeycloakOpenIdUserAttributeProtocolMapper_basicClientScope
+=== RUN   TestAccKeycloakOpenIdUserAttributeProtocolMapper_import
+=== PAUSE TestAccKeycloakOpenIdUserAttributeProtocolMapper_import
+=== RUN   TestAccKeycloakOpenIdUserAttributeProtocolMapper_update
+=== PAUSE TestAccKeycloakOpenIdUserAttributeProtocolMapper_update
+=== RUN   TestAccKeycloakOpenIdUserAttributeProtocolMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakOpenIdUserAttributeProtocolMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakOpenIdUserAttributeProtocolMapper_validateClaimValueType
+=== PAUSE TestAccKeycloakOpenIdUserAttributeProtocolMapper_validateClaimValueType
+=== RUN   TestAccKeycloakOpenIdUserAttributeProtocolMapper_updateClientIdForceNew
+=== PAUSE TestAccKeycloakOpenIdUserAttributeProtocolMapper_updateClientIdForceNew
+=== RUN   TestAccKeycloakOpenIdUserAttributeProtocolMapper_updateClientScopeForceNew
+=== PAUSE TestAccKeycloakOpenIdUserAttributeProtocolMapper_updateClientScopeForceNew
+=== RUN   TestAccKeycloakOpenIdUserClientRoleProtocolMapper_basicClient
+=== PAUSE TestAccKeycloakOpenIdUserClientRoleProtocolMapper_basicClient
+=== RUN   TestAccKeycloakOpenIdUserClientRoleProtocolMapper_basicClientScope
+=== PAUSE TestAccKeycloakOpenIdUserClientRoleProtocolMapper_basicClientScope
+=== RUN   TestAccKeycloakOpenIdUserClientRoleProtocolMapper_import
+=== PAUSE TestAccKeycloakOpenIdUserClientRoleProtocolMapper_import
+=== RUN   TestAccKeycloakOpenIdUserClientRoleProtocolMapper_update
+=== PAUSE TestAccKeycloakOpenIdUserClientRoleProtocolMapper_update
+=== RUN   TestAccKeycloakOpenIdUserClientRoleProtocolMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakOpenIdUserClientRoleProtocolMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakOpenIdUserClientRoleProtocolMapper_validateClaimValueType
+=== PAUSE TestAccKeycloakOpenIdUserClientRoleProtocolMapper_validateClaimValueType
+=== RUN   TestAccKeycloakOpenIdUserClientRoleProtocolMapper_updateClientIdForceNew
+=== PAUSE TestAccKeycloakOpenIdUserClientRoleProtocolMapper_updateClientIdForceNew
+=== RUN   TestAccKeycloakOpenIdUserClientRoleProtocolMapper_updateClientScopeForceNew
+=== PAUSE TestAccKeycloakOpenIdUserClientRoleProtocolMapper_updateClientScopeForceNew
+=== RUN   TestAccKeycloakOpenIdUserClientRoleProtocolMapper_updateRealmIdForceNew
+=== PAUSE TestAccKeycloakOpenIdUserClientRoleProtocolMapper_updateRealmIdForceNew
+=== RUN   TestAccKeycloakOpenIdUserClientRoleProtocolMapper_clientAssignment
+=== PAUSE TestAccKeycloakOpenIdUserClientRoleProtocolMapper_clientAssignment
+=== RUN   TestAccKeycloakOpenIdUserClientRoleProtocolMapper_clientAssignmentRolePrefix
+=== PAUSE TestAccKeycloakOpenIdUserClientRoleProtocolMapper_clientAssignmentRolePrefix
+=== RUN   TestAccKeycloakOpenIdUserPropertyProtocolMapper_basicClient
+=== PAUSE TestAccKeycloakOpenIdUserPropertyProtocolMapper_basicClient
+=== RUN   TestAccKeycloakOpenIdUserPropertyProtocolMapper_basicClientScope
+=== PAUSE TestAccKeycloakOpenIdUserPropertyProtocolMapper_basicClientScope
+=== RUN   TestAccKeycloakOpenIdUserPropertyProtocolMapper_import
+=== PAUSE TestAccKeycloakOpenIdUserPropertyProtocolMapper_import
+=== RUN   TestAccKeycloakOpenIdUserPropertyProtocolMapper_update
+=== PAUSE TestAccKeycloakOpenIdUserPropertyProtocolMapper_update
+=== RUN   TestAccKeycloakOpenIdUserPropertyProtocolMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakOpenIdUserPropertyProtocolMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakOpenIdUserPropertyProtocolMapper_validateClaimValueType
+=== PAUSE TestAccKeycloakOpenIdUserPropertyProtocolMapper_validateClaimValueType
+=== RUN   TestAccKeycloakOpenIdUserPropertyProtocolMapper_updateClientIdForceNew
+=== PAUSE TestAccKeycloakOpenIdUserPropertyProtocolMapper_updateClientIdForceNew
+=== RUN   TestAccKeycloakOpenIdUserPropertyProtocolMapper_updateClientScopeForceNew
+=== PAUSE TestAccKeycloakOpenIdUserPropertyProtocolMapper_updateClientScopeForceNew
+=== RUN   TestAccKeycloakOpenIdUserPropertyProtocolMapper_updateRealmIdForceNew
+=== PAUSE TestAccKeycloakOpenIdUserPropertyProtocolMapper_updateRealmIdForceNew
+=== RUN   TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_basicClient
+=== PAUSE TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_basicClient
+=== RUN   TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_basicClientScope
+=== PAUSE TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_basicClientScope
+=== RUN   TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_import
+=== PAUSE TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_import
+=== RUN   TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_update
+=== PAUSE TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_update
+=== RUN   TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_validateClaimValueType
+=== PAUSE TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_validateClaimValueType
+=== RUN   TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_updateClientIdForceNew
+=== PAUSE TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_updateClientIdForceNew
+=== RUN   TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_updateClientScopeForceNew
+=== PAUSE TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_updateClientScopeForceNew
+=== RUN   TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_updateRealmIdForceNew
+=== PAUSE TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_updateRealmIdForceNew
+=== RUN   TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_basicClient
+=== PAUSE TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_basicClient
+=== RUN   TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_basicClientScope
+=== PAUSE TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_basicClientScope
+=== RUN   TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_import
+=== PAUSE TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_import
+=== RUN   TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_updateClaim
+=== PAUSE TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_updateClaim
+=== RUN   TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_updateNote
+=== PAUSE TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_updateNote
+=== RUN   TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_validateClaimValueType
+=== PAUSE TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_validateClaimValueType
+=== RUN   TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_updateClientIdForceNew
+=== PAUSE TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_updateClientIdForceNew
+=== RUN   TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_updateClientScopeForceNew
+=== PAUSE TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_updateClientScopeForceNew
+=== RUN   TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_updateRealmIdForceNew
+=== PAUSE TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_updateRealmIdForceNew
+=== RUN   TestAccKeycloakRealmEvents_basic
+--- PASS: TestAccKeycloakRealmEvents_basic (3.22s)
+=== RUN   TestAccKeycloakRealmEvents_destroy
+--- PASS: TestAccKeycloakRealmEvents_destroy (3.63s)
+=== RUN   TestAccKeycloakRealmEvents_update
+--- PASS: TestAccKeycloakRealmEvents_update (3.67s)
+=== RUN   TestAccKeycloakRealmEvents_unsetEnabledEventTypes
+    resource_keycloak_realm_events_test.go:149: Step 2/2 error: Check failed: Check 2/2 error: exptected to enabled_event_types to contain all(79) event types, but it contains 91
+--- FAIL: TestAccKeycloakRealmEvents_unsetEnabledEventTypes (3.51s)
+=== RUN   TestAccKeycloakRealmKeystoreAesGenerated_basic
+=== PAUSE TestAccKeycloakRealmKeystoreAesGenerated_basic
+=== RUN   TestAccKeycloakRealmKeystoreAesGenerated_createAfterManualDestroy
+=== PAUSE TestAccKeycloakRealmKeystoreAesGenerated_createAfterManualDestroy
+=== RUN   TestAccKeycloakRealmKeystoreAesGenerated_secretSizeValidation
+=== PAUSE TestAccKeycloakRealmKeystoreAesGenerated_secretSizeValidation
+=== RUN   TestAccKeycloakRealmKeystoreAesGenerated_updateRealmKeystoreAesGenerated
+=== PAUSE TestAccKeycloakRealmKeystoreAesGenerated_updateRealmKeystoreAesGenerated
+=== RUN   TestAccKeycloakRealmKeystoreEcdsaGenerated_basic
+=== PAUSE TestAccKeycloakRealmKeystoreEcdsaGenerated_basic
+=== RUN   TestAccKeycloakRealmKeystoreEcdsaGenerated_createAfterManualDestroy
+=== PAUSE TestAccKeycloakRealmKeystoreEcdsaGenerated_createAfterManualDestroy
+=== RUN   TestAccKeycloakRealmKeystoreEcdsaGenerated_ellipticCurveValidation
+=== PAUSE TestAccKeycloakRealmKeystoreEcdsaGenerated_ellipticCurveValidation
+=== RUN   TestAccKeycloakRealmKeystoreEcdsaGenerated_updateRealmKeystoreEcdsaGenerated
+=== PAUSE TestAccKeycloakRealmKeystoreEcdsaGenerated_updateRealmKeystoreEcdsaGenerated
+=== RUN   TestAccKeycloakRealmKeystoreHmacGenerated_basic
+=== PAUSE TestAccKeycloakRealmKeystoreHmacGenerated_basic
+=== RUN   TestAccKeycloakRealmKeystoreHmacGenerated_createAfterManualDestroy
+=== PAUSE TestAccKeycloakRealmKeystoreHmacGenerated_createAfterManualDestroy
+=== RUN   TestAccKeycloakRealmKeystoreHmacGenerated_algorithmValidation
+=== PAUSE TestAccKeycloakRealmKeystoreHmacGenerated_algorithmValidation
+=== RUN   TestAccKeycloakRealmKeystoreHmacGenerated_updateRealmKeystoreHmacGenerated
+=== PAUSE TestAccKeycloakRealmKeystoreHmacGenerated_updateRealmKeystoreHmacGenerated
+=== RUN   TestAccKeycloakRealmKeystoreJava_basic
+=== PAUSE TestAccKeycloakRealmKeystoreJava_basic
+=== RUN   TestAccKeycloakRealmKeystoreJava_createAfterManualDestroy
+=== PAUSE TestAccKeycloakRealmKeystoreJava_createAfterManualDestroy
+=== RUN   TestAccKeycloakRealmKeystoreJava_algorithmValidation
+=== PAUSE TestAccKeycloakRealmKeystoreJava_algorithmValidation
+=== RUN   TestAccKeycloakRealmKeystoreJava_updateRsaKeystoreGenerated
+=== PAUSE TestAccKeycloakRealmKeystoreJava_updateRsaKeystoreGenerated
+=== RUN   TestAccKeycloakRealmKeystoreRsaGenerated_basic
+=== PAUSE TestAccKeycloakRealmKeystoreRsaGenerated_basic
+=== RUN   TestAccKeycloakRealmKeystoreRsaGenerated_createAfterManualDestroy
+=== PAUSE TestAccKeycloakRealmKeystoreRsaGenerated_createAfterManualDestroy
+=== RUN   TestAccKeycloakRealmKeystoreRsaGenerated_keySizeValidation
+=== PAUSE TestAccKeycloakRealmKeystoreRsaGenerated_keySizeValidation
+=== RUN   TestAccKeycloakRealmKeystoreRsaGenerated_algorithmValidation
+=== PAUSE TestAccKeycloakRealmKeystoreRsaGenerated_algorithmValidation
+=== RUN   TestAccKeycloakRealmKeystoreRsaGenerated_updateRsaKeystoreGenerated
+=== PAUSE TestAccKeycloakRealmKeystoreRsaGenerated_updateRsaKeystoreGenerated
+=== RUN   TestAccKeycloakRealmKeystoreRsa_basic
+=== PAUSE TestAccKeycloakRealmKeystoreRsa_basic
+=== RUN   TestAccKeycloakRealmKeystoreRsa_createAfterManualDestroy
+=== PAUSE TestAccKeycloakRealmKeystoreRsa_createAfterManualDestroy
+=== RUN   TestAccKeycloakRealmKeystoreRsa_algorithmValidation
+=== PAUSE TestAccKeycloakRealmKeystoreRsa_algorithmValidation
+=== RUN   TestAccKeycloakRealm_basic
+--- PASS: TestAccKeycloakRealm_basic (5.12s)
+=== RUN   TestAccKeycloakRealm_createAfterManualDestroy
+--- PASS: TestAccKeycloakRealm_createAfterManualDestroy (4.87s)
+=== RUN   TestAccKeycloakRealm_import
+--- PASS: TestAccKeycloakRealm_import (2.89s)
+=== RUN   TestAccKeycloakRealm_OTP
+--- PASS: TestAccKeycloakRealm_OTP (2.81s)
+=== RUN   TestAccKeycloakRealm_SmtpServer
+--- PASS: TestAccKeycloakRealm_SmtpServer (3.49s)
+=== RUN   TestAccKeycloakRealm_SmtpServerUpdate
+--- PASS: TestAccKeycloakRealm_SmtpServerUpdate (3.38s)
+=== RUN   TestAccKeycloakRealm_SmtpServerInvalid
+--- PASS: TestAccKeycloakRealm_SmtpServerInvalid (0.22s)
+=== RUN   TestAccKeycloakRealm_themes
+--- PASS: TestAccKeycloakRealm_themes (3.49s)
+=== RUN   TestAccKeycloakRealm_themesValidation
+--- PASS: TestAccKeycloakRealm_themesValidation (1.58s)
+=== RUN   TestAccKeycloakRealm_InternationalizationValidation
+--- PASS: TestAccKeycloakRealm_InternationalizationValidation (0.56s)
+=== RUN   TestAccKeycloakRealm_Internationalization
+--- PASS: TestAccKeycloakRealm_Internationalization (5.03s)
+=== RUN   TestAccKeycloakRealm_InternationalizationDisabled
+--- PASS: TestAccKeycloakRealm_InternationalizationDisabled (2.93s)
+=== RUN   TestAccKeycloakRealm_loginConfigBasic
+--- PASS: TestAccKeycloakRealm_loginConfigBasic (3.73s)
+=== RUN   TestAccKeycloakRealm_loginConfigValidation
+--- PASS: TestAccKeycloakRealm_loginConfigValidation (1.18s)
+=== RUN   TestAccKeycloakRealm_tokenSettings
+--- PASS: TestAccKeycloakRealm_tokenSettings (4.68s)
+=== RUN   TestAccKeycloakRealm_tokenSettingsOauth2Device
+--- PASS: TestAccKeycloakRealm_tokenSettingsOauth2Device (3.45s)
+=== RUN   TestAccKeycloakRealm_computedTokenSettings
+--- PASS: TestAccKeycloakRealm_computedTokenSettings (2.57s)
+=== RUN   TestAccKeycloakRealm_oauth2DeviceSettings
+--- PASS: TestAccKeycloakRealm_oauth2DeviceSettings (2.50s)
+=== RUN   TestAccKeycloakRealm_securityDefensesHeaders
+--- PASS: TestAccKeycloakRealm_securityDefensesHeaders (5.38s)
+=== RUN   TestAccKeycloakRealm_securityDefensesBruteForceDetection
+--- PASS: TestAccKeycloakRealm_securityDefensesBruteForceDetection (4.28s)
+=== RUN   TestAccKeycloakRealm_securityDefenses
+--- PASS: TestAccKeycloakRealm_securityDefenses (7.04s)
+=== RUN   TestAccKeycloakRealm_passwordPolicy
+--- PASS: TestAccKeycloakRealm_passwordPolicy (6.00s)
+=== RUN   TestAccKeycloakRealm_browserFlow
+--- PASS: TestAccKeycloakRealm_browserFlow (4.41s)
+=== RUN   TestAccKeycloakRealm_customAttribute
+--- PASS: TestAccKeycloakRealm_customAttribute (3.46s)
+=== RUN   TestAccKeycloakRealm_passwordPolicyInvalid
+--- PASS: TestAccKeycloakRealm_passwordPolicyInvalid (3.75s)
+=== RUN   TestAccKeycloakRealm_createWithInternalId
+--- PASS: TestAccKeycloakRealm_createWithInternalId (2.42s)
+=== RUN   TestAccKeycloakRealm_internalId
+--- PASS: TestAccKeycloakRealm_internalId (1.29s)
+=== RUN   TestAccKeycloakRealm_default_client_scopes
+--- PASS: TestAccKeycloakRealm_default_client_scopes (2.73s)
+=== RUN   TestAccKeycloakRealm_webauthn
+--- PASS: TestAccKeycloakRealm_webauthn (4.85s)
+=== RUN   TestAccKeycloakRealmUserProfile_featureDisabled
+--- PASS: TestAccKeycloakRealmUserProfile_featureDisabled (2.83s)
+=== RUN   TestAccKeycloakRealmUserProfile_basicEmpty
+    resource_keycloak_realm_user_profile_test.go:42: Step 1/1 error: Error running apply: exit status 1
+        
+        Error: User Profile is disabled for the tf-acc-5526531272924469627 realm
+        
+          with keycloak_realm_user_profile.realm_user_profile,
+          on terraform_plugin_test.tf line 10, in resource "keycloak_realm_user_profile" "realm_user_profile":
+          10: resource "keycloak_realm_user_profile" "realm_user_profile" {
+        
+--- FAIL: TestAccKeycloakRealmUserProfile_basicEmpty (2.48s)
+=== RUN   TestAccKeycloakRealmUserProfile_basicFull
+    resource_keycloak_realm_user_profile_test.go:99: Step 1/1 error: Error running apply: exit status 1
+        
+        Error: error sending PUT request to /admin/realms/tf-acc-627183399057548368/users/profile: 400 Bad Request. Response body: {"errorMessage":"[The attribute 'username' can not be removed, The attribute 'email' can not be removed]"}
+        
+          with keycloak_realm_user_profile.realm_user_profile,
+          on terraform_plugin_test.tf line 10, in resource "keycloak_realm_user_profile" "realm_user_profile":
+          10: resource "keycloak_realm_user_profile" "realm_user_profile" {
+        
+--- FAIL: TestAccKeycloakRealmUserProfile_basicFull (2.79s)
+=== RUN   TestAccKeycloakRealmUserProfile_group
+    resource_keycloak_realm_user_profile_test.go:134: Step 1/3 error: Error running apply: exit status 1
+        
+        Error: error sending PUT request to /admin/realms/tf-acc-4623024210544907884/users/profile: 400 Bad Request. Response body: {"errorMessage":"[The attribute 'username' can not be removed, The attribute 'email' can not be removed]"}
+        
+          with keycloak_realm_user_profile.realm_user_profile,
+          on terraform_plugin_test.tf line 10, in resource "keycloak_realm_user_profile" "realm_user_profile":
+          10: resource "keycloak_realm_user_profile" "realm_user_profile" {
+        
+--- FAIL: TestAccKeycloakRealmUserProfile_group (2.66s)
+=== RUN   TestAccKeycloakRealmUserProfile_attributeValidator
+    resource_keycloak_realm_user_profile_test.go:209: Step 1/6 error: Error running apply: exit status 1
+        
+        Error: error sending PUT request to /admin/realms/tf-acc-3048911980475282026/users/profile: 400 Bad Request. Response body: {"errorMessage":"[The attribute 'username' can not be removed, The attribute 'email' can not be removed]"}
+        
+          with keycloak_realm_user_profile.realm_user_profile,
+          on terraform_plugin_test.tf line 10, in resource "keycloak_realm_user_profile" "realm_user_profile":
+          10: resource "keycloak_realm_user_profile" "realm_user_profile" {
+        
+--- FAIL: TestAccKeycloakRealmUserProfile_attributeValidator (2.89s)
+=== RUN   TestAccKeycloakRealmUserProfile_attributePermissions
+    resource_keycloak_realm_user_profile_test.go:310: Step 1/6 error: Error running apply: exit status 1
+        
+        Error: error sending PUT request to /admin/realms/tf-acc-5258294195542090747/users/profile: 400 Bad Request. Response body: {"errorMessage":"[The attribute 'username' can not be removed, The attribute 'email' can not be removed]"}
+        
+          with keycloak_realm_user_profile.realm_user_profile,
+          on terraform_plugin_test.tf line 10, in resource "keycloak_realm_user_profile" "realm_user_profile":
+          10: resource "keycloak_realm_user_profile" "realm_user_profile" {
+        
+--- FAIL: TestAccKeycloakRealmUserProfile_attributePermissions (2.87s)
+=== RUN   TestAccKeycloakRealmUserProfile_unmanagedPolicyEnabled
+    resource_keycloak_realm_user_profile_test.go:358: Step 1/1 error: Check failed: {"unmanagedAttributePolicy":"ENABLED"}
+        should be equal to
+        {"unmanagedAttributePolicy":"ENABLED"}
+--- FAIL: TestAccKeycloakRealmUserProfile_unmanagedPolicyEnabled (4.02s)
+=== RUN   TestAccKeycloakRequiredAction_basic
+--- PASS: TestAccKeycloakRequiredAction_basic (3.56s)
+=== RUN   TestAccKeycloakRequiredAction_unregisteredAction
+--- PASS: TestAccKeycloakRequiredAction_unregisteredAction (3.36s)
+=== RUN   TestAccKeycloakRequiredAction_invalidAlias
+--- PASS: TestAccKeycloakRequiredAction_invalidAlias (2.39s)
+=== RUN   TestAccKeycloakRequiredAction_import
+--- PASS: TestAccKeycloakRequiredAction_import (3.26s)
+=== RUN   TestAccKeycloakRequiredAction_disabledDefault
+--- PASS: TestAccKeycloakRequiredAction_disabledDefault (2.49s)
+=== RUN   TestAccKeycloakRequiredAction_computedPriority
+--- PASS: TestAccKeycloakRequiredAction_computedPriority (3.00s)
+=== RUN   TestAccKeycloakRole_basicRealm
+=== PAUSE TestAccKeycloakRole_basicRealm
+=== RUN   TestAccKeycloakRole_basicRealmUrlRoleName
+=== PAUSE TestAccKeycloakRole_basicRealmUrlRoleName
+=== RUN   TestAccKeycloakRole_basicClient
+=== PAUSE TestAccKeycloakRole_basicClient
+=== RUN   TestAccKeycloakRole_basicSamlClient
+=== PAUSE TestAccKeycloakRole_basicSamlClient
+=== RUN   TestAccKeycloakRole_basicRealmUpdate
+=== PAUSE TestAccKeycloakRole_basicRealmUpdate
+=== RUN   TestAccKeycloakRole_import
+=== PAUSE TestAccKeycloakRole_import
+=== RUN   TestAccKeycloakRole_basicClientUpdate
+=== PAUSE TestAccKeycloakRole_basicClientUpdate
+=== RUN   TestAccKeycloakRole_createAfterManualDestroy
+=== PAUSE TestAccKeycloakRole_createAfterManualDestroy
+=== RUN   TestAccKeycloakRole_composites
+=== PAUSE TestAccKeycloakRole_composites
+=== RUN   TestAccKeycloakRole_basicWithAttributes
+=== PAUSE TestAccKeycloakRole_basicWithAttributes
+=== RUN   TestAccKeycloakSamlClientDefaultScopes_basic
+=== PAUSE TestAccKeycloakSamlClientDefaultScopes_basic
+=== RUN   TestAccKeycloakSamlClientDefaultScopes_updateClientForceNew
+=== PAUSE TestAccKeycloakSamlClientDefaultScopes_updateClientForceNew
+=== RUN   TestAccKeycloakSamlClientDefaultScopes_updateInPlace
+=== PAUSE TestAccKeycloakSamlClientDefaultScopes_updateInPlace
+=== RUN   TestAccKeycloakSamlClientDefaultScopes_validateClientDoesNotExist
+=== PAUSE TestAccKeycloakSamlClientDefaultScopes_validateClientDoesNotExist
+=== RUN   TestAccKeycloakSamlClientDefaultScopes_authoritativeAdd
+=== PAUSE TestAccKeycloakSamlClientDefaultScopes_authoritativeAdd
+=== RUN   TestAccKeycloakSamlClientDefaultScopes_authoritativeRemove
+=== PAUSE TestAccKeycloakSamlClientDefaultScopes_authoritativeRemove
+=== RUN   TestAccKeycloakSamlClientDefaultScopes_noImportNeeded
+=== PAUSE TestAccKeycloakSamlClientDefaultScopes_noImportNeeded
+=== RUN   TestAccKeycloakSamlClientDefaultScopes_profileAndEmailDefaultScopes
+=== PAUSE TestAccKeycloakSamlClientDefaultScopes_profileAndEmailDefaultScopes
+=== RUN   TestAccKeycloakSamlClientScope_basic
+=== PAUSE TestAccKeycloakSamlClientScope_basic
+=== RUN   TestAccKeycloakSamlClientScope_createAfterManualDestroy
+=== PAUSE TestAccKeycloakSamlClientScope_createAfterManualDestroy
+=== RUN   TestAccKeycloakSamlClientScope_updateRealm
+=== PAUSE TestAccKeycloakSamlClientScope_updateRealm
+=== RUN   TestAccKeycloakSamlClientScope_consentScreenText
+=== PAUSE TestAccKeycloakSamlClientScope_consentScreenText
+=== RUN   TestAccKeycloakSamlClientScope_guiOrder
+=== PAUSE TestAccKeycloakSamlClientScope_guiOrder
+=== RUN   TestAccKeycloakSamlClient_basic
+=== PAUSE TestAccKeycloakSamlClient_basic
+=== RUN   TestAccKeycloakSamlClient_generatedCertificate
+=== PAUSE TestAccKeycloakSamlClient_generatedCertificate
+=== RUN   TestAccKeycloakSamlClient_createAfterManualDestroy
+=== PAUSE TestAccKeycloakSamlClient_createAfterManualDestroy
+=== RUN   TestAccKeycloakSamlClient_updateRealm
+=== PAUSE TestAccKeycloakSamlClient_updateRealm
+=== RUN   TestAccKeycloakSamlClient_updateInPlace
+=== PAUSE TestAccKeycloakSamlClient_updateInPlace
+=== RUN   TestAccKeycloakSamlClient_certificateAndKey
+=== PAUSE TestAccKeycloakSamlClient_certificateAndKey
+=== RUN   TestAccKeycloakSamlClient_encryptionCertificate
+=== PAUSE TestAccKeycloakSamlClient_encryptionCertificate
+=== RUN   TestAccCheckKeycloakSamlClient_authenticationFlowBindingOverrides
+=== PAUSE TestAccCheckKeycloakSamlClient_authenticationFlowBindingOverrides
+=== RUN   TestAccKeycloakSamlClient_extraConfig
+=== PAUSE TestAccKeycloakSamlClient_extraConfig
+=== RUN   TestAccKeycloakSamlClient_extraConfigInvalid
+=== PAUSE TestAccKeycloakSamlClient_extraConfigInvalid
+=== RUN   TestAccKeycloakSamlIdentityProvider_basic
+=== PAUSE TestAccKeycloakSamlIdentityProvider_basic
+=== RUN   TestAccKeycloakSamlIdentityProvider_customProviderId
+=== PAUSE TestAccKeycloakSamlIdentityProvider_customProviderId
+=== RUN   TestAccKeycloakSamlIdentityProvider_nameIdPolicyFormatTransient
+=== PAUSE TestAccKeycloakSamlIdentityProvider_nameIdPolicyFormatTransient
+=== RUN   TestAccKeycloakSamlIdentityProvider_extraConfig
+=== PAUSE TestAccKeycloakSamlIdentityProvider_extraConfig
+=== RUN   TestAccKeycloakSamlIdentityProvider_extraConfigInvalid
+=== PAUSE TestAccKeycloakSamlIdentityProvider_extraConfigInvalid
+=== RUN   TestAccKeycloakSamlIdentityProvider_createAfterManualDestroy
+=== PAUSE TestAccKeycloakSamlIdentityProvider_createAfterManualDestroy
+=== RUN   TestAccKeycloakSamlIdentityProvider_basicUpdateAll
+=== PAUSE TestAccKeycloakSamlIdentityProvider_basicUpdateAll
+=== RUN   TestAccKeycloakSamlScriptProtocolMapper_basicClient
+    test_utils.go:89: keycloak server version is greater than or equal to 19.0.0, skipping...
+--- SKIP: TestAccKeycloakSamlScriptProtocolMapper_basicClient (0.00s)
+=== RUN   TestAccKeycloakSamlScriptProtocolMapper_basicClientScope
+    test_utils.go:89: keycloak server version is greater than or equal to 19.0.0, skipping...
+--- SKIP: TestAccKeycloakSamlScriptProtocolMapper_basicClientScope (0.00s)
+=== RUN   TestAccKeycloakSamlScriptProtocolMapper_import
+    test_utils.go:89: keycloak server version is greater than or equal to 19.0.0, skipping...
+--- SKIP: TestAccKeycloakSamlScriptProtocolMapper_import (0.00s)
+=== RUN   TestAccKeycloakSamlScriptProtocolMapper_update
+    test_utils.go:89: keycloak server version is greater than or equal to 19.0.0, skipping...
+--- SKIP: TestAccKeycloakSamlScriptProtocolMapper_update (0.00s)
+=== RUN   TestAccKeycloakSamlScriptProtocolMapper_createAfterManualDestroy
+    test_utils.go:89: keycloak server version is greater than or equal to 19.0.0, skipping...
+--- SKIP: TestAccKeycloakSamlScriptProtocolMapper_createAfterManualDestroy (0.00s)
+=== RUN   TestAccKeycloakSamlScriptProtocolMapper_updateClientIdForceNew
+    test_utils.go:89: keycloak server version is greater than or equal to 19.0.0, skipping...
+--- SKIP: TestAccKeycloakSamlScriptProtocolMapper_updateClientIdForceNew (0.00s)
+=== RUN   TestAccKeycloakSamlScriptProtocolMapper_updateClientScopeForceNew
+    test_utils.go:89: keycloak server version is greater than or equal to 19.0.0, skipping...
+--- SKIP: TestAccKeycloakSamlScriptProtocolMapper_updateClientScopeForceNew (0.00s)
+=== RUN   TestAccKeycloakSamlUserAttributeProtocolMapper_basicClient
+=== PAUSE TestAccKeycloakSamlUserAttributeProtocolMapper_basicClient
+=== RUN   TestAccKeycloakSamlUserAttributeProtocolMapper_import
+=== PAUSE TestAccKeycloakSamlUserAttributeProtocolMapper_import
+=== RUN   TestAccKeycloakSamlUserAttributeProtocolMapper_update
+=== PAUSE TestAccKeycloakSamlUserAttributeProtocolMapper_update
+=== RUN   TestAccKeycloakSamlUserAttributeProtocolMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakSamlUserAttributeProtocolMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakSamlUserAttributeProtocolMapper_validateClaimValueType
+=== PAUSE TestAccKeycloakSamlUserAttributeProtocolMapper_validateClaimValueType
+=== RUN   TestAccKeycloakSamlUserAttributeProtocolMapper_updateClientIdForceNew
+=== PAUSE TestAccKeycloakSamlUserAttributeProtocolMapper_updateClientIdForceNew
+=== RUN   TestAccKeycloakSamlUserPropertyProtocolMapper_basicClient
+=== PAUSE TestAccKeycloakSamlUserPropertyProtocolMapper_basicClient
+=== RUN   TestAccKeycloakSamlUserPropertyProtocolMapper_import
+=== PAUSE TestAccKeycloakSamlUserPropertyProtocolMapper_import
+=== RUN   TestAccKeycloakSamlUserPropertyProtocolMapper_update
+=== PAUSE TestAccKeycloakSamlUserPropertyProtocolMapper_update
+=== RUN   TestAccKeycloakSamlUserPropertyProtocolMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakSamlUserPropertyProtocolMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakSamlUserPropertyProtocolMapper_validateClaimValueType
+=== PAUSE TestAccKeycloakSamlUserPropertyProtocolMapper_validateClaimValueType
+=== RUN   TestAccKeycloakSamlUserPropertyProtocolMapper_updateClientIdForceNew
+=== PAUSE TestAccKeycloakSamlUserPropertyProtocolMapper_updateClientIdForceNew
+=== RUN   TestAccKeycloakUserGroups_basic
+=== PAUSE TestAccKeycloakUserGroups_basic
+=== RUN   TestAccKeycloakUserGroups_basicNonExhaustive
+=== PAUSE TestAccKeycloakUserGroups_basicNonExhaustive
+=== RUN   TestAccKeycloakUserGroups_update
+=== PAUSE TestAccKeycloakUserGroups_update
+=== RUN   TestAccKeycloakUserGroups_updateNonExhaustive
+=== PAUSE TestAccKeycloakUserGroups_updateNonExhaustive
+=== RUN   TestAccKeycloakUserRoles_basic
+=== PAUSE TestAccKeycloakUserRoles_basic
+=== RUN   TestAccKeycloakUserRoles_update
+=== PAUSE TestAccKeycloakUserRoles_update
+=== RUN   TestAccKeycloakUserRoles_updateNonExhaustive
+=== PAUSE TestAccKeycloakUserRoles_updateNonExhaustive
+=== RUN   TestAccKeycloakUserTemplateIdentityProviderMapper_basic
+=== PAUSE TestAccKeycloakUserTemplateIdentityProviderMapper_basic
+=== RUN   TestAccKeycloakUserTemplateIdentityProviderMapper_withExtraConfig
+=== PAUSE TestAccKeycloakUserTemplateIdentityProviderMapper_withExtraConfig
+=== RUN   TestAccKeycloakUserTemplateIdentityProviderMapper_createAfterManualDestroy
+=== PAUSE TestAccKeycloakUserTemplateIdentityProviderMapper_createAfterManualDestroy
+=== RUN   TestAccKeycloakUserTemplateIdentityProviderMapper_withExtraConfig_createAfterManualDestroy
+=== PAUSE TestAccKeycloakUserTemplateIdentityProviderMapper_withExtraConfig_createAfterManualDestroy
+=== RUN   TestAccKeycloakUserTemplateIdentityProviderMapper_basicUpdateAll
+=== PAUSE TestAccKeycloakUserTemplateIdentityProviderMapper_basicUpdateAll
+=== RUN   TestAccKeycloakUser_basic
+=== PAUSE TestAccKeycloakUser_basic
+=== RUN   TestAccKeycloakUser_import
+=== PAUSE TestAccKeycloakUser_import
+=== RUN   TestAccKeycloakUser_withInitialPassword
+=== PAUSE TestAccKeycloakUser_withInitialPassword
+=== RUN   TestAccKeycloakUser_createAfterManualDestroy
+=== PAUSE TestAccKeycloakUser_createAfterManualDestroy
+=== RUN   TestAccKeycloakUser_updateUsername
+=== PAUSE TestAccKeycloakUser_updateUsername
+=== RUN   TestAccKeycloakUser_updateWithInitialPasswordChangeDoesNotReset
+=== PAUSE TestAccKeycloakUser_updateWithInitialPasswordChangeDoesNotReset
+=== RUN   TestAccKeycloakUser_updateInPlace
+=== PAUSE TestAccKeycloakUser_updateInPlace
+=== RUN   TestAccKeycloakUser_unsetOptionalAttributes
+=== PAUSE TestAccKeycloakUser_unsetOptionalAttributes
+=== RUN   TestAccKeycloakUser_validateLowercaseUsernames
+=== PAUSE TestAccKeycloakUser_validateLowercaseUsernames
+=== RUN   TestAccKeycloakUser_federatedLink
+--- PASS: TestAccKeycloakUser_federatedLink (4.99s)
+=== RUN   TestAccKeycloakUsersPermission_basic
+--- PASS: TestAccKeycloakUsersPermission_basic (5.15s)
+=== CONT  TestAccKeycloakUserGroups_basic
+=== CONT  TestAccKeycloakUserTemplateIdentityProviderMapper_basicUpdateAll
+=== CONT  TestAccKeycloakDataSourceAuthenticationExecution_basic
+=== CONT  TestAccKeycloakSamlUserPropertyProtocolMapper_updateClientIdForceNew
+--- PASS: TestAccKeycloakDataSourceAuthenticationExecution_basic (2.06s)
+=== CONT  TestAccKeycloakSamlClientScope_basic
+--- PASS: TestAccKeycloakUserTemplateIdentityProviderMapper_basicUpdateAll (3.49s)
+=== CONT  TestAccKeycloakSamlClientDefaultScopes_profileAndEmailDefaultScopes
+--- PASS: TestAccKeycloakUserGroups_basic (3.93s)
+=== CONT  TestAccKeycloakSamlClientDefaultScopes_noImportNeeded
+--- PASS: TestAccKeycloakSamlUserPropertyProtocolMapper_updateClientIdForceNew (4.13s)
+=== CONT  TestAccKeycloakSamlClientDefaultScopes_authoritativeRemove
+--- PASS: TestAccKeycloakSamlClientScope_basic (2.12s)
+=== CONT  TestAccKeycloakSamlClientDefaultScopes_authoritativeAdd
+--- PASS: TestAccKeycloakSamlClientDefaultScopes_profileAndEmailDefaultScopes (2.19s)
+=== CONT  TestAccKeycloakSamlClientDefaultScopes_validateClientDoesNotExist
+=== NAME  TestAccKeycloakSamlClientDefaultScopes_authoritativeRemove
+    resource_keycloak_saml_client_default_scopes_test.go:180: Step 1/2 error: After applying this test step and performing a `terraform refresh`, the plan was not empty.
+        stdout
+        
+        
+        Terraform used the selected providers to generate the following execution
+        plan. Resource actions are indicated with the following symbols:
+          ~ update in-place
+        
+        Terraform will perform the following actions:
+        
+          # keycloak_saml_client_default_scopes.default_scopes will be updated in-place
+          ~ resource "keycloak_saml_client_default_scopes" "default_scopes" {
+              ~ default_scopes = [
+                  - "saml_organization",
+                    # (3 unchanged elements hidden)
+                ]
+                id             = "tf-acc-3351663872932440298/c2cf3063-41f7-461c-ad97-0e9593160658"
+                # (2 unchanged attributes hidden)
+            }
+        
+        Plan: 0 to add, 1 to change, 0 to destroy.
+=== NAME  TestAccKeycloakSamlClientDefaultScopes_authoritativeAdd
+    resource_keycloak_saml_client_default_scopes_test.go:132: Step 1/2 error: After applying this test step and performing a `terraform refresh`, the plan was not empty.
+        stdout
+        
+        
+        Terraform used the selected providers to generate the following execution
+        plan. Resource actions are indicated with the following symbols:
+          ~ update in-place
+        
+        Terraform will perform the following actions:
+        
+          # keycloak_saml_client_default_scopes.default_scopes will be updated in-place
+          ~ resource "keycloak_saml_client_default_scopes" "default_scopes" {
+              ~ default_scopes = [
+                  - "saml_organization",
+                    # (4 unchanged elements hidden)
+                ]
+                id             = "tf-acc-3351663872932440298/61ba45fd-464b-496b-9863-8c3fb137664f"
+                # (2 unchanged attributes hidden)
+            }
+        
+        Plan: 0 to add, 1 to change, 0 to destroy.
+--- FAIL: TestAccKeycloakSamlClientDefaultScopes_authoritativeRemove (2.55s)
+=== CONT  TestAccKeycloakSamlClientDefaultScopes_updateInPlace
+--- FAIL: TestAccKeycloakSamlClientDefaultScopes_authoritativeAdd (2.61s)
+=== CONT  TestAccKeycloakSamlClientDefaultScopes_updateClientForceNew
+--- PASS: TestAccKeycloakSamlClientDefaultScopes_validateClientDoesNotExist (1.23s)
+=== CONT  TestAccKeycloakSamlClientDefaultScopes_basic
+=== NAME  TestAccKeycloakSamlClientDefaultScopes_noImportNeeded
+    resource_keycloak_saml_client_default_scopes_test.go:218: Step 2/2 error: After applying this test step and performing a `terraform refresh`, the plan was not empty.
+        stdout
+        
+        
+        Terraform used the selected providers to generate the following execution
+        plan. Resource actions are indicated with the following symbols:
+          ~ update in-place
+        
+        Terraform will perform the following actions:
+        
+          # keycloak_saml_client_default_scopes.default_scopes will be updated in-place
+          ~ resource "keycloak_saml_client_default_scopes" "default_scopes" {
+              ~ default_scopes = [
+                  - "saml_organization",
+                    # (2 unchanged elements hidden)
+                ]
+                id             = "tf-acc-3351663872932440298/90b91b45-5ce8-4cfa-932e-2fa938042ff0"
+                # (2 unchanged attributes hidden)
+            }
+        
+        Plan: 0 to add, 1 to change, 0 to destroy.
+--- FAIL: TestAccKeycloakSamlClientDefaultScopes_noImportNeeded (3.83s)
+=== CONT  TestAccKeycloakRole_basicWithAttributes
+=== NAME  TestAccKeycloakSamlClientDefaultScopes_updateInPlace
+    resource_keycloak_saml_client_default_scopes_test.go:82: Step 1/3 error: After applying this test step and performing a `terraform refresh`, the plan was not empty.
+        stdout
+        
+        
+        Terraform used the selected providers to generate the following execution
+        plan. Resource actions are indicated with the following symbols:
+          ~ update in-place
+        
+        Terraform will perform the following actions:
+        
+          # keycloak_saml_client_default_scopes.default_scopes will be updated in-place
+          ~ resource "keycloak_saml_client_default_scopes" "default_scopes" {
+              ~ default_scopes = [
+                  - "saml_organization",
+                    # (2 unchanged elements hidden)
+                ]
+                id             = "tf-acc-3351663872932440298/165641c7-d1ea-4054-94fc-070c9eac0c89"
+                # (2 unchanged attributes hidden)
+            }
+        
+        Plan: 0 to add, 1 to change, 0 to destroy.
+=== NAME  TestAccKeycloakSamlClientDefaultScopes_updateClientForceNew
+    resource_keycloak_saml_client_default_scopes_test.go:51: Step 1/2 error: After applying this test step and performing a `terraform refresh`, the plan was not empty.
+        stdout
+        
+        
+        Terraform used the selected providers to generate the following execution
+        plan. Resource actions are indicated with the following symbols:
+          ~ update in-place
+        
+        Terraform will perform the following actions:
+        
+          # keycloak_saml_client_default_scopes.default_scopes will be updated in-place
+          ~ resource "keycloak_saml_client_default_scopes" "default_scopes" {
+              ~ default_scopes = [
+                  - "saml_organization",
+                    # (2 unchanged elements hidden)
+                ]
+                id             = "tf-acc-3351663872932440298/8af5b5ed-f1db-4108-a9a9-9b5b9be03396"
+                # (2 unchanged attributes hidden)
+            }
+        
+        Plan: 0 to add, 1 to change, 0 to destroy.
+=== NAME  TestAccKeycloakSamlClientDefaultScopes_basic
+    resource_keycloak_saml_client_default_scopes_test.go:25: Step 1/2 error: After applying this test step and performing a `terraform refresh`, the plan was not empty.
+        stdout
+        
+        
+        Terraform used the selected providers to generate the following execution
+        plan. Resource actions are indicated with the following symbols:
+          ~ update in-place
+        
+        Terraform will perform the following actions:
+        
+          # keycloak_saml_client_default_scopes.default_scopes will be updated in-place
+          ~ resource "keycloak_saml_client_default_scopes" "default_scopes" {
+              ~ default_scopes = [
+                  - "saml_organization",
+                    # (2 unchanged elements hidden)
+                ]
+                id             = "tf-acc-3351663872932440298/da31b45b-f43b-42f1-a093-ca265af82ee5"
+                # (2 unchanged attributes hidden)
+            }
+        
+        Plan: 0 to add, 1 to change, 0 to destroy.
+--- FAIL: TestAccKeycloakSamlClientDefaultScopes_updateInPlace (2.43s)
+=== CONT  TestAccKeycloakRole_composites
+--- FAIL: TestAccKeycloakSamlClientDefaultScopes_updateClientForceNew (2.54s)
+=== CONT  TestAccKeycloakRole_createAfterManualDestroy
+--- FAIL: TestAccKeycloakSamlClientDefaultScopes_basic (2.52s)
+=== CONT  TestAccKeycloakRole_basicClientUpdate
+--- PASS: TestAccKeycloakRole_basicWithAttributes (2.77s)
+=== CONT  TestAccKeycloakRole_import
+--- PASS: TestAccKeycloakRole_createAfterManualDestroy (3.62s)
+=== CONT  TestAccKeycloakRole_basicRealmUpdate
+--- PASS: TestAccKeycloakRole_basicClientUpdate (5.55s)
+=== CONT  TestAccKeycloakRole_basicSamlClient
+--- PASS: TestAccKeycloakRole_import (5.91s)
+=== CONT  TestAccKeycloakRole_basicClient
+--- PASS: TestAccKeycloakRole_basicSamlClient (2.94s)
+=== CONT  TestAccKeycloakRole_basicRealmUrlRoleName
+--- PASS: TestAccKeycloakRole_basicRealmUpdate (5.05s)
+=== CONT  TestAccKeycloakRole_basicRealm
+--- PASS: TestAccKeycloakRole_basicClient (2.54s)
+=== CONT  TestAccKeycloakRealmKeystoreRsa_algorithmValidation
+--- PASS: TestAccKeycloakRole_composites (9.95s)
+=== CONT  TestAccKeycloakRealmKeystoreRsa_createAfterManualDestroy
+--- PASS: TestAccKeycloakRole_basicRealmUrlRoleName (2.27s)
+=== CONT  TestAccKeycloakRealmKeystoreRsa_basic
+--- PASS: TestAccKeycloakRole_basicRealm (2.26s)
+=== CONT  TestAccKeycloakRealmKeystoreRsaGenerated_updateRsaKeystoreGenerated
+--- PASS: TestAccKeycloakRealmKeystoreRsa_algorithmValidation (2.26s)
+=== CONT  TestAccKeycloakRealmKeystoreRsaGenerated_algorithmValidation
+--- PASS: TestAccKeycloakRealmKeystoreRsa_createAfterManualDestroy (3.56s)
+=== CONT  TestAccKeycloakRealmKeystoreRsaGenerated_keySizeValidation
+--- PASS: TestAccKeycloakRealmKeystoreRsa_basic (2.43s)
+=== CONT  TestAccKeycloakRealmKeystoreRsaGenerated_createAfterManualDestroy
+--- PASS: TestAccKeycloakRealmKeystoreRsaGenerated_algorithmValidation (1.95s)
+=== CONT  TestAccKeycloakRealmKeystoreRsaGenerated_basic
+--- PASS: TestAccKeycloakRealmKeystoreRsaGenerated_updateRsaKeystoreGenerated (3.32s)
+=== CONT  TestAccKeycloakRealmKeystoreJava_updateRsaKeystoreGenerated
+--- PASS: TestAccKeycloakRealmKeystoreRsaGenerated_keySizeValidation (2.00s)
+=== CONT  TestAccKeycloakRealmKeystoreJava_algorithmValidation
+--- PASS: TestAccKeycloakRealmKeystoreRsaGenerated_basic (2.45s)
+=== CONT  TestAccKeycloakRealmKeystoreJava_createAfterManualDestroy
+--- PASS: TestAccKeycloakRealmKeystoreRsaGenerated_createAfterManualDestroy (3.48s)
+=== CONT  TestAccKeycloakRealmKeystoreJava_basic
+--- PASS: TestAccKeycloakRealmKeystoreJava_algorithmValidation (1.97s)
+=== CONT  TestAccKeycloakRealmKeystoreHmacGenerated_updateRealmKeystoreHmacGenerated
+--- PASS: TestAccKeycloakRealmKeystoreJava_updateRsaKeystoreGenerated (3.43s)
+=== CONT  TestAccKeycloakRealmKeystoreHmacGenerated_algorithmValidation
+--- PASS: TestAccKeycloakRealmKeystoreJava_basic (2.29s)
+=== CONT  TestAccKeycloakRealmKeystoreHmacGenerated_createAfterManualDestroy
+--- PASS: TestAccKeycloakRealmKeystoreHmacGenerated_algorithmValidation (1.84s)
+=== CONT  TestAccKeycloakRealmKeystoreHmacGenerated_basic
+--- PASS: TestAccKeycloakRealmKeystoreJava_createAfterManualDestroy (3.27s)
+=== CONT  TestAccKeycloakRealmKeystoreEcdsaGenerated_updateRealmKeystoreEcdsaGenerated
+--- PASS: TestAccKeycloakRealmKeystoreHmacGenerated_updateRealmKeystoreHmacGenerated (3.06s)
+=== CONT  TestAccKeycloakRealmKeystoreEcdsaGenerated_ellipticCurveValidation
+--- PASS: TestAccKeycloakRealmKeystoreHmacGenerated_basic (2.23s)
+=== CONT  TestAccKeycloakRealmKeystoreEcdsaGenerated_createAfterManualDestroy
+--- PASS: TestAccKeycloakRealmKeystoreHmacGenerated_createAfterManualDestroy (3.16s)
+=== CONT  TestAccKeycloakRealmKeystoreEcdsaGenerated_basic
+--- PASS: TestAccKeycloakRealmKeystoreEcdsaGenerated_ellipticCurveValidation (1.91s)
+=== CONT  TestAccKeycloakRealmKeystoreAesGenerated_updateRealmKeystoreAesGenerated
+--- PASS: TestAccKeycloakRealmKeystoreEcdsaGenerated_updateRealmKeystoreEcdsaGenerated (3.18s)
+=== CONT  TestAccKeycloakRealmKeystoreAesGenerated_secretSizeValidation
+--- PASS: TestAccKeycloakRealmKeystoreEcdsaGenerated_basic (2.27s)
+=== CONT  TestAccKeycloakRealmKeystoreAesGenerated_createAfterManualDestroy
+--- PASS: TestAccKeycloakRealmKeystoreAesGenerated_secretSizeValidation (1.90s)
+=== CONT  TestAccKeycloakRealmKeystoreAesGenerated_basic
+--- PASS: TestAccKeycloakRealmKeystoreEcdsaGenerated_createAfterManualDestroy (3.23s)
+=== CONT  TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_updateRealmIdForceNew
+--- PASS: TestAccKeycloakRealmKeystoreAesGenerated_updateRealmKeystoreAesGenerated (3.20s)
+=== CONT  TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_updateClientScopeForceNew
+--- PASS: TestAccKeycloakRealmKeystoreAesGenerated_basic (2.26s)
+=== CONT  TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_updateClientIdForceNew
+--- PASS: TestAccKeycloakRealmKeystoreAesGenerated_createAfterManualDestroy (3.12s)
+=== CONT  TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_validateClaimValueType
+--- PASS: TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_validateClaimValueType (0.32s)
+=== CONT  TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_updateRealmIdForceNew (3.27s)
+=== CONT  TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_updateNote
+--- PASS: TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_updateClientScopeForceNew (3.24s)
+=== CONT  TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_updateClaim
+--- PASS: TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_updateClientIdForceNew (3.64s)
+=== CONT  TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_import
+--- PASS: TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_createAfterManualDestroy (3.89s)
+=== CONT  TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_updateClientScopeForceNew
+--- PASS: TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_updateNote (3.80s)
+=== CONT  TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_basicClientScope
+--- PASS: TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_updateClaim (3.78s)
+=== CONT  TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_basicClient
+--- PASS: TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_import (3.08s)
+=== CONT  TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_updateRealmIdForceNew
+--- PASS: TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_basicClientScope (1.83s)
+=== CONT  TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_updateClientIdForceNew
+--- PASS: TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_basicClient (1.91s)
+=== CONT  TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_validateClaimValueType
+--- PASS: TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_validateClaimValueType (0.30s)
+=== CONT  TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_updateClientScopeForceNew (3.25s)
+=== CONT  TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_update
+--- PASS: TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_updateRealmIdForceNew (3.42s)
+=== CONT  TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_import
+--- PASS: TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_updateClientIdForceNew (3.56s)
+=== CONT  TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_basicClientScope
+--- PASS: TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_createAfterManualDestroy (3.66s)
+=== CONT  TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_basicClient
+--- PASS: TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_update (3.52s)
+=== CONT  TestAccKeycloakOpenIdUserPropertyProtocolMapper_updateRealmIdForceNew
+--- PASS: TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_basicClientScope (1.86s)
+=== CONT  TestAccKeycloakOpenIdUserPropertyProtocolMapper_updateClientScopeForceNew
+--- PASS: TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_import (2.92s)
+=== CONT  TestAccKeycloakOpenIdUserPropertyProtocolMapper_updateClientIdForceNew
+--- PASS: TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_basicClient (2.02s)
+=== CONT  TestAccKeycloakOpenIdUserPropertyProtocolMapper_validateClaimValueType
+--- PASS: TestAccKeycloakOpenIdUserPropertyProtocolMapper_validateClaimValueType (0.32s)
+=== CONT  TestAccKeycloakOpenIdUserPropertyProtocolMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakOpenIdUserPropertyProtocolMapper_updateRealmIdForceNew (3.42s)
+=== CONT  TestAccKeycloakOpenIdUserPropertyProtocolMapper_update
+--- PASS: TestAccKeycloakOpenIdUserPropertyProtocolMapper_updateClientScopeForceNew (3.36s)
+=== CONT  TestAccKeycloakOpenIdUserPropertyProtocolMapper_import
+--- PASS: TestAccKeycloakOpenIdUserPropertyProtocolMapper_updateClientIdForceNew (3.55s)
+=== CONT  TestAccKeycloakOpenIdUserPropertyProtocolMapper_basicClientScope
+--- PASS: TestAccKeycloakOpenIdUserPropertyProtocolMapper_createAfterManualDestroy (3.47s)
+=== CONT  TestAccKeycloakOpenIdUserPropertyProtocolMapper_basicClient
+--- PASS: TestAccKeycloakOpenIdUserPropertyProtocolMapper_basicClientScope (1.88s)
+=== CONT  TestAccKeycloakOpenIdUserClientRoleProtocolMapper_clientAssignmentRolePrefix
+--- PASS: TestAccKeycloakOpenIdUserPropertyProtocolMapper_update (3.47s)
+=== CONT  TestAccKeycloakOpenIdUserClientRoleProtocolMapper_clientAssignment
+--- PASS: TestAccKeycloakOpenIdUserPropertyProtocolMapper_import (2.89s)
+=== CONT  TestAccKeycloakOpenIdUserClientRoleProtocolMapper_updateRealmIdForceNew
+--- PASS: TestAccKeycloakOpenIdUserPropertyProtocolMapper_basicClient (1.99s)
+=== CONT  TestAccKeycloakOpenIdUserClientRoleProtocolMapper_updateClientScopeForceNew
+--- PASS: TestAccKeycloakOpenIdUserClientRoleProtocolMapper_clientAssignmentRolePrefix (3.54s)
+=== CONT  TestAccKeycloakOpenIdUserClientRoleProtocolMapper_updateClientIdForceNew
+--- PASS: TestAccKeycloakOpenIdUserClientRoleProtocolMapper_updateRealmIdForceNew (3.44s)
+=== CONT  TestAccKeycloakOpenIdUserClientRoleProtocolMapper_validateClaimValueType
+--- PASS: TestAccKeycloakOpenIdUserClientRoleProtocolMapper_clientAssignment (3.57s)
+=== CONT  TestAccKeycloakOpenIdUserClientRoleProtocolMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakOpenIdUserClientRoleProtocolMapper_validateClaimValueType (0.29s)
+=== CONT  TestAccKeycloakOpenIdUserClientRoleProtocolMapper_update
+--- PASS: TestAccKeycloakOpenIdUserClientRoleProtocolMapper_updateClientScopeForceNew (3.34s)
+=== CONT  TestAccKeycloakOpenIdUserClientRoleProtocolMapper_import
+--- PASS: TestAccKeycloakOpenIdUserClientRoleProtocolMapper_import (3.14s)
+=== CONT  TestAccKeycloakOpenIdUserClientRoleProtocolMapper_basicClientScope
+--- PASS: TestAccKeycloakOpenIdUserClientRoleProtocolMapper_updateClientIdForceNew (3.70s)
+=== CONT  TestAccKeycloakOpenIdUserClientRoleProtocolMapper_basicClient
+--- PASS: TestAccKeycloakOpenIdUserClientRoleProtocolMapper_createAfterManualDestroy (3.62s)
+=== CONT  TestAccKeycloakOpenIdUserAttributeProtocolMapper_updateClientScopeForceNew
+--- PASS: TestAccKeycloakOpenIdUserClientRoleProtocolMapper_update (3.67s)
+=== CONT  TestAccKeycloakOpenIdUserAttributeProtocolMapper_updateClientIdForceNew
+--- PASS: TestAccKeycloakOpenIdUserClientRoleProtocolMapper_basicClientScope (2.09s)
+=== CONT  TestAccKeycloakOpenIdUserAttributeProtocolMapper_validateClaimValueType
+--- PASS: TestAccKeycloakOpenIdUserClientRoleProtocolMapper_basicClient (2.31s)
+=== CONT  TestAccKeycloakOpenIdUserAttributeProtocolMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakOpenIdUserAttributeProtocolMapper_validateClaimValueType (0.43s)
+=== CONT  TestAccKeycloakOpenIdUserAttributeProtocolMapper_update
+--- PASS: TestAccKeycloakOpenIdUserAttributeProtocolMapper_updateClientScopeForceNew (3.70s)
+=== CONT  TestAccKeycloakOpenIdUserAttributeProtocolMapper_import
+--- PASS: TestAccKeycloakOpenIdUserAttributeProtocolMapper_updateClientIdForceNew (3.88s)
+=== CONT  TestAccKeycloakOpenIdUserAttributeProtocolMapper_basicClientScope
+--- PASS: TestAccKeycloakOpenIdUserAttributeProtocolMapper_update (3.52s)
+=== CONT  TestAccKeycloakOpenIdUserAttributeProtocolMapper_basicClient
+--- PASS: TestAccKeycloakOpenIdUserAttributeProtocolMapper_createAfterManualDestroy (3.71s)
+=== CONT  TestAccKeycloakOpenIdHardcodedRoleProtocolMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakOpenIdUserAttributeProtocolMapper_basicClientScope (2.00s)
+=== CONT  TestAccKeycloakOpenIdHardcodedRoleProtocolMapper_update
+--- PASS: TestAccKeycloakOpenIdUserAttributeProtocolMapper_import (3.03s)
+=== CONT  TestAccKeycloakOpenIdHardcodedRoleProtocolMapper_import
+--- PASS: TestAccKeycloakOpenIdUserAttributeProtocolMapper_basicClient (2.19s)
+=== CONT  TestAccKeycloakOpenIdHardcodedRoleProtocolMapper_basicRealmRole_clientScope
+--- PASS: TestAccKeycloakOpenIdHardcodedRoleProtocolMapper_createAfterManualDestroy (3.95s)
+=== CONT  TestAccKeycloakOpenIdHardcodedRoleProtocolMapper_basicClientRole_client
+--- PASS: TestAccKeycloakOpenIdHardcodedRoleProtocolMapper_update (3.96s)
+=== CONT  TestAccKeycloakLdapUserFederation_basicUpdateKerberosSettings
+--- PASS: TestAccKeycloakOpenIdHardcodedRoleProtocolMapper_import (3.43s)
+=== CONT  TestAccKeycloakOpenIdHardcodedRoleProtocolMapper_basicRealmRole_client
+--- PASS: TestAccKeycloakOpenIdHardcodedRoleProtocolMapper_basicRealmRole_clientScope (2.12s)
+=== CONT  TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_updateRealmIdForceNew
+--- PASS: TestAccKeycloakOpenIdHardcodedRoleProtocolMapper_basicRealmRole_client (2.18s)
+=== CONT  TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_updateClientScopeForceNew
+--- PASS: TestAccKeycloakOpenIdHardcodedRoleProtocolMapper_basicClientRole_client (2.43s)
+=== CONT  TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_updateClientIdForceNew
+--- PASS: TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_updateRealmIdForceNew (3.54s)
+=== CONT  TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_validateClaimValueType
+--- PASS: TestAccKeycloakLdapUserFederation_basicUpdateKerberosSettings (3.93s)
+=== CONT  TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_validateClaimValueType (0.43s)
+=== CONT  TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_update
+--- PASS: TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_updateClientScopeForceNew (3.57s)
+=== CONT  TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_import
+--- PASS: TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_updateClientIdForceNew (3.79s)
+=== CONT  TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_basicClientScope
+--- PASS: TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_createAfterManualDestroy (3.76s)
+=== CONT  TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_basicClient
+--- PASS: TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_update (3.59s)
+=== CONT  TestAccKeycloakOpenIdGroupMembershipProtocolMapper_updateClientScopeForceNew
+--- PASS: TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_basicClientScope (2.05s)
+=== CONT  TestAccKeycloakOpenIdGroupMembershipProtocolMapper_updateClientIdForceNew
+--- PASS: TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_import (3.18s)
+=== CONT  TestAccKeycloakOpenIdGroupMembershipProtocolMapper_updateMapperNameForceNew
+--- PASS: TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_basicClient (2.05s)
+=== CONT  TestAccKeycloakOpenIdGroupMembershipProtocolMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakOpenIdGroupMembershipProtocolMapper_updateClientScopeForceNew (3.46s)
+=== CONT  TestAccKeycloakOpenIdGroupMembershipProtocolMapper_update
+--- PASS: TestAccKeycloakOpenIdGroupMembershipProtocolMapper_updateClientIdForceNew (3.71s)
+=== CONT  TestAccKeycloakOpenIdGroupMembershipProtocolMapper_import
+--- PASS: TestAccKeycloakOpenIdGroupMembershipProtocolMapper_updateMapperNameForceNew (3.70s)
+=== CONT  TestAccKeycloakOpenIdGroupMembershipProtocolMapper_basicClient
+--- PASS: TestAccKeycloakOpenIdGroupMembershipProtocolMapper_createAfterManualDestroy (3.67s)
+=== CONT  TestAccKeycloakOpenIdGroupMembershipProtocolMapper_basicClientScope
+--- PASS: TestAccKeycloakOpenIdGroupMembershipProtocolMapper_basicClient (2.06s)
+=== CONT  TestAccKeycloakOpenIdFullNameProtocolMapper_updateClientScopeForceNew
+--- PASS: TestAccKeycloakOpenIdGroupMembershipProtocolMapper_update (3.67s)
+=== CONT  TestAccKeycloakOpenIdFullNameProtocolMapper_updateClientIdForceNew
+--- PASS: TestAccKeycloakOpenIdGroupMembershipProtocolMapper_import (3.10s)
+=== CONT  TestAccKeycloakOpenIdFullNameProtocolMapper_updateMapperNameForceNew
+--- PASS: TestAccKeycloakOpenIdGroupMembershipProtocolMapper_basicClientScope (1.96s)
+=== CONT  TestAccKeycloakOpenIdFullNameProtocolMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakOpenIdFullNameProtocolMapper_updateClientScopeForceNew (3.96s)
+=== CONT  TestAccKeycloakOpenIdFullNameProtocolMapper_update
+--- PASS: TestAccKeycloakOpenIdFullNameProtocolMapper_updateClientIdForceNew (4.24s)
+=== CONT  TestAccKeycloakOpenIdFullNameProtocolMapper_import
+--- PASS: TestAccKeycloakOpenIdFullNameProtocolMapper_updateMapperNameForceNew (4.29s)
+=== CONT  TestAccKeycloakOpenIdFullNameProtocolMapper_basicClientScope
+--- PASS: TestAccKeycloakOpenIdFullNameProtocolMapper_createAfterManualDestroy (4.28s)
+=== CONT  TestAccKeycloakOpenIdFullNameProtocolMapper_basicClient
+--- PASS: TestAccKeycloakOpenIdFullNameProtocolMapper_basicClientScope (2.15s)
+=== CONT  TestAccKeycloakOpenidClient_oauth2DeviceAuthorizationGrantEnabled
+--- PASS: TestAccKeycloakOpenIdFullNameProtocolMapper_basicClient (2.34s)
+=== CONT  TestAccKeycloakOpenidClient_extraConfigInvalid
+--- PASS: TestAccKeycloakOpenidClient_extraConfigInvalid (0.32s)
+=== CONT  TestAccKeycloakOpenidClient_extraConfig
+--- PASS: TestAccKeycloakOpenIdFullNameProtocolMapper_import (3.37s)
+=== CONT  TestAccKeycloakOpenidClient_useRefreshTokensClientCredentials
+--- PASS: TestAccKeycloakOpenIdFullNameProtocolMapper_update (4.29s)
+=== CONT  TestAccKeycloakOpenidClient_useRefreshTokens
+--- PASS: TestAccKeycloakOpenidClient_oauth2DeviceAuthorizationGrantEnabled (5.07s)
+=== CONT  TestAccKeycloakOpenidClient_import
+--- PASS: TestAccKeycloakOpenidClient_extraConfig (6.12s)
+=== CONT  TestAccKeycloakOpenidClient_loginTheme
+--- PASS: TestAccKeycloakOpenidClient_useRefreshTokensClientCredentials (5.99s)
+=== CONT  TestAccKeycloakOpenidClient_authenticationFlowBindingOverrides
+--- PASS: TestAccKeycloakOpenidClient_useRefreshTokens (6.02s)
+=== CONT  TestAccKeycloakOpenidClient_excludeSessionStateFromAuthResponse
+--- PASS: TestAccKeycloakOpenidClient_import (4.35s)
+=== CONT  TestAccKeycloakOpenidClient_pkceCodeChallengeMethod
+--- PASS: TestAccKeycloakOpenidClient_authenticationFlowBindingOverrides (4.68s)
+=== CONT  TestAccKeycloakOpenidClient_bearerClientNoGrantsValidation
+--- PASS: TestAccKeycloakOpenidClient_loginTheme (6.84s)
+=== CONT  TestAccKeycloakOpenidClient_publicClientCredentialsValidation
+--- PASS: TestAccKeycloakOpenidClient_bearerClientNoGrantsValidation (3.21s)
+=== CONT  TestAccKeycloakOpenidClient_redirectUrisValidation
+--- PASS: TestAccKeycloakOpenidClient_publicClientCredentialsValidation (1.12s)
+=== CONT  TestAccKeycloakOpenidClient_secret
+--- PASS: TestAccKeycloakOpenidClient_excludeSessionStateFromAuthResponse (7.64s)
+=== CONT  TestAccKeycloakOpenidClient_Device_basic
+--- PASS: TestAccKeycloakOpenidClient_redirectUrisValidation (2.04s)
+=== CONT  TestAccKeycloakOpenidClient_ClientTimeouts_basic
+--- PASS: TestAccKeycloakOpenidClient_pkceCodeChallengeMethod (7.65s)
+=== CONT  TestAccKeycloakOpenidClient_AccessToken_basic
+--- PASS: TestAccKeycloakOpenidClient_Device_basic (2.86s)
+=== CONT  TestAccKeycloakOpenidClient_frontChannel
+--- PASS: TestAccKeycloakOpenidClient_secret (4.08s)
+=== CONT  TestAccKeycloakSamlUserPropertyProtocolMapper_validateClaimValueType
+--- PASS: TestAccKeycloakSamlUserPropertyProtocolMapper_validateClaimValueType (0.34s)
+=== CONT  TestAccKeycloakOpenidClient_backChannel
+--- PASS: TestAccKeycloakOpenidClient_ClientTimeouts_basic (2.55s)
+=== CONT  TestAccKeycloakSamlUserPropertyProtocolMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakOpenidClient_AccessToken_basic (2.56s)
+=== CONT  TestAccKeycloakOpenidClient_updateInPlace
+--- PASS: TestAccKeycloakOpenidClient_frontChannel (2.33s)
+=== CONT  TestAccKeycloakSamlUserPropertyProtocolMapper_update
+--- PASS: TestAccKeycloakOpenidClient_backChannel (2.28s)
+=== CONT  TestAccKeycloakOpenidClient_clientAuthenticatorType
+--- PASS: TestAccKeycloakSamlUserPropertyProtocolMapper_createAfterManualDestroy (4.25s)
+=== CONT  TestAccKeycloakSamlUserPropertyProtocolMapper_import
+--- PASS: TestAccKeycloakSamlUserPropertyProtocolMapper_update (4.23s)
+=== CONT  TestAccKeycloakOpenidClient_accessType
+--- PASS: TestAccKeycloakOpenidClient_updateInPlace (5.94s)
+=== CONT  TestAccKeycloakSamlUserPropertyProtocolMapper_basicClient
+--- PASS: TestAccKeycloakSamlUserPropertyProtocolMapper_import (3.37s)
+=== CONT  TestAccKeycloakOpenidClient_updateRealm
+--- PASS: TestAccKeycloakSamlUserPropertyProtocolMapper_basicClient (2.64s)
+=== CONT  TestAccKeycloakSamlUserAttributeProtocolMapper_updateClientIdForceNew
+--- PASS: TestAccKeycloakOpenidClient_clientAuthenticatorType (7.36s)
+=== CONT  TestAccKeycloakOpenidClient_createAfterManualDestroy
+--- PASS: TestAccKeycloakOpenidClient_accessType (5.59s)
+=== CONT  TestAccKeycloakSamlUserAttributeProtocolMapper_validateClaimValueType
+--- PASS: TestAccKeycloakSamlUserAttributeProtocolMapper_validateClaimValueType (0.34s)
+=== CONT  TestAccKeycloakOpenidClient_basic_with_consent
+--- PASS: TestAccKeycloakOpenidClient_updateRealm (4.05s)
+=== CONT  TestAccKeycloakSamlUserAttributeProtocolMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakSamlUserAttributeProtocolMapper_updateClientIdForceNew (4.94s)
+=== CONT  TestAccKeycloakOpenidClient_basic
+--- PASS: TestAccKeycloakOpenidClient_createAfterManualDestroy (4.48s)
+=== CONT  TestAccKeycloakOpenidClientServiceAccountRole_enableAfterCreate
+--- PASS: TestAccKeycloakOpenidClient_basic_with_consent (3.28s)
+=== CONT  TestAccKeycloakSamlUserAttributeProtocolMapper_update
+--- PASS: TestAccKeycloakOpenidClient_basic (2.75s)
+=== CONT  TestAccKeycloakUser_validateLowercaseUsernames
+--- PASS: TestAccKeycloakSamlUserAttributeProtocolMapper_createAfterManualDestroy (4.84s)
+=== CONT  TestAccKeycloakOpenidClientServiceAccountRole_createAfterManualDestroy
+--- PASS: TestAccKeycloakUser_validateLowercaseUsernames (0.34s)
+=== CONT  TestAccKeycloakSamlUserAttributeProtocolMapper_import
+--- PASS: TestAccKeycloakOpenidClientServiceAccountRole_enableAfterCreate (4.38s)
+=== CONT  TestAccKeycloakUser_unsetOptionalAttributes
+--- PASS: TestAccKeycloakSamlUserAttributeProtocolMapper_update (4.62s)
+=== CONT  TestAccKeycloakOpenidClientServiceAccountRole_basic
+=== NAME  TestAccKeycloakUser_unsetOptionalAttributes
+    resource_keycloak_user_test.go:245: Step 1/2 error: After applying this test step, the plan was not empty.
+        stdout:
+        
+        
+        Terraform used the selected providers to generate the following execution
+        plan. Resource actions are indicated with the following symbols:
+          ~ update in-place
+        
+        Terraform will perform the following actions:
+        
+          # keycloak_user.user will be updated in-place
+          ~ resource "keycloak_user" "user" {
+              + first_name     = "qjzzsys1rn"
+                id             = "dfdae377-e56d-4e31-a7b2-dd7835a4b7a9"
+              + last_name      = "ozxyx2csnq"
+                # (6 unchanged attributes hidden)
+            }
+        
+        Plan: 0 to add, 1 to change, 0 to destroy.
+--- PASS: TestAccKeycloakSamlUserAttributeProtocolMapper_import (3.50s)
+=== CONT  TestAccKeycloakSamlUserAttributeProtocolMapper_basicClient
+--- FAIL: TestAccKeycloakUser_unsetOptionalAttributes (1.92s)
+=== CONT  TestAccKeycloakUser_updateInPlace
+--- PASS: TestAccKeycloakOpenidClientServiceAccountRole_createAfterManualDestroy (4.84s)
+=== CONT  TestAccKeycloakOpenidClientServiceAccountRealmRole_createAfterManualDestroy
+=== NAME  TestAccKeycloakUser_updateInPlace
+    resource_keycloak_user_test.go:208: Step 1/2 error: After applying this test step, the plan was not empty.
+        stdout:
+        
+        
+        Terraform used the selected providers to generate the following execution
+        plan. Resource actions are indicated with the following symbols:
+          ~ update in-place
+        
+        Terraform will perform the following actions:
+        
+          # keycloak_user.user will be updated in-place
+          ~ resource "keycloak_user" "user" {
+              + first_name     = "mrauniakj7"
+                id             = "85ef22fb-99ee-4470-9a37-a62968fa1d2e"
+              + last_name      = "0f3l1wt70a"
+                # (6 unchanged attributes hidden)
+            }
+        
+        Plan: 0 to add, 1 to change, 0 to destroy.
+--- PASS: TestAccKeycloakOpenidClientServiceAccountRole_basic (3.40s)
+=== CONT  TestAccKeycloakSamlIdentityProvider_basicUpdateAll
+--- FAIL: TestAccKeycloakUser_updateInPlace (2.16s)
+=== CONT  TestAccKeycloakOpenidClientServiceAccountRealmRole_basic
+--- PASS: TestAccKeycloakSamlUserAttributeProtocolMapper_basicClient (2.83s)
+=== CONT  TestAccKeycloakSamlIdentityProvider_createAfterManualDestroy
+--- PASS: TestAccKeycloakOpenidClientServiceAccountRealmRole_createAfterManualDestroy (4.62s)
+=== CONT  TestAccKeycloakClientScope_guiOrder
+--- PASS: TestAccKeycloakOpenidClientServiceAccountRealmRole_basic (3.54s)
+=== CONT  TestAccKeycloakSamlIdentityProvider_extraConfigInvalid
+=== NAME  TestAccKeycloakSamlIdentityProvider_basicUpdateAll
+    resource_keycloak_saml_identity_provider_test.go:220: Step 2/2 error: After applying this test step, the plan was not empty.
+        stdout:
+        
+        
+        Terraform used the selected providers to generate the following execution
+        plan. Resource actions are indicated with the following symbols:
+          ~ update in-place
+        
+        Terraform will perform the following actions:
+        
+          # keycloak_saml_identity_provider.saml will be updated in-place
+          ~ resource "keycloak_saml_identity_provider" "saml" {
+              ~ hide_on_login_page                     = false -> true
+                id                                     = "m2lbgtw9y2"
+                # (36 unchanged attributes hidden)
+            }
+        
+        Plan: 0 to add, 1 to change, 0 to destroy.
+--- PASS: TestAccKeycloakSamlIdentityProvider_extraConfigInvalid (0.29s)
+=== CONT  TestAccKeycloakUser_updateWithInitialPasswordChangeDoesNotReset
+--- FAIL: TestAccKeycloakSamlIdentityProvider_basicUpdateAll (4.03s)
+=== CONT  TestAccKeycloakClientScope_includeInTokenScope
+--- PASS: TestAccKeycloakSamlIdentityProvider_createAfterManualDestroy (4.31s)
+=== CONT  TestAccKeycloakSamlIdentityProvider_extraConfig
+--- PASS: TestAccKeycloakUser_updateWithInitialPasswordChangeDoesNotReset (4.19s)
+=== CONT  TestAccKeycloakClientScope_consentScreenText
+--- PASS: TestAccKeycloakSamlIdentityProvider_extraConfig (4.00s)
+=== CONT  TestAccKeycloakUser_updateUsername
+--- PASS: TestAccKeycloakClientScope_guiOrder (5.41s)
+=== CONT  TestAccKeycloakSamlIdentityProvider_nameIdPolicyFormatTransient
+--- PASS: TestAccKeycloakClientScope_includeInTokenScope (5.45s)
+=== CONT  TestAccKeycloakClientScope_updateRealm
+--- PASS: TestAccKeycloakSamlIdentityProvider_nameIdPolicyFormatTransient (2.70s)
+=== CONT  TestAccKeycloakUser_createAfterManualDestroy
+--- PASS: TestAccKeycloakUser_updateUsername (4.58s)
+=== CONT  TestAccKeycloakSamlIdentityProvider_customProviderId
+--- PASS: TestAccKeycloakClientScope_updateRealm (4.79s)
+=== CONT  TestAccKeycloakUser_withInitialPassword
+--- PASS: TestAccKeycloakClientScope_consentScreenText (6.32s)
+=== CONT  TestAccKeycloakUser_import
+--- PASS: TestAccKeycloakSamlIdentityProvider_customProviderId (2.67s)
+=== CONT  TestAccKeycloakSamlIdentityProvider_basic
+--- PASS: TestAccKeycloakUser_createAfterManualDestroy (4.53s)
+=== CONT  TestAccKeycloakUser_basic
+--- PASS: TestAccKeycloakUser_withInitialPassword (3.23s)
+=== CONT  TestAccKeycloakSamlClient_extraConfigInvalid
+--- PASS: TestAccKeycloakSamlClient_extraConfigInvalid (0.43s)
+=== CONT  TestAccKeycloakClientScope_createAfterManualDestroy
+--- PASS: TestAccKeycloakUser_import (3.67s)
+=== CONT  TestAccKeycloakSamlClient_extraConfig
+--- PASS: TestAccKeycloakSamlIdentityProvider_basic (2.55s)
+=== CONT  TestAccKeycloakOpenidClientOptionalScopes_authoritativeRemove
+--- PASS: TestAccKeycloakUser_basic (2.93s)
+=== CONT  TestAccKeycloakClientScope_basic
+--- PASS: TestAccKeycloakClientScope_createAfterManualDestroy (3.69s)
+=== CONT  TestAccCheckKeycloakSamlClient_authenticationFlowBindingOverrides
+--- PASS: TestAccKeycloakClientScope_basic (2.77s)
+=== CONT  TestAccKeycloakOpenidClientOptionalScopes_authoritativeAdd
+--- PASS: TestAccKeycloakSamlClient_extraConfig (4.20s)
+=== CONT  TestAccKeycloakOpenidClientPermission_basic
+--- PASS: TestAccKeycloakOpenidClientOptionalScopes_authoritativeRemove (4.65s)
+=== CONT  TestAccKeycloakSamlClient_encryptionCertificate
+=== NAME  TestAccKeycloakOpenidClientPermission_basic
+    resource_keycloak_openid_client_permissions_test.go:19: Step 1/2 error: After applying this test step, the plan was not empty.
+        stdout:
+        
+        
+        Terraform used the selected providers to generate the following execution
+        plan. Resource actions are indicated with the following symbols:
+          ~ update in-place
+        
+        Terraform will perform the following actions:
+        
+          # keycloak_user.test will be updated in-place
+          ~ resource "keycloak_user" "test" {
+              + first_name     = "Testy"
+                id             = "3c335d5f-9935-4eb8-8ed6-140535397a28"
+              + last_name      = "Tester"
+                # (6 unchanged attributes hidden)
+            }
+        
+        Plan: 0 to add, 1 to change, 0 to destroy.
+--- FAIL: TestAccKeycloakOpenidClientPermission_basic (2.91s)
+=== CONT  TestAccKeycloakOpenidClientOptionalScopes_validateDuplicateScopeAssignment
+--- PASS: TestAccKeycloakSamlClient_encryptionCertificate (2.52s)
+=== CONT  TestAccKeycloakSamlClient_certificateAndKey
+--- PASS: TestAccCheckKeycloakSamlClient_authenticationFlowBindingOverrides (4.45s)
+=== CONT  TestAccKeycloakOpenidClientOptionalScopes_noImportNeeded
+--- PASS: TestAccKeycloakOpenidClientOptionalScopes_authoritativeAdd (4.64s)
+=== CONT  TestAccKeycloakOpenidClientOptionalScopes_validateClientAccessType
+--- PASS: TestAccKeycloakSamlClient_certificateAndKey (2.03s)
+=== CONT  TestAccKeycloakSamlClient_updateInPlace
+--- PASS: TestAccKeycloakOpenidClientOptionalScopes_validateClientAccessType (1.34s)
+=== CONT  TestAccKeycloakOpenidClientOptionalScopes_validateClientDoesNotExist
+--- PASS: TestAccKeycloakOpenidClientOptionalScopes_validateDuplicateScopeAssignment (3.23s)
+=== CONT  TestAccKeycloakOpenidClientOptionalScopes_updateInPlace
+=== NAME  TestAccKeycloakSamlClient_updateInPlace
+    resource_keycloak_saml_client_test.go:219: Step 1/2 error: Error running apply: exit status 1
+        
+        Error: error sending POST request to /admin/realms/tf-acc-3351663872932440298/clients: 400 Bad Request. Response body: {"error":"invalid_input","error_description":"Master SAML Processing URL is not a valid URL; Assertion Consumer Service POST Binding URL is not a valid URL; Assertion Consumer Service Redirect Binding URL is not a valid URL; Logout Service Redirect Binding URL is not a valid URL; Logout Service POST Binding URL is not a valid URL"}
+        
+          with keycloak_saml_client.saml_client,
+          on terraform_plugin_test.tf line 6, in resource "keycloak_saml_client" "saml_client":
+           6: resource "keycloak_saml_client" "saml_client" {
+        
+--- PASS: TestAccKeycloakOpenidClientOptionalScopes_validateClientDoesNotExist (1.18s)
+=== CONT  TestAccKeycloakSamlClient_updateRealm
+--- FAIL: TestAccKeycloakSamlClient_updateInPlace (1.33s)
+=== CONT  TestAccKeycloakOpenidClientOptionalScopes_updateClientForceNew
+--- PASS: TestAccKeycloakOpenidClientOptionalScopes_noImportNeeded (4.14s)
+=== CONT  TestAccKeycloakSamlClient_createAfterManualDestroy
+--- PASS: TestAccKeycloakOpenidClientOptionalScopes_updateClientForceNew (4.89s)
+=== CONT  TestAccKeycloakOpenidClientDefaultScopes_noImportNeeded
+--- PASS: TestAccKeycloakSamlClient_updateRealm (5.28s)
+=== CONT  TestAccKeycloakOpenidClientOptionalScopes_basic
+=== CONT  TestAccKeycloakSamlClient_generatedCertificate
+--- PASS: TestAccKeycloakOpenidClientOptionalScopes_updateInPlace (6.91s)
+--- PASS: TestAccKeycloakSamlClient_createAfterManualDestroy (5.27s)
+=== CONT  TestAccKeycloakOpenidClientDefaultScopes_validateDuplicateScopeAssignment
+--- PASS: TestAccKeycloakSamlClient_generatedCertificate (3.18s)
+=== CONT  TestAccKeycloakSamlClient_basic
+--- PASS: TestAccKeycloakOpenidClientDefaultScopes_noImportNeeded (5.32s)
+=== CONT  TestAccKeycloakOpenidClientDefaultScopes_basic
+--- PASS: TestAccKeycloakOpenidClientOptionalScopes_basic (5.28s)
+=== CONT  TestAccKeycloakSamlClientScope_guiOrder
+--- PASS: TestAccKeycloakOpenidClientDefaultScopes_validateDuplicateScopeAssignment (4.33s)
+=== CONT  TestAccKeycloakOpenidClientDefaultScopes_authoritativeRemove
+--- PASS: TestAccKeycloakSamlClient_basic (4.45s)
+=== CONT  TestAccKeycloakOpenidClientAuthorizationUserPolicy
+--- PASS: TestAccKeycloakOpenidClientDefaultScopes_basic (5.05s)
+=== CONT  TestAccKeycloakOpenidClientAuthorizationScope_basicUpdateAll
+=== NAME  TestAccKeycloakOpenidClientAuthorizationUserPolicy
+    resource_keycloak_openid_client_authorization_user_policy_test.go:19: Step 1/1 error: After applying this test step, the plan was not empty.
+        stdout:
+        
+        
+        Terraform used the selected providers to generate the following execution
+        plan. Resource actions are indicated with the following symbols:
+          ~ update in-place
+        
+        Terraform will perform the following actions:
+        
+          # keycloak_user.test will be updated in-place
+          ~ resource "keycloak_user" "test" {
+              + first_name     = "Testy"
+                id             = "85db2f42-fc77-490f-a841-efed57fc4b13"
+              + last_name      = "Tester"
+                # (6 unchanged attributes hidden)
+            }
+        
+        Plan: 0 to add, 1 to change, 0 to destroy.
+--- PASS: TestAccKeycloakOpenidClientDefaultScopes_authoritativeRemove (5.30s)
+=== CONT  TestAccKeycloakOpenidClientDefaultScopes_authoritativeAdd
+--- FAIL: TestAccKeycloakOpenidClientAuthorizationUserPolicy (2.61s)
+=== CONT  TestAccKeycloakSamlClientScope_consentScreenText
+--- PASS: TestAccKeycloakSamlClientScope_guiOrder (6.36s)
+=== CONT  TestAccKeycloakOpenidClientAuthorizationScope_createAfterManualDestroy
+--- PASS: TestAccKeycloakOpenidClientAuthorizationScope_basicUpdateAll (4.60s)
+=== CONT  TestAccKeycloakOpenidClientAuthorizationTimePolicy
+--- PASS: TestAccKeycloakOpenidClientDefaultScopes_authoritativeAdd (4.91s)
+=== CONT  TestAccKeycloakSamlClientScope_updateRealm
+--- PASS: TestAccKeycloakOpenidClientAuthorizationScope_createAfterManualDestroy (4.90s)
+=== CONT  TestAccKeycloakOpenidClientAuthorizationScope_basic
+--- PASS: TestAccKeycloakSamlClientScope_consentScreenText (5.65s)
+=== CONT  TestAccKeycloakOpenidClientDefaultScopes_validateClientAccessType
+--- PASS: TestAccKeycloakOpenidClientAuthorizationTimePolicy (2.74s)
+=== CONT  TestAccKeycloakSamlClientScope_createAfterManualDestroy
+--- PASS: TestAccKeycloakOpenidClientDefaultScopes_validateClientAccessType (1.59s)
+=== CONT  TestAccKeycloakOpenidClientAuthorizationRolePolicy_multiple
+--- PASS: TestAccKeycloakOpenidClientAuthorizationScope_basic (2.60s)
+=== CONT  TestAccKeycloakOpenidClientDefaultScopes_validateClientDoesNotExist
+--- PASS: TestAccKeycloakSamlClientScope_updateRealm (4.22s)
+=== CONT  TestAccKeycloakOpenidClientDefaultScopes_updateInPlace
+--- PASS: TestAccKeycloakOpenidClientDefaultScopes_validateClientDoesNotExist (1.41s)
+=== CONT  TestAccKeycloakOpenidClientAuthorizationRolePolicy_basic
+--- PASS: TestAccKeycloakSamlClientScope_createAfterManualDestroy (4.28s)
+=== CONT  TestAccKeycloakOpenidClientDefaultScopes_updateClientForceNew
+--- PASS: TestAccKeycloakOpenidClientAuthorizationRolePolicy_multiple (3.29s)
+=== CONT  TestAccKeycloakOpenidClientAuthorizationResource_basicUpdateAll
+--- PASS: TestAccKeycloakOpenidClientAuthorizationRolePolicy_basic (3.04s)
+=== CONT  TestAccKeycloakOpenidClientAuthorizationPermission_resourceType
+--- PASS: TestAccKeycloakOpenidClientAuthorizationResource_basicUpdateAll (4.71s)
+=== CONT  TestAccKeycloakOpenIdAudienceResolveProtocolMapper_updateClientScopeForceNew
+--- PASS: TestAccKeycloakOpenidClientAuthorizationPermission_resourceType (3.03s)
+=== CONT  TestAccKeycloakOpenidClientAuthorizationPermission_basic
+--- PASS: TestAccKeycloakOpenidClientDefaultScopes_updateClientForceNew (4.88s)
+=== CONT  TestAccKeycloakOpenidClientAuthorizationResource_createAfterManualDestroy
+--- PASS: TestAccKeycloakOpenidClientDefaultScopes_updateInPlace (7.07s)
+=== CONT  TestAccKeycloakOpenIdAudienceResolveProtocolMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakOpenidClientAuthorizationPermission_basic (3.04s)
+=== CONT  TestAccKeycloakOpenidClientAuthorizationGroupPolicy
+--- PASS: TestAccKeycloakOpenIdAudienceResolveProtocolMapper_updateClientScopeForceNew (4.29s)
+=== CONT  TestAccKeycloakOpenidClientAuthorizationResource_basic
+--- PASS: TestAccKeycloakOpenidClientAuthorizationResource_createAfterManualDestroy (4.81s)
+=== CONT  TestAccKeycloakOpenIdAudienceResolveProtocolMapper_import
+--- PASS: TestAccKeycloakOpenIdAudienceResolveProtocolMapper_createAfterManualDestroy (4.62s)
+=== CONT  TestAccKeycloakOpenidClientAuthorizationPermission_basicUpdateAll
+--- PASS: TestAccKeycloakOpenidClientAuthorizationResource_basic (2.88s)
+=== CONT  TestAccKeycloakOpenIdAudienceResolveProtocolMapper_basicClientScope
+--- PASS: TestAccKeycloakOpenidClientAuthorizationGroupPolicy (4.83s)
+=== CONT  TestAccKeycloakOpenIdAudienceResolveProtocolMapper_basicClient
+--- PASS: TestAccKeycloakOpenIdAudienceResolveProtocolMapper_import (3.63s)
+=== CONT  TestAccKeycloakOpenidClientAuthorizationPermission_createAfterManualDestroy
+--- PASS: TestAccKeycloakOpenIdAudienceResolveProtocolMapper_basicClientScope (2.08s)
+=== CONT  TestAccKeycloakOpenIdAudienceProtocolMapper_validateClientAudienceExists
+--- PASS: TestAccKeycloakOpenidClientAuthorizationPermission_basicUpdateAll (5.04s)
+=== CONT  TestAccKeycloakOpenIdAudienceProtocolMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakOpenIdAudienceResolveProtocolMapper_basicClient (2.28s)
+=== CONT  TestAccKeycloakOpenIdAudienceProtocolMapper_update
+--- PASS: TestAccKeycloakOpenIdAudienceProtocolMapper_validateClientAudienceExists (1.25s)
+=== CONT  TestAccKeycloakOpenIdAudienceProtocolMapper_updateRealmIdForceNew
+--- PASS: TestAccKeycloakOpenidClientAuthorizationPermission_createAfterManualDestroy (4.66s)
+=== CONT  TestAccKeycloakOpenIdAudienceProtocolMapper_updateClientScopeForceNew
+--- PASS: TestAccKeycloakOpenIdAudienceProtocolMapper_createAfterManualDestroy (3.87s)
+=== CONT  TestAccKeycloakOpenIdAudienceProtocolMapper_import
+--- PASS: TestAccKeycloakOpenIdAudienceProtocolMapper_update (3.86s)
+=== CONT  TestAccKeycloakOpenIdAudienceProtocolMapper_updateClientIdForceNew
+--- PASS: TestAccKeycloakOpenIdAudienceProtocolMapper_updateRealmIdForceNew (3.70s)
+=== CONT  TestAccKeycloakOpenidClientAuthorizationClientPolicy
+--- PASS: TestAccKeycloakOpenidClientAuthorizationClientPolicy (2.23s)
+=== CONT  TestAccKeycloakOidcIdentityProvider_createAfterManualDestroy
+--- PASS: TestAccKeycloakOpenIdAudienceProtocolMapper_updateClientScopeForceNew (3.61s)
+=== CONT  TestAccKeycloakOpenidClientAuthorizationAggregatePolicy
+--- PASS: TestAccKeycloakOpenIdAudienceProtocolMapper_import (3.20s)
+=== CONT  TestAccKeycloakOidcIdentityProvider_extraConfigInvalid
+--- PASS: TestAccKeycloakOidcIdentityProvider_extraConfigInvalid (0.30s)
+=== CONT  TestAccKeycloakOidcIdentityProvider_keyDefaultScopes
+--- PASS: TestAccKeycloakOpenIdAudienceProtocolMapper_updateClientIdForceNew (3.77s)
+=== CONT  TestAccKeycloakOidcIdentityProvider_extraConfig
+--- PASS: TestAccKeycloakOpenidClientAuthorizationAggregatePolicy (2.54s)
+=== CONT  TestAccKeycloakLdapUserFederation_syncPeriodValidation
+--- PASS: TestAccKeycloakOidcIdentityProvider_keyDefaultScopes (2.08s)
+=== CONT  TestAccKeycloakOidcIdentityProvider_basic
+--- PASS: TestAccKeycloakOidcIdentityProvider_extraConfig (2.04s)
+=== CONT  TestAccKeycloakLdapUserFederation_bindValidation
+--- PASS: TestAccKeycloakOidcIdentityProvider_createAfterManualDestroy (3.63s)
+=== CONT  TestAccKeycloakOpenIdAudienceProtocolMapper_basicClientScope
+--- PASS: TestAccKeycloakOidcIdentityProvider_basic (1.93s)
+=== CONT  TestAccKeycloakLdapUserFederation_useTrustStoreValidation
+--- PASS: TestAccKeycloakLdapUserFederation_bindValidation (1.73s)
+=== CONT  TestAccKeycloakLdapUserFederation_bindCredential
+--- PASS: TestAccKeycloakLdapUserFederation_syncPeriodValidation (2.38s)
+=== CONT  TestAccKeycloakOpenIdAudienceProtocolMapper_basicClient
+--- PASS: TestAccKeycloakOpenIdAudienceProtocolMapper_basicClientScope (1.94s)
+=== CONT  TestAccKeycloakLdapUserFederation_searchScopeValidation
+--- PASS: TestAccKeycloakLdapUserFederation_useTrustStoreValidation (2.09s)
+=== CONT  TestAccKeycloakOidcIdentityProvider_basicUpdateAll
+--- PASS: TestAccKeycloakOpenIdAudienceProtocolMapper_basicClient (2.06s)
+=== CONT  TestAccKeycloakLdapUserFederation_editModeValidation
+--- PASS: TestAccKeycloakLdapUserFederation_searchScopeValidation (2.07s)
+=== CONT  TestAccKeycloakLdapUserFederation_unsetTimeoutDurationStrings
+--- PASS: TestAccKeycloakLdapUserFederation_bindCredential (3.59s)
+=== CONT  TestAccKeycloakLdapUserFederation_basicUpdateAll
+--- PASS: TestAccKeycloakLdapUserFederation_editModeValidation (2.20s)
+=== CONT  TestAccKeycloakAuthenticationFlow_basic
+--- PASS: TestAccKeycloakOidcIdentityProvider_basicUpdateAll (3.46s)
+=== CONT  TestAccKeycloakGenericRoleMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakLdapUserFederation_unsetTimeoutDurationStrings (3.67s)
+=== CONT  TestAccKeycloakLdapUserFederation_deleteDefaultMappers
+--- PASS: TestAccKeycloakAuthenticationFlow_basic (2.35s)
+=== CONT  TestAccKeycloakAttributeImporterIdentityProviderMapper_withExtraConfig_createAfterManualDestroy
+--- PASS: TestAccKeycloakLdapUserFederation_basicUpdateAll (3.68s)
+=== CONT  TestAccKeycloakLdapUserFederation_vendorValidation
+--- PASS: TestAccKeycloakLdapUserFederation_deleteDefaultMappers (2.31s)
+=== CONT  TestAccKeycloakLdapUserFederation_basicUpdateRealm
+--- PASS: TestAccKeycloakLdapUserFederation_vendorValidation (2.12s)
+=== CONT  TestAccKeycloakGenericRoleMapper_basic
+--- PASS: TestAccKeycloakGenericRoleMapper_createAfterManualDestroy (4.16s)
+=== CONT  TestAccKeycloakOpenIdGroupMembershipProtocolMapper_clientScopeDuplicateNameValidation
+--- PASS: TestAccKeycloakAttributeImporterIdentityProviderMapper_withExtraConfig_createAfterManualDestroy (3.71s)
+=== CONT  TestAccKeycloakGenericProtocolMapper_update
+--- PASS: TestAccKeycloakLdapUserFederation_basicUpdateRealm (3.36s)
+=== CONT  TestAccKeycloakAttributeImporterIdentityProviderMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakGenericRoleMapper_basic (2.37s)
+=== CONT  TestAccKeycloakGenericProtocolMapper_import
+--- PASS: TestAccKeycloakOpenIdGroupMembershipProtocolMapper_clientScopeDuplicateNameValidation (2.70s)
+=== CONT  TestAccKeycloakLdapUserFederation_createAfterManualDestroy
+--- PASS: TestAccKeycloakGenericProtocolMapper_update (4.05s)
+=== CONT  TestAccKeycloakLdapUserFederation_import
+--- PASS: TestAccKeycloakGenericProtocolMapper_import (2.72s)
+=== CONT  TestAccKeycloakAttributeImporterIdentityProviderMapper_withExtraConfig
+--- PASS: TestAccKeycloakAttributeImporterIdentityProviderMapper_createAfterManualDestroy (3.55s)
+=== CONT  TestAccKeycloakGenericProtocolMapper_basicClientScope
+--- PASS: TestAccKeycloakLdapUserFederation_createAfterManualDestroy (3.61s)
+=== CONT  TestAccKeycloakLdapUserFederation_basic
+--- PASS: TestAccKeycloakAttributeImporterIdentityProviderMapper_withExtraConfig (2.06s)
+=== CONT  TestAccKeycloakGenericProtocolMapper_basicClient
+--- PASS: TestAccKeycloakGenericProtocolMapper_basicClientScope (2.02s)
+=== CONT  TestAccKeycloakLdapUserAttributeMapper_updateLdapUserFederation
+--- PASS: TestAccKeycloakLdapUserFederation_basic (2.02s)
+=== CONT  TestAccKeycloakLdapUserAttributeMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakLdapUserFederation_import (4.54s)
+=== CONT  TestAccKeycloakGenericClientRoleMapper_basicClientScopeRealmRole
+--- PASS: TestAccKeycloakGenericProtocolMapper_basicClient (2.82s)
+=== CONT  TestAccKeycloakLdapUserAttributeMapper_basic
+--- PASS: TestAccKeycloakGenericClientRoleMapper_basicClientScopeRealmRole (2.07s)
+=== CONT  TestAccKeycloakGenericClientRoleMapper_importClientScope
+--- PASS: TestAccKeycloakLdapUserAttributeMapper_updateLdapUserFederation (3.94s)
+=== CONT  TestAccKeycloakAttributeImporterIdentityProviderMapper_basic
+--- PASS: TestAccKeycloakLdapUserAttributeMapper_createAfterManualDestroy (3.76s)
+=== CONT  TestAccKeycloakGenericClientRoleMapper_basicClientScope
+--- PASS: TestAccKeycloakLdapUserAttributeMapper_basic (2.68s)
+=== CONT  TestAccKeycloakLdapUserAttributeMapper_updateInPlace
+--- PASS: TestAccKeycloakAttributeImporterIdentityProviderMapper_basic (2.13s)
+=== CONT  TestAccKeycloakLdapRoleMapper_updateLdapUserFederationInPlace
+--- PASS: TestAccKeycloakGenericClientRoleMapper_basicClientScope (2.36s)
+=== CONT  TestAccKeycloakGenericClientRoleMapper_import
+--- PASS: TestAccKeycloakGenericClientRoleMapper_importClientScope (2.91s)
+=== CONT  TestAccKeycloakLdapRoleMapper_updateLdapUserFederationForceNew
+--- PASS: TestAccKeycloakLdapUserAttributeMapper_updateInPlace (3.82s)
+=== CONT  TestAccKeycloakLdapRoleMapper_rolesLdapFilterValidation
+--- PASS: TestAccKeycloakGenericClientRoleMapper_import (2.81s)
+=== CONT  TestAccKeycloakGenericClientRoleMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakLdapRoleMapper_updateLdapUserFederationInPlace (3.81s)
+=== CONT  TestAccKeycloakLdapRoleMapper_userRolesRetrieveStrategyValidation
+--- PASS: TestAccKeycloakLdapRoleMapper_updateLdapUserFederationForceNew (4.22s)
+=== CONT  TestAccKeycloakGenericClientRoleMapper_basic
+--- PASS: TestAccKeycloakLdapRoleMapper_rolesLdapFilterValidation (2.39s)
+=== CONT  TestAccKeycloakLdapRoleMapper_membershipAttributeTypeValidation
+--- PASS: TestAccKeycloakLdapRoleMapper_userRolesRetrieveStrategyValidation (2.45s)
+=== CONT  TestAccKeycloakGenericClientProtocolMapper_update
+--- PASS: TestAccKeycloakGenericClientRoleMapper_basic (2.50s)
+=== CONT  TestAccKeycloakLdapRoleMapper_modeValidation
+--- PASS: TestAccKeycloakLdapRoleMapper_membershipAttributeTypeValidation (2.53s)
+=== CONT  TestProvider
+--- PASS: TestProvider (0.00s)
+=== CONT  TestAccKeycloakGenericClientProtocolMapper_import
+--- PASS: TestAccKeycloakGenericClientRoleMapper_createAfterManualDestroy (4.31s)
+=== CONT  TestAccKeycloakGenericClientProtocolMapper_basicClientScope
+--- PASS: TestAccKeycloakLdapRoleMapper_modeValidation (2.26s)
+=== CONT  TestAccKeycloakProvider_passwordGrant
+--- PASS: TestAccKeycloakGenericClientProtocolMapper_basicClientScope (1.99s)
+=== CONT  TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_validateClientOrClientScopeSet
+--- PASS: TestAccKeycloakGenericClientProtocolMapper_import (2.92s)
+=== CONT  TestAccKeycloakGenericClientProtocolMapper_basicClient
+--- PASS: TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_validateClientOrClientScopeSet (1.09s)
+=== CONT  TestAccKeycloakOpenIdUserClientRoleProtocolMapper_validateClientOrClientScopeSet
+--- PASS: TestAccKeycloakProvider_passwordGrant (1.95s)
+=== CONT  TestAccKeycloakCustomUserFederation_validation
+--- PASS: TestAccKeycloakOpenIdUserClientRoleProtocolMapper_validateClientOrClientScopeSet (1.02s)
+=== CONT  TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_validateClientOrClientScopeSet
+--- PASS: TestAccKeycloakGenericClientProtocolMapper_update (5.62s)
+=== CONT  TestAccKeycloakCustomUserFederation_createAfterManualDestroy
+--- PASS: TestAccKeycloakGenericClientProtocolMapper_basicClient (2.21s)
+=== CONT  TestAccKeycloakCustomUserFederation_customConfig
+=== NAME  TestAccKeycloakCustomUserFederation_createAfterManualDestroy
+    resource_keycloak_custom_user_federation_test.go:87: Step 1/2 error: Error running apply: exit status 1
+        
+        Error: custom user federation provider with id custom is not installed on the server
+        
+          with keycloak_custom_user_federation.custom,
+          on terraform_plugin_test.tf line 6, in resource "keycloak_custom_user_federation" "custom":
+           6: resource "keycloak_custom_user_federation" "custom" {
+        
+--- PASS: TestAccKeycloakCustomUserFederation_validation (1.12s)
+=== CONT  TestAccKeycloakCustomUserFederation_basic
+--- PASS: TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_validateClientOrClientScopeSet (1.06s)
+=== CONT  TestAccKeycloakLdapRoleMapper_createAfterManualDestroy
+--- FAIL: TestAccKeycloakCustomUserFederation_createAfterManualDestroy (1.06s)
+=== CONT  TestAccKeycloakCustomIdentityProviderMapper_basicUpdateAll
+=== NAME  TestAccKeycloakCustomUserFederation_customConfig
+    resource_keycloak_custom_user_federation_test.go:50: Step 1/1 error: Error running apply: exit status 1
+        
+        Error: custom user federation provider with id custom is not installed on the server
+        
+          with keycloak_custom_user_federation.custom,
+          on terraform_plugin_test.tf line 6, in resource "keycloak_custom_user_federation" "custom":
+           6: resource "keycloak_custom_user_federation" "custom" {
+        
+=== NAME  TestAccKeycloakCustomUserFederation_basic
+    resource_keycloak_custom_user_federation_test.go:22: Step 1/2 error: Error running apply: exit status 1
+        
+        Error: custom user federation provider with id custom is not installed on the server
+        
+          with keycloak_custom_user_federation.custom,
+          on terraform_plugin_test.tf line 6, in resource "keycloak_custom_user_federation" "custom":
+           6: resource "keycloak_custom_user_federation" "custom" {
+        
+--- FAIL: TestAccKeycloakCustomUserFederation_customConfig (1.01s)
+=== CONT  TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_validateClientOrClientScopeSet
+--- FAIL: TestAccKeycloakCustomUserFederation_basic (1.14s)
+=== CONT  TestAccKeycloakLdapRoleMapper_basic
+--- PASS: TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_validateClientOrClientScopeSet (1.13s)
+=== CONT  TestAccKeycloakCustomIdentityProviderMapper_withExtraConfig_createAfterManualDestroy
+--- PASS: TestAccKeycloakLdapRoleMapper_basic (2.78s)
+=== CONT  TestAccKeycloakOpenIdUserPropertyProtocolMapper_validateClientOrClientScopeSet
+--- PASS: TestAccKeycloakCustomIdentityProviderMapper_basicUpdateAll (3.80s)
+=== CONT  TestAccKeycloakCustomIdentityProviderMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakLdapRoleMapper_createAfterManualDestroy (3.91s)
+=== CONT  TestAccKeycloakLdapMsadUserAccountControlMapper_updateInPlace
+--- PASS: TestAccKeycloakOpenIdUserPropertyProtocolMapper_validateClientOrClientScopeSet (0.96s)
+=== CONT  TestAccKeycloakOpenIdUserAttributeProtocolMapper_validateClientOrClientScopeSet
+--- PASS: TestAccKeycloakCustomIdentityProviderMapper_withExtraConfig_createAfterManualDestroy (3.56s)
+=== CONT  TestAccKeycloakCustomIdentityProviderMapper_withExtraConfig
+--- PASS: TestAccKeycloakOpenIdUserAttributeProtocolMapper_validateClientOrClientScopeSet (1.08s)
+=== CONT  TestAccKeycloakLdapMsadUserAccountControlMapper_updateLdapUserFederation
+--- PASS: TestAccKeycloakCustomIdentityProviderMapper_createAfterManualDestroy (3.57s)
+=== CONT  TestAccKeycloakCustomIdentityProviderMapper_basic
+--- PASS: TestAccKeycloakCustomIdentityProviderMapper_withExtraConfig (2.04s)
+=== CONT  TestAccKeycloakOpenIdGroupMembershipProtocolMapper_validateClientOrClientScopeSet
+--- PASS: TestAccKeycloakLdapMsadUserAccountControlMapper_updateInPlace (3.79s)
+=== CONT  TestAccKeycloakLdapMsadUserAccountControlMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakOpenIdGroupMembershipProtocolMapper_validateClientOrClientScopeSet (0.96s)
+=== CONT  TestAccKeycloakAuthenticationSubFlowImport
+--- PASS: TestAccKeycloakCustomIdentityProviderMapper_basic (2.06s)
+=== CONT  TestAccKeycloakOpenIdFullNameProtocolMapper_validateClientOrClientScopeSet
+--- PASS: TestAccKeycloakLdapMsadUserAccountControlMapper_updateLdapUserFederation (3.98s)
+=== CONT  TestAccKeycloakLdapMsadUserAccountControlMapper_basic
+--- PASS: TestAccKeycloakOpenIdFullNameProtocolMapper_validateClientOrClientScopeSet (1.02s)
+=== CONT  TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_clientScopeDuplicateNameValidation
+--- PASS: TestAccKeycloakLdapMsadUserAccountControlMapper_createAfterManualDestroy (3.82s)
+=== CONT  TestAccKeycloakLdapMsadLdsUserAccountControlMapper_updateLdapUserFederation
+--- PASS: TestAccKeycloakAuthenticationSubFlowImport (3.46s)
+=== CONT  TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_clientDuplicateNameValidation
+--- PASS: TestAccKeycloakLdapMsadUserAccountControlMapper_basic (2.63s)
+=== CONT  TestAccKeycloakAuthenticationSubFlow_updateAuthenticationSubFlowRequirement
+--- PASS: TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_clientScopeDuplicateNameValidation (2.79s)
+=== CONT  TestAccKeycloakAuthenticationSubFlow_updateAuthenticationSubFlow
+--- PASS: TestAccKeycloakOpenIdUserSessionNoteProtocolMapper_clientDuplicateNameValidation (2.79s)
+=== CONT  TestAccKeycloakOpenIdUserClientRoleProtocolMapper_clientScopeDuplicateNameValidation
+--- PASS: TestAccKeycloakLdapMsadLdsUserAccountControlMapper_updateLdapUserFederation (4.05s)
+=== CONT  TestAccKeycloakAuthenticationSubFlow_createAfterManualDestroy
+--- PASS: TestAccKeycloakAuthenticationSubFlow_updateAuthenticationSubFlow (3.96s)
+=== CONT  TestAccKeycloakLdapMsadLdsUserAccountControlMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakOpenIdUserClientRoleProtocolMapper_clientScopeDuplicateNameValidation (3.04s)
+=== CONT  TestAccKeycloakAuthenticationSubFlow_basic
+--- PASS: TestAccKeycloakAuthenticationSubFlow_updateAuthenticationSubFlowRequirement (5.46s)
+=== CONT  TestAccKeycloakLdapMsadLdsUserAccountControlMapper_basic
+--- PASS: TestAccKeycloakAuthenticationSubFlow_createAfterManualDestroy (4.02s)
+=== CONT  TestAccKeycloakAuthenticationFlow_import
+--- PASS: TestAccKeycloakAuthenticationSubFlow_basic (2.64s)
+=== CONT  TestAccKeycloakLdapHardcodedRoleMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakLdapMsadLdsUserAccountControlMapper_basic (2.78s)
+=== CONT  TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_clientScopeDuplicateNameValidation
+--- PASS: TestAccKeycloakLdapMsadLdsUserAccountControlMapper_createAfterManualDestroy (3.95s)
+=== CONT  TestAccKeycloakAuthenticationFlow_updateRealm
+--- PASS: TestAccKeycloakAuthenticationFlow_import (2.54s)
+=== CONT  TestAccKeycloakLdapHardcodedRoleMapper_basic
+--- PASS: TestAccKeycloakOpenIdUserRealmRoleProtocolMapper_clientScopeDuplicateNameValidation (2.81s)
+=== CONT  TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_clientScopeDuplicateNameValidation
+--- PASS: TestAccKeycloakLdapHardcodedRoleMapper_createAfterManualDestroy (3.80s)
+=== CONT  TestAccKeycloakAuthenticationFlow_updateAuthenticationFlow
+--- PASS: TestAccKeycloakAuthenticationFlow_updateRealm (3.50s)
+=== CONT  TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_clientDuplicateNameValidation
+--- PASS: TestAccKeycloakLdapHardcodedRoleMapper_basic (2.59s)
+=== CONT  TestAccKeycloakAuthenticationFlow_createAfterManualDestroy
+--- PASS: TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_clientScopeDuplicateNameValidation (2.74s)
+=== CONT  TestAccKeycloakOpenIdUserPropertyProtocolMapper_clientScopeDuplicateNameValidation
+--- PASS: TestAccKeycloakAuthenticationFlow_updateAuthenticationFlow (3.40s)
+=== CONT  TestAccKeycloakAuthenticationExecution_updateAuthenticationExecutionRequirement
+--- PASS: TestAccKeycloakOpenIdHardcodedClaimProtocolMapper_clientDuplicateNameValidation (2.99s)
+=== CONT  TestAccKeycloakAuthenticationExecution_createAfterManualDestroy
+--- PASS: TestAccKeycloakAuthenticationFlow_createAfterManualDestroy (3.43s)
+=== CONT  TestAccKeycloakAuthenticationExecution_import
+--- PASS: TestAccKeycloakOpenIdUserPropertyProtocolMapper_clientScopeDuplicateNameValidation (2.71s)
+=== CONT  TestAccKeycloakOpenIdUserPropertyProtocolMapper_clientDuplicateNameValidation
+=== NAME  TestAccKeycloakAuthenticationExecution_import
+    resource_keycloak_authentication_execution_test.go:40: Step 3/3 error: After applying this test step, the plan was not empty.
+        stdout:
+        
+        
+        Terraform used the selected providers to generate the following execution
+        plan. Resource actions are indicated with the following symbols:
+          ~ update in-place
+        
+        Terraform will perform the following actions:
+        
+          # keycloak_authentication_execution.imported-execution will be updated in-place
+          ~ resource "keycloak_authentication_execution" "imported-execution" {
+                id                = "5e74ea6d-d010-4584-ae8a-5423769e0476"
+              - priority          = 25 -> null
+                # (5 unchanged attributes hidden)
+            }
+        
+        Plan: 0 to add, 1 to change, 0 to destroy.
+--- PASS: TestAccKeycloakAuthenticationExecution_createAfterManualDestroy (3.63s)
+=== CONT  TestAccKeycloakLdapHardcodedGroupMapper_createAfterManualDestroy
+--- FAIL: TestAccKeycloakAuthenticationExecution_import (3.15s)
+=== CONT  TestAccKeycloakAuthenticationExecution_basic
+--- PASS: TestAccKeycloakOpenIdUserPropertyProtocolMapper_clientDuplicateNameValidation (2.98s)
+=== CONT  TestAccKeycloakOpenIdUserAttributeProtocolMapper_clientScopeDuplicateNameValidation
+--- PASS: TestAccKeycloakAuthenticationExecution_updateAuthenticationExecutionRequirement (5.04s)
+=== CONT  TestAccKeycloakLdapHardcodedGroupMapper_basic
+--- PASS: TestAccKeycloakAuthenticationExecution_basic (2.48s)
+=== CONT  TestAccKeycloakAuthenticationExecutionConfig_import
+--- PASS: TestAccKeycloakOpenIdUserAttributeProtocolMapper_clientScopeDuplicateNameValidation (2.64s)
+=== CONT  TestAccKeycloakOpenIdUserAttributeProtocolMapper_clientDuplicateNameValidation
+--- PASS: TestAccKeycloakLdapHardcodedGroupMapper_createAfterManualDestroy (3.77s)
+=== CONT  TestAccKeycloakLdapHardcodedAttributeMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakLdapHardcodedGroupMapper_basic (2.69s)
+=== CONT  TestAccKeycloakAuthenticationExecutionConfig_updateForcesNew
+--- PASS: TestAccKeycloakAuthenticationExecutionConfig_import (2.59s)
+=== CONT  TestAccKeycloakLdapHardcodedAttributeMapper_basic
+--- PASS: TestAccKeycloakOpenIdUserAttributeProtocolMapper_clientDuplicateNameValidation (2.87s)
+=== CONT  TestAccKeycloakAuthenticationExecutionConfig_basic
+--- PASS: TestAccKeycloakLdapHardcodedAttributeMapper_createAfterManualDestroy (3.75s)
+=== CONT  TestAccKeycloakLdapGroupMapper_groupsPath
+--- PASS: TestAccKeycloakAuthenticationExecutionConfig_updateForcesNew (3.69s)
+=== CONT  TestAccKeycloakAttributeToRoleIdentityProviderMapper_basicUpdateAll
+--- PASS: TestAccKeycloakLdapHardcodedAttributeMapper_basic (2.59s)
+=== CONT  TestAccKeycloakAttributeToRoleIdentityProviderMapper_withExtraConfig_createAfterManualDestroy
+--- PASS: TestAccKeycloakAuthenticationExecutionConfig_basic (3.82s)
+=== CONT  TestAccKeycloakAttributeToRoleIdentityProviderMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakLdapGroupMapper_groupsPath (2.38s)
+=== CONT  TestAccKeycloakAttributeToRoleIdentityProviderMapper_withExtraConfig
+--- PASS: TestAccKeycloakAttributeToRoleIdentityProviderMapper_withExtraConfig_createAfterManualDestroy (3.65s)
+=== CONT  TestAccKeycloakLdapGroupMapper_updateLdapUserFederationInPlace
+--- PASS: TestAccKeycloakAttributeToRoleIdentityProviderMapper_basicUpdateAll (3.70s)
+=== CONT  TestAccKeycloakAttributeToRoleIdentityProviderMapper_basic
+--- PASS: TestAccKeycloakAttributeToRoleIdentityProviderMapper_withExtraConfig (2.02s)
+=== CONT  TestAccKeycloakLdapGroupMapper_updateLdapUserFederationForceNew
+--- PASS: TestAccKeycloakAttributeToRoleIdentityProviderMapper_basic (2.08s)
+=== CONT  TestAccKeycloakAttributeImporterIdentityProviderMapper_basicUpdateAll
+--- PASS: TestAccKeycloakAttributeToRoleIdentityProviderMapper_createAfterManualDestroy (3.53s)
+=== CONT  TestAccKeycloakLdapGroupMapper_groupInheritanceValidation
+--- PASS: TestAccKeycloakLdapGroupMapper_groupInheritanceValidation (1.33s)
+=== CONT  TestAccKeycloakLdapGroupMapper_groupsLdapFilterValidation
+--- PASS: TestAccKeycloakLdapGroupMapper_updateLdapUserFederationInPlace (3.87s)
+=== CONT  TestAccKeycloakUserGroups_updateNonExhaustive
+--- PASS: TestAccKeycloakLdapGroupMapper_updateLdapUserFederationForceNew (4.10s)
+=== CONT  TestAccKeycloakLdapGroupMapper_userRolesRetrieveStrategyValidation
+--- PASS: TestAccKeycloakLdapGroupMapper_groupsLdapFilterValidation (2.28s)
+=== CONT  TestAccKeycloakUserRoles_updateNonExhaustive
+--- PASS: TestAccKeycloakAttributeImporterIdentityProviderMapper_basicUpdateAll (3.71s)
+=== CONT  TestAccKeycloakLdapGroupMapper_membershipAttributeTypeValidation
+--- PASS: TestAccKeycloakLdapGroupMapper_userRolesRetrieveStrategyValidation (2.41s)
+=== CONT  TestAccKeycloakUserTemplateIdentityProviderMapper_withExtraConfig_createAfterManualDestroy
+--- PASS: TestAccKeycloakLdapGroupMapper_membershipAttributeTypeValidation (2.43s)
+=== CONT  TestAccKeycloakLdapGroupMapper_modeValidation
+--- PASS: TestAccKeycloakLdapGroupMapper_modeValidation (2.61s)
+=== CONT  TestAccKeycloakUserRoles_update
+--- PASS: TestAccKeycloakUserTemplateIdentityProviderMapper_withExtraConfig_createAfterManualDestroy (4.03s)
+=== CONT  TestAccKeycloakLdapGroupMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakLdapGroupMapper_createAfterManualDestroy (5.16s)
+=== CONT  TestAccKeycloakUserRoles_basic
+--- PASS: TestAccKeycloakUserGroups_updateNonExhaustive (17.44s)
+=== CONT  TestAccKeycloakLdapGroupMapper_basic
+--- PASS: TestAccKeycloakUserRoles_basic (6.83s)
+=== CONT  TestAccKeycloakDataSourceOpenidClient_extraConfig
+--- PASS: TestAccKeycloakLdapGroupMapper_basic (3.15s)
+=== CONT  TestAccKeycloakOpenIdGroupMembershipProtocolMapper_clientDuplicateNameValidation
+--- PASS: TestAccKeycloakDataSourceOpenidClient_extraConfig (2.42s)
+=== CONT  TestAccKeycloakOpenIdFullNameProtocolMapper_clientScopeDuplicateNameValidation
+--- PASS: TestAccKeycloakUserRoles_updateNonExhaustive (20.46s)
+=== CONT  TestAccKeycloakLdapFullNameMapper_updateLdapUserFederation
+--- PASS: TestAccKeycloakOpenIdGroupMembershipProtocolMapper_clientDuplicateNameValidation (3.38s)
+=== CONT  TestAccKeycloakOpenIdFullNameProtocolMapper_clientDuplicateNameValidation
+--- PASS: TestAccKeycloakOpenIdFullNameProtocolMapper_clientScopeDuplicateNameValidation (3.41s)
+=== CONT  TestAccKeycloakLdapFullNameMapper_writableValidation
+--- PASS: TestAccKeycloakLdapFullNameMapper_updateLdapUserFederation (4.87s)
+=== CONT  TestAccKeycloakDataSourceUser_gracefulError
+--- PASS: TestAccKeycloakDataSourceUser_gracefulError (0.39s)
+=== CONT  TestAccKeycloakDataSourceUser
+--- PASS: TestAccKeycloakOpenIdFullNameProtocolMapper_clientDuplicateNameValidation (3.68s)
+=== CONT  TestAccKeycloakDataSourceUserRoles
+--- PASS: TestAccKeycloakLdapFullNameMapper_writableValidation (3.43s)
+=== CONT  TestAccKeycloakDataSourceSamlClient_basic
+=== NAME  TestAccKeycloakDataSourceUser
+    data_source_keycloak_user_test.go:19: Step 1/1 error: After applying this test step, the plan was not empty.
+        stdout:
+        
+        
+        Terraform used the selected providers to generate the following execution
+        plan. Resource actions are indicated with the following symbols:
+          ~ update in-place
+         <= read (data resources)
+        
+        Terraform will perform the following actions:
+        
+          # data.keycloak_user.user will be read during apply
+          # (depends on a resource or a module with changes pending)
+         <= data "keycloak_user" "user" {
+              + attributes         = (known after apply)
+              + email              = (known after apply)
+              + email_verified     = (known after apply)
+              + enabled            = (known after apply)
+              + federated_identity = (known after apply)
+              + first_name         = (known after apply)
+              + id                 = (known after apply)
+              + last_name          = (known after apply)
+              + realm_id           = "tf-acc-3351663872932440298"
+              + required_actions   = (known after apply)
+              + username           = "tf-acc-6112327367373645802"
+            }
+        
+          # keycloak_user.user will be updated in-place
+          ~ resource "keycloak_user" "user" {
+              + first_name     = "Bob"
+                id             = "7d105e94-b2e2-4a31-8d2e-4c3dce5bc07c"
+              + last_name      = "Bobson"
+                # (6 unchanged attributes hidden)
+            }
+        
+        Plan: 0 to add, 1 to change, 0 to destroy.
+=== NAME  TestAccKeycloakDataSourceUserRoles
+    data_source_keycloak_user_realm_roles_test.go:17: Step 1/1 error: After applying this test step, the plan was not empty.
+        stdout:
+        
+        
+        Terraform used the selected providers to generate the following execution
+        plan. Resource actions are indicated with the following symbols:
+          ~ update in-place
+         <= read (data resources)
+        
+        Terraform will perform the following actions:
+        
+          # data.keycloak_user_realm_roles.user_realm_roles will be read during apply
+          # (depends on a resource or a module with changes pending)
+         <= data "keycloak_user_realm_roles" "user_realm_roles" {
+              + id         = (known after apply)
+              + realm_id   = "tf-acc-3351663872932440298"
+              + role_names = (known after apply)
+              + user_id    = "72cdfbbc-ed4a-447a-b1ea-e9263190623b"
+            }
+        
+          # keycloak_user.user will be updated in-place
+          ~ resource "keycloak_user" "user" {
+              + first_name     = "Bob"
+                id             = "72cdfbbc-ed4a-447a-b1ea-e9263190623b"
+              + last_name      = "Bobson"
+                # (6 unchanged attributes hidden)
+            }
+        
+        Plan: 0 to add, 1 to change, 0 to destroy.
+--- FAIL: TestAccKeycloakDataSourceUser (1.98s)
+=== CONT  TestAccKeycloakDataSourceSamlClientInstallationProvider_basic
+--- FAIL: TestAccKeycloakDataSourceUserRoles (2.20s)
+=== CONT  TestAccKeycloakDataSourceRole_basic
+--- PASS: TestAccKeycloakDataSourceSamlClient_basic (2.96s)
+=== CONT  TestAccKeycloakDataSourceRealmKeys_filterByAlgorithms
+--- PASS: TestAccKeycloakUserRoles_update (25.66s)
+=== CONT  TestAccKeycloakDataSourceRealmKeys_basic
+--- PASS: TestAccKeycloakDataSourceSamlClientInstallationProvider_basic (3.37s)
+=== CONT  TestAccKeycloakLdapFullNameMapper_readWriteValidation
+--- PASS: TestAccKeycloakDataSourceRole_basic (3.23s)
+=== CONT  TestAccKeycloakUserGroups_update
+--- PASS: TestAccKeycloakDataSourceRealmKeys_filterByAlgorithms (2.23s)
+=== CONT  TestAccKeycloakLdapFullNameMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakLdapFullNameMapper_readWriteValidation (1.44s)
+=== CONT  TestAccKeycloakLdapFullNameMapper_basic
+--- PASS: TestAccKeycloakDataSourceRealmKeys_basic (2.05s)
+=== CONT  TestAccKeycloakUserGroups_basicNonExhaustive
+--- PASS: TestAccKeycloakLdapFullNameMapper_basic (3.12s)
+=== CONT  TestAccKeycloakLdapCustomMapper_updateInPlace
+--- PASS: TestAccKeycloakLdapFullNameMapper_createAfterManualDestroy (4.45s)
+=== CONT  TestAccKeycloakLdapCustomMapper_updateLdapUserFederation
+--- PASS: TestAccKeycloakUserGroups_basicNonExhaustive (3.94s)
+=== CONT  TestAccKeycloakGroup_basicGroupNameContainsBackSlash
+--- PASS: TestAccKeycloakGroup_basicGroupNameContainsBackSlash (2.54s)
+=== CONT  TestAccKeycloakGroup_basic
+--- PASS: TestAccKeycloakLdapCustomMapper_updateInPlace (3.93s)
+=== CONT  TestAccKeycloakLdapCustomMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakLdapCustomMapper_updateLdapUserFederation (4.11s)
+=== CONT  TestAccKeycloakGroupRoles_simultaneousRoleAndAssignmentUpdate
+--- PASS: TestAccKeycloakGroup_basic (2.35s)
+=== CONT  TestAccKeycloakLdapCustomMapper_basic
+--- PASS: TestAccKeycloakLdapCustomMapper_createAfterManualDestroy (3.87s)
+=== CONT  TestAccKeycloakIdpTokenExchangeScopePermission_rolePolicy
+--- PASS: TestAccKeycloakIdpTokenExchangeScopePermission_rolePolicy (0.28s)
+=== CONT  TestAccKeycloakGroupRoles_updateNonExhaustive
+--- PASS: TestAccKeycloakGroupRoles_simultaneousRoleAndAssignmentUpdate (3.75s)
+=== CONT  TestAccKeycloakIdpTokenExchangeScopePermission_updatePolicyMultipleClients
+--- PASS: TestAccKeycloakLdapCustomMapper_basic (2.63s)
+=== CONT  TestAccKeycloakGroupRoles_basicNonExhaustive
+--- PASS: TestAccKeycloakGroupRoles_basicNonExhaustive (4.92s)
+=== CONT  TestAccKeycloakIdpTokenExchangeScopePermission_import
+--- PASS: TestAccKeycloakUserGroups_update (18.23s)
+=== CONT  TestAccKeycloakGroupRoles_update
+--- PASS: TestAccKeycloakIdpTokenExchangeScopePermission_updatePolicyMultipleClients (6.76s)
+=== CONT  TestAccKeycloakGroupRoles_createAfterManualDestroy
+--- PASS: TestAccKeycloakIdpTokenExchangeScopePermission_import (3.16s)
+=== CONT  TestAccKeycloakIdpTokenExchangeScopePermission_createAfterManualDestroy
+--- PASS: TestAccKeycloakGroupRoles_createAfterManualDestroy (5.35s)
+=== CONT  TestAccKeycloakGroupRoles_basic
+--- PASS: TestAccKeycloakIdpTokenExchangeScopePermission_createAfterManualDestroy (4.85s)
+=== CONT  TestAccKeycloakIdpTokenExchangeScopePermission_basic
+--- PASS: TestAccKeycloakIdpTokenExchangeScopePermission_basic (2.64s)
+=== CONT  TestAccKeycloakGroupMemberships_createAfterManualDestroy
+--- PASS: TestAccKeycloakGroupRoles_updateNonExhaustive (17.52s)
+=== CONT  TestAccKeycloakHardcodedRoleIdentityProviderMapper_basicUpdateAll
+--- PASS: TestAccKeycloakGroupRoles_basic (5.29s)
+=== CONT  TestAccKeycloakGroupMemberships_validateLowercaseUsernames
+--- PASS: TestAccKeycloakGroupMemberships_validateLowercaseUsernames (1.16s)
+=== CONT  TestAccKeycloakHardcodedRoleIdentityProviderMapper_withExtraConfig_createAfterManualDestroy
+--- PASS: TestAccKeycloakGroupMemberships_createAfterManualDestroy (3.89s)
+=== CONT  TestAccKeycloakGroupMemberships_noImportNeeded
+--- PASS: TestAccKeycloakHardcodedRoleIdentityProviderMapper_basicUpdateAll (4.13s)
+=== CONT  TestAccKeycloakGroupMemberships_authoritativeRemove
+--- PASS: TestAccKeycloakHardcodedRoleIdentityProviderMapper_withExtraConfig_createAfterManualDestroy (4.07s)
+=== CONT  TestAccKeycloakHardcodedRoleIdentityProviderMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakGroupMemberships_noImportNeeded (4.01s)
+=== CONT  TestAccKeycloakGroupMemberships_authoritativeAdd
+--- PASS: TestAccKeycloakGroupMemberships_authoritativeRemove (4.18s)
+=== CONT  TestAccKeycloakHardcodedRoleIdentityProviderMapper_withExtraConfig
+--- PASS: TestAccKeycloakHardcodedRoleIdentityProviderMapper_createAfterManualDestroy (3.88s)
+=== CONT  TestAccKeycloakHardcodedRoleIdentityProviderMapper_basic
+--- PASS: TestAccKeycloakGroupRoles_update (21.75s)
+=== CONT  TestAccKeycloakHardcodedAttributeIdentityProviderMapper_basicUpdateAll
+--- PASS: TestAccKeycloakHardcodedRoleIdentityProviderMapper_withExtraConfig (2.11s)
+=== CONT  TestAccKeycloakGroupMemberships_userDoesNotExist
+--- PASS: TestAccKeycloakGroupMemberships_authoritativeAdd (4.11s)
+=== CONT  TestAccKeycloakHardcodedAttributeIdentityProviderMapper_withExtraConfig_createAfterManualDestroy
+--- PASS: TestAccKeycloakHardcodedRoleIdentityProviderMapper_basic (2.03s)
+=== CONT  TestAccKeycloakGroupMemberships_updateInPlace
+--- PASS: TestAccKeycloakGroupMemberships_userDoesNotExist (1.13s)
+=== CONT  TestAccKeycloakHardcodedAttributeIdentityProviderMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakHardcodedAttributeIdentityProviderMapper_basicUpdateAll (3.68s)
+=== CONT  TestAccKeycloakGroupMemberships_updateGroupForceNew
+--- PASS: TestAccKeycloakHardcodedAttributeIdentityProviderMapper_withExtraConfig_createAfterManualDestroy (3.66s)
+=== CONT  TestAccKeycloakHardcodedAttributeIdentityProviderMapper_withExtraConfig
+--- PASS: TestAccKeycloakHardcodedAttributeIdentityProviderMapper_createAfterManualDestroy (3.77s)
+=== CONT  TestAccKeycloakHardcodedAttributeIdentityProviderMapper_basic
+--- PASS: TestAccKeycloakHardcodedAttributeIdentityProviderMapper_withExtraConfig (2.18s)
+=== CONT  TestAccKeycloakGroup_unsetOptionalAttributes
+--- PASS: TestAccKeycloakGroupMemberships_updateInPlace (5.77s)
+=== CONT  TestAccKeycloakGroup_nestedGroupNameContainsBackSlash
+--- PASS: TestAccKeycloakGroupMemberships_updateGroupForceNew (4.25s)
+=== CONT  TestAccKeycloakGroup_nested
+--- PASS: TestAccKeycloakHardcodedAttributeIdentityProviderMapper_basic (2.60s)
+=== CONT  TestAccKeycloakGroup_updateRealm
+--- PASS: TestAccKeycloakGroup_unsetOptionalAttributes (4.00s)
+=== CONT  TestAccKeycloakGroup_updateGroupName
+--- PASS: TestAccKeycloakGroup_updateRealm (3.59s)
+=== CONT  TestAccKeycloakGroup_createAfterManualDestroy
+--- PASS: TestAccKeycloakGroup_updateGroupName (3.41s)
+=== CONT  TestAccKeycloakGroupMemberships_moreThan100members
+--- PASS: TestAccKeycloakGroup_nestedGroupNameContainsBackSlash (7.20s)
+=== CONT  TestAccKeycloakGenericRoleMapper_basicClientScopeRealmRole
+--- PASS: TestAccKeycloakGroup_createAfterManualDestroy (3.39s)
+=== CONT  TestAccKeycloakGenericRoleMapper_importClientScope
+--- PASS: TestAccKeycloakGroup_nested (7.05s)
+=== CONT  TestAccKeycloakGenericRoleMapper_basicClientScope
+--- PASS: TestAccKeycloakGenericRoleMapper_basicClientScopeRealmRole (2.41s)
+=== CONT  TestAccKeycloakGenericRoleMapper_import
+--- PASS: TestAccKeycloakGenericRoleMapper_basicClientScope (2.68s)
+=== CONT  TestAccKeycloakGroupMemberships_basicUserWithBackslash
+--- PASS: TestAccKeycloakGenericRoleMapper_importClientScope (3.23s)
+=== CONT  TestAccKeycloakDataSourceGroup_basic
+=== NAME  TestAccKeycloakGroupMemberships_basicUserWithBackslash
+    resource_keycloak_group_memberships_test.go:44: Step 1/1 error: Error running apply: exit status 1
+        
+        Error: user with username mmxo1\jvelh does not exist
+        
+          with keycloak_group_memberships.group_members,
+          on terraform_plugin_test.tf line 16, in resource "keycloak_group_memberships" "group_members":
+          16: resource "keycloak_group_memberships" "group_members" {
+        
+--- FAIL: TestAccKeycloakGroupMemberships_basicUserWithBackslash (1.20s)
+=== CONT  TestAccKeycloakGroupMemberships_basic
+--- PASS: TestAccKeycloakGenericRoleMapper_import (2.90s)
+=== CONT  TestAccKeycloakDataSourceOpenidClient_basic
+--- PASS: TestAccKeycloakDataSourceGroup_basic (2.05s)
+=== CONT  TestAccKeycloakGenericRoleMapper_deleteIndividualMappers
+--- PASS: TestAccKeycloakDataSourceOpenidClient_basic (2.91s)
+=== CONT  TestAccKeycloakDataSourceOpenidClientServiceAccountUser_basic
+--- PASS: TestAccKeycloakGroupMemberships_basic (4.10s)
+=== CONT  TestAccKeycloakDataSourceAuthenticationFlow_basic
+--- PASS: TestAccKeycloakGenericRoleMapper_deleteIndividualMappers (4.56s)
+=== CONT  TestAccKeycloakDataSourceOpenidClientScope_basic
+--- PASS: TestAccKeycloakDataSourceOpenidClientServiceAccountUser_basic (2.25s)
+=== CONT  TestAccKeycloakDataSourceOpenidClientAuthorizationPolicy_basic
+--- PASS: TestAccKeycloakDataSourceAuthenticationFlow_basic (2.02s)
+=== CONT  TestAccKeycloakDataSourceClientDescriptionConverter_basic
+--- PASS: TestAccKeycloakGroupMemberships_moreThan100members (12.86s)
+=== CONT  TestAccKeycloakDataSourceGroup_nested
+--- PASS: TestAccKeycloakDataSourceOpenidClientScope_basic (2.33s)
+=== CONT  TestAccKeycloakDataSourceAuthenticationExecution_errorWrongProviderId
+--- PASS: TestAccKeycloakDataSourceClientDescriptionConverter_basic (2.14s)
+=== CONT  TestAccKeycloakDataSourceAuthenticationExecution_wrongAlias
+--- PASS: TestAccKeycloakDataSourceOpenidClientAuthorizationPolicy_basic (2.59s)
+=== CONT  TestAccKeycloakDataSourceAuthenticationExecution_errorNoExecutions
+--- PASS: TestAccKeycloakDataSourceAuthenticationExecution_wrongAlias (1.26s)
+=== CONT  TestAccKeycloakUserTemplateIdentityProviderMapper_withExtraConfig
+--- PASS: TestAccKeycloakDataSourceAuthenticationExecution_errorWrongProviderId (1.38s)
+=== CONT  TestAccKeycloakUserTemplateIdentityProviderMapper_basic
+--- PASS: TestAccKeycloakDataSourceAuthenticationExecution_errorNoExecutions (1.39s)
+=== CONT  TestAccKeycloakUserTemplateIdentityProviderMapper_createAfterManualDestroy
+--- PASS: TestAccKeycloakDataSourceGroup_nested (2.24s)
+--- PASS: TestAccKeycloakUserTemplateIdentityProviderMapper_withExtraConfig (1.85s)
+--- PASS: TestAccKeycloakUserTemplateIdentityProviderMapper_basic (1.86s)
+--- PASS: TestAccKeycloakUserTemplateIdentityProviderMapper_createAfterManualDestroy (2.69s)
+FAIL
+FAIL	github.com/denniskniep/terraform-provider-keycloak/provider	617.281s
+FAIL

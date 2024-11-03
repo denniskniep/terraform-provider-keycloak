@@ -84,6 +84,13 @@ func createTestRealm(testCtx context.Context) *keycloak.Realm {
 		os.Exit(1)
 	}
 
+	up := &keycloak.RealmUserProfile{
+		UnmanagedAttributePolicy: stringPointer("ENABLED"),
+		Attributes:               nil,
+		Groups:                   nil,
+	}
+	keycloakClient.UpdateRealmUserProfile(testCtx, name, up)
+
 	return r
 }
 

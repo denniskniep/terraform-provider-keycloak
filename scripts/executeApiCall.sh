@@ -16,8 +16,19 @@ function get() {
     curl  \
         -H "Authorization: Bearer ${accessToken}" \
         -H "Content-Type: application/json" \
-        -H "Foo: bar" \
         "${KEYCLOAK_URL}/admin${1}"
 }
 
-get /realms/master
+function put() {
+    curl --fail \
+        -X PUT \
+        -H "Authorization: bearer ${accessToken}" \
+        -H "Content-Type: application/json" \
+        -d "${2}" \
+        "${KEYCLOAK_URL}/admin${1}"
+}
+
+#get /realms/master
+
+# usersProfile=$(jq -n "{}")
+#put "/realms/tf-acc-5893505837518950807/users/profile" "${usersProfile}"

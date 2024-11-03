@@ -125,6 +125,11 @@ func resourceKeycloakRealmUserProfile() *schema.Resource {
 					},
 				},
 			},
+			"unmanaged_attribute_policy": {
+				Type:     schema.TypeString,
+				Default:  nil,
+				Optional: true,
+			},
 		},
 	}
 }
@@ -292,6 +297,9 @@ func getRealmUserProfileFromData(data *schema.ResourceData) *keycloak.RealmUserP
 
 	realmUserProfile.Attributes = getRealmUserProfileAttributesFromData(data.Get("attribute").([]interface{}))
 	realmUserProfile.Groups = getRealmUserProfileGroupsFromData(data.Get("group").(*schema.Set).List())
+	if p, ok := data.Get("unmanaged_attribute_policy").(string); ok && p != "" {
+		realmUserProfile.UnmanagedAttributePolicy = &p
+	}
 
 	return realmUserProfile
 }
@@ -400,6 +408,10 @@ func setRealmUserProfileData(data *schema.ResourceData, realmUserProfile *keyclo
 		groups = append(groups, getRealmUserProfileGroupData(group))
 	}
 	data.Set("group", groups)
+
+	if realmUserProfile.UnmanagedAttributePolicy != nil && *realmUserProfile.UnmanagedAttributePolicy != "" {
+		data.Set("unmanaged_attribute_policy", *realmUserProfile.UnmanagedAttributePolicy)
+	}
 }
 
 func resourceKeycloakRealmUserProfileCreate(ctx context.Context, data *schema.ResourceData, meta interface{}) diag.Diagnostics {
@@ -438,8 +450,9 @@ func resourceKeycloakRealmUserProfileDelete(ctx context.Context, data *schema.Re
 
 	// The realm user profile cannot be deleted, so instead we set it back to its "zero" values.
 	realmUserProfile := &keycloak.RealmUserProfile{
-		Attributes: []*keycloak.RealmUserProfileAttribute{},
-		Groups:     []*keycloak.RealmUserProfileGroup{},
+		Attributes:               []*keycloak.RealmUserProfileAttribute{},
+		Groups:                   []*keycloak.RealmUserProfileGroup{},
+		UnmanagedAttributePolicy: nil,
 	}
 
 	err := keycloakClient.UpdateRealmUserProfile(ctx, realmId, realmUserProfile)
