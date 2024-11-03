@@ -101,8 +101,6 @@ func testResourceKeycloakOpenidClientAuthorizationUserPolicy_basic(clientId, use
 		username = "%s"
 
 		email      = "%s"
-		first_name = "Testy"
-		last_name  = "Tester"
 	}
 
 	resource keycloak_openid_client_user_policy test {
