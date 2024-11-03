@@ -123,7 +123,7 @@ func getOidcIdentityProviderFromData(data *schema.ResourceData) (*keycloak.Ident
 		AuthorizationUrl:            data.Get("authorization_url").(string),
 		ClientId:                    data.Get("client_id").(string),
 		ClientSecret:                data.Get("client_secret").(string),
-		HideOnLoginPage:             types.KeycloakBoolQuoted(data.Get("hide_on_login_page").(bool)),
+		HideOnLoginPage:             data.Get("hide_on_login_page").(bool),
 		TokenUrl:                    data.Get("token_url").(string),
 		LogoutUrl:                   data.Get("logout_url").(string),
 		UILocales:                   types.KeycloakBoolQuoted(data.Get("ui_locales").(bool)),

@@ -94,7 +94,7 @@ func getOidcGoogleIdentityProviderFromData(data *schema.ResourceData) (*keycloak
 	googleOidcIdentityProviderConfig := &keycloak.IdentityProviderConfig{
 		ClientId:                    data.Get("client_id").(string),
 		ClientSecret:                data.Get("client_secret").(string),
-		HideOnLoginPage:             types.KeycloakBoolQuoted(data.Get("hide_on_login_page").(bool)),
+		HideOnLoginPage:             data.Get("hide_on_login_page").(bool),
 		HostedDomain:                data.Get("hosted_domain").(string),
 		UserIp:                      types.KeycloakBoolQuoted(data.Get("use_user_ip_param").(bool)),
 		OfflineAccess:               types.KeycloakBoolQuoted(data.Get("request_refresh_token").(bool)),

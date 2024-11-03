@@ -199,7 +199,7 @@ func getSamlIdentityProviderFromData(data *schema.ResourceData) (*keycloak.Ident
 
 	samlIdentityProviderConfig := &keycloak.IdentityProviderConfig{
 		ValidateSignature:               types.KeycloakBoolQuoted(data.Get("validate_signature").(bool)),
-		HideOnLoginPage:                 types.KeycloakBoolQuoted(data.Get("hide_on_login_page").(bool)),
+		HideOnLoginPage:                 data.Get("hide_on_login_page").(bool),
 		BackchannelSupported:            types.KeycloakBoolQuoted(data.Get("backchannel_supported").(bool)),
 		NameIDPolicyFormat:              nameIdPolicyFormats[data.Get("name_id_policy_format").(string)],
 		EntityId:                        data.Get("entity_id").(string),
