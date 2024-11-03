@@ -293,6 +293,7 @@ resource "keycloak_authentication_execution" "imported-execution" {
 
 	authenticator     = "%s"
 	requirement       = "%s"
+	priority          = 25
 	import 			  = true
 }
 	`, testAccRealm.Realm, parentAlias, authenticator, newReq)
