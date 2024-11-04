@@ -6,14 +6,14 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/denniskniep/terraform-provider-keycloak/keycloak"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	"github.com/mrparkers/terraform-provider-keycloak/keycloak"
 )
 
 // All saml clients in Keycloak will automatically have these scopes listed as "default client scopes".
-var preAssignedDefaultSamlClientScopes = []string{"role_list"}
+var preAssignedDefaultSamlClientScopes = []string{"role_list", "saml_organization"}
 
 func TestAccKeycloakSamlClientDefaultScopes_basic(t *testing.T) {
 	t.Parallel()
@@ -242,7 +242,7 @@ func TestAccKeycloakSamlClientDefaultScopes_noImportNeeded(t *testing.T) {
 	})
 }
 
-// by default, keycloak saml clients have the default scopes "role_list",
+// by default, keycloak saml clients have the default scopes "role_list" & "saml_organization"
 // attached. if you create this resource with only one scope, it
 // won't remove these two scopes, because the creation of a new resource should not
 // result in anything destructive. thus, a following plan will not be empty, as terraform
@@ -375,6 +375,7 @@ resource "keycloak_saml_client_default_scopes" "default_scopes" {
 	client_id      = keycloak_saml_client.client.id
 	default_scopes = [
 		"role_list",
+ 		"saml_organization",
 		keycloak_saml_client_scope.client_scope.name
 	]
 }
@@ -461,6 +462,7 @@ resource "keycloak_saml_client_default_scopes" "default_scopes" {
 	client_id      = "%s"
 	default_scopes = [
 		"role_list",
+        "saml_organization",
 		keycloak_saml_client_scope.client_scope.name
 	]
 }

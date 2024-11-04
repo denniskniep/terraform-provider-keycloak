@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/denniskniep/terraform-provider-keycloak/keycloak"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	"github.com/mrparkers/terraform-provider-keycloak/keycloak"
 )
 
 func TestAccKeycloakOpenidClientPermission_basic(t *testing.T) {
@@ -146,6 +146,37 @@ resource keycloak_openid_client_permissions "realm-management_permission" {
 	client_id = data.keycloak_openid_client.realm_management.id
 }
 
+
+resource "keycloak_realm_user_profile" "realm_user_profile" {
+	realm_id = data.keycloak_realm.realm.id
+	attribute {
+		name = "username"
+    }
+
+	attribute {
+		name = "email"
+    }
+
+	attribute {
+		name = "firstName"
+		display_name = "$${firstName}"
+		permissions {
+            view = ["admin", "user"]
+            edit = ["admin", "user"]
+        }
+    }
+
+	attribute {
+		name = "lastName"
+		display_name = "$${lastName}"
+		permissions {
+            view = ["admin", "user"]
+            edit = ["admin", "user"]
+        }
+    }
+	unmanaged_attribute_policy = "ENABLED"
+}
+
 resource keycloak_user test {
 	realm_id = data.keycloak_realm.realm.id
 	username = "%s"
@@ -153,6 +184,10 @@ resource keycloak_user test {
 	email      = "%s"
 	first_name = "Testy"
 	last_name  = "Tester"
+
+    depends_on = [
+	  keycloak_realm_user_profile.realm_user_profile
+    ]
 }
 
 resource keycloak_openid_client_user_policy test {
@@ -215,6 +250,36 @@ resource keycloak_openid_client_permissions "realm-management_permission" {
 	client_id = data.keycloak_openid_client.realm_management.id
 }
 
+resource "keycloak_realm_user_profile" "realm_user_profile" {
+	realm_id = data.keycloak_realm.realm.id
+	attribute {
+		name = "username"
+    }
+
+	attribute {
+		name = "email"
+    }
+
+	attribute {
+		name = "firstName"
+		display_name = "$${firstName}"
+		permissions {
+            view = ["admin", "user"]
+            edit = ["admin", "user"]
+        }
+    }
+
+	attribute {
+		name = "lastName"
+		display_name = "$${lastName}"
+		permissions {
+            view = ["admin", "user"]
+            edit = ["admin", "user"]
+        }
+    }
+	unmanaged_attribute_policy = "ENABLED"
+}
+
 resource keycloak_user test {
 	realm_id = data.keycloak_realm.realm.id
 	username = "%s"
@@ -222,6 +287,10 @@ resource keycloak_user test {
 	email      = "%s"
 	first_name = "Testy"
 	last_name  = "Tester"
+
+    depends_on = [
+	  keycloak_realm_user_profile.realm_user_profile
+    ]
 }
 
 resource keycloak_openid_client_user_policy test {

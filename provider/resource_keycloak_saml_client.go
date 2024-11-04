@@ -7,15 +7,15 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
+	"github.com/denniskniep/terraform-provider-keycloak/keycloak/types"
 	"github.com/hashicorp/terraform-plugin-log/tflog"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
-	"github.com/mrparkers/terraform-provider-keycloak/keycloak/types"
 	"reflect"
 	"strings"
 
+	"github.com/denniskniep/terraform-provider-keycloak/keycloak"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"github.com/mrparkers/terraform-provider-keycloak/keycloak"
 )
 
 var (
@@ -58,6 +58,11 @@ func resourceKeycloakSamlClient() *schema.Resource {
 				Type:     schema.TypeBool,
 				Optional: true,
 				Default:  true,
+			},
+			"always_display_in_console": {
+				Type:     schema.TypeBool,
+				Optional: true,
+				Default:  false,
 			},
 			"description": {
 				Type:     schema.TypeString,
@@ -318,6 +323,10 @@ func mapToSamlClientFromData(data *schema.ResourceData) *keycloak.SamlClient {
 		Attributes:              samlAttributes,
 	}
 
+	if v, ok := data.GetOk("always_display_in_console"); ok {
+		samlClient.AlwaysDisplayInConsole = v.(bool)
+	}
+
 	if v, ok := data.GetOk("authentication_flow_binding_overrides"); ok {
 		authenticationFlowBindingOverridesData := v.(*schema.Set).List()[0]
 		authenticationFlowBindingOverrides := authenticationFlowBindingOverridesData.(map[string]interface{})
@@ -370,6 +379,7 @@ func mapToDataFromSamlClient(ctx context.Context, data *schema.ResourceData, cli
 	data.Set("logout_service_post_binding_url", client.Attributes.LogoutServicePostBindingURL)
 	data.Set("logout_service_redirect_binding_url", client.Attributes.LogoutServiceRedirectBindingURL)
 	data.Set("full_scope_allowed", client.FullScopeAllowed)
+	data.Set("always_display_in_console", client.AlwaysDisplayInConsole)
 	data.Set("login_theme", client.Attributes.LoginTheme)
 
 	if canonicalizationMethod, ok := mapKeyFromValue(keycloakSamlClientCanonicalizationMethods, client.Attributes.CanonicalizationMethod); ok {

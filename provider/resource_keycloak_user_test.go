@@ -2,10 +2,10 @@ package provider
 
 import (
 	"fmt"
+	"github.com/denniskniep/terraform-provider-keycloak/keycloak"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	"github.com/mrparkers/terraform-provider-keycloak/keycloak"
 	"io/ioutil"
 	"net/http"
 	"net/url"
@@ -16,7 +16,7 @@ import (
 )
 
 func TestAccKeycloakUser_basic(t *testing.T) {
-	t.Parallel()
+	//t.Parallel()
 	username := acctest.RandomWithPrefix("tf-acc")
 	attributeName := acctest.RandomWithPrefix("tf-acc")
 	attributeValue := acctest.RandomWithPrefix("tf-acc")
@@ -29,7 +29,7 @@ func TestAccKeycloakUser_basic(t *testing.T) {
 		CheckDestroy:      testAccCheckKeycloakUserDestroy(),
 		Steps: []resource.TestStep{
 			{
-				Config: testKeycloakUser_basic(username, attributeName, attributeValue),
+				Config: testKeycloakUser_basic(username, attributeName, attributeValue, "", ""),
 				Check:  testAccCheckKeycloakUserExists(resourceName),
 			},
 			{
@@ -42,8 +42,28 @@ func TestAccKeycloakUser_basic(t *testing.T) {
 	})
 }
 
+func TestAccKeycloakUser_import(t *testing.T) {
+	//t.Parallel()
+
+	resource.Test(t, resource.TestCase{
+		ProviderFactories: testAccProviderFactories,
+		PreCheck:          func() { testAccPreCheck(t) },
+		CheckDestroy:      testAccCheckKeycloakUserNotDestroyed(),
+		Steps: []resource.TestStep{
+			{
+				Config:      testKeycloakUser_import("master", "non-existing-username"),
+				ExpectError: regexp.MustCompile("no user found for username non-existing-username"),
+			},
+			{
+				Config: testKeycloakUser_import("master", "service-account-terraform"),
+				Check:  testAccCheckKeycloakUserExistsWithUsername("keycloak_user.user", "service-account-terraform"),
+			},
+		},
+	})
+}
+
 func TestAccKeycloakUser_withInitialPassword(t *testing.T) {
-	t.Parallel()
+	//t.Parallel()
 	username := acctest.RandomWithPrefix("tf-acc")
 	password := acctest.RandomWithPrefix("tf-acc")
 	clientId := acctest.RandomWithPrefix("tf-acc")
@@ -67,7 +87,7 @@ func TestAccKeycloakUser_withInitialPassword(t *testing.T) {
 }
 
 func TestAccKeycloakUser_createAfterManualDestroy(t *testing.T) {
-	t.Parallel()
+	//t.Parallel()
 	var user = &keycloak.User{}
 
 	username := acctest.RandomWithPrefix("tf-acc")
@@ -81,7 +101,7 @@ func TestAccKeycloakUser_createAfterManualDestroy(t *testing.T) {
 		CheckDestroy:      testAccCheckKeycloakUserDestroy(),
 		Steps: []resource.TestStep{
 			{
-				Config: testKeycloakUser_basic(username, attributeName, attributeValue),
+				Config: testKeycloakUser_basic(username, attributeName, attributeValue, "", ""),
 				Check: resource.ComposeTestCheckFunc(
 					testAccCheckKeycloakUserExists(resourceName),
 					testAccCheckKeycloakUserFetch(resourceName, user),
@@ -94,7 +114,7 @@ func TestAccKeycloakUser_createAfterManualDestroy(t *testing.T) {
 						t.Fatal(err)
 					}
 				},
-				Config: testKeycloakUser_basic(username, attributeName, attributeValue),
+				Config: testKeycloakUser_basic(username, attributeName, attributeValue, "", ""),
 				Check:  testAccCheckKeycloakUserExists(resourceName),
 			},
 		},
@@ -102,7 +122,7 @@ func TestAccKeycloakUser_createAfterManualDestroy(t *testing.T) {
 }
 
 func TestAccKeycloakUser_updateUsername(t *testing.T) {
-	t.Parallel()
+	//t.Parallel()
 	usernameOne := acctest.RandomWithPrefix("tf-acc")
 	usernameTwo := acctest.RandomWithPrefix("tf-acc")
 	attributeName := acctest.RandomWithPrefix("tf-acc")
@@ -116,14 +136,14 @@ func TestAccKeycloakUser_updateUsername(t *testing.T) {
 		CheckDestroy:      testAccCheckKeycloakUserDestroy(),
 		Steps: []resource.TestStep{
 			{
-				Config: testKeycloakUser_basic(usernameOne, attributeName, attributeValue),
+				Config: testKeycloakUser_basic(usernameOne, attributeName, attributeValue, "", ""),
 				Check: resource.ComposeTestCheckFunc(
 					testAccCheckKeycloakUserExists(resourceName),
 					resource.TestCheckResourceAttr(resourceName, "username", usernameOne),
 				),
 			},
 			{
-				Config: testKeycloakUser_basic(usernameTwo, attributeName, attributeValue),
+				Config: testKeycloakUser_basic(usernameTwo, attributeName, attributeValue, "", ""),
 				Check: resource.ComposeTestCheckFunc(
 					testAccCheckKeycloakUserExists(resourceName),
 					resource.TestCheckResourceAttr(resourceName, "username", usernameTwo),
@@ -134,7 +154,7 @@ func TestAccKeycloakUser_updateUsername(t *testing.T) {
 }
 
 func TestAccKeycloakUser_updateWithInitialPasswordChangeDoesNotReset(t *testing.T) {
-	t.Parallel()
+	//t.Parallel()
 	username := acctest.RandomWithPrefix("tf-acc")
 	passwordOne := acctest.RandomWithPrefix("tf-acc")
 	passwordTwo := acctest.RandomWithPrefix("tf-acc")
@@ -162,7 +182,7 @@ func TestAccKeycloakUser_updateWithInitialPasswordChangeDoesNotReset(t *testing.
 }
 
 func TestAccKeycloakUser_updateInPlace(t *testing.T) {
-	t.Parallel()
+	//t.Parallel()
 	userOne := &keycloak.User{
 		RealmId:       "terraform-" + acctest.RandString(10),
 		Username:      "terraform-user-" + acctest.RandString(10),
@@ -203,7 +223,7 @@ func TestAccKeycloakUser_updateInPlace(t *testing.T) {
 }
 
 func TestAccKeycloakUser_unsetOptionalAttributes(t *testing.T) {
-	t.Parallel()
+	//t.Parallel()
 	attributeName := acctest.RandomWithPrefix("tf-acc")
 	userWithOptionalAttributes := &keycloak.User{
 		RealmId:   "terraform-" + acctest.RandString(10),
@@ -232,7 +252,7 @@ func TestAccKeycloakUser_unsetOptionalAttributes(t *testing.T) {
 				Check:  testAccCheckKeycloakUserExists(resourceName),
 			},
 			{
-				Config: testKeycloakUser_basic(userWithOptionalAttributes.Username, attributeName, strings.Join(userWithOptionalAttributes.Attributes[attributeName], "")),
+				Config: testKeycloakUser_basic(userWithOptionalAttributes.Username, attributeName, strings.Join(userWithOptionalAttributes.Attributes[attributeName], ""), "", ""),
 				Check: resource.ComposeTestCheckFunc(
 					testAccCheckKeycloakUserExists(resourceName),
 					resource.TestCheckResourceAttr(resourceName, "email", ""),
@@ -245,7 +265,7 @@ func TestAccKeycloakUser_unsetOptionalAttributes(t *testing.T) {
 }
 
 func TestAccKeycloakUser_validateLowercaseUsernames(t *testing.T) {
-	t.Parallel()
+	//t.Parallel()
 	username := "terraform-user-" + strings.ToUpper(acctest.RandString(10))
 	attributeName := "terraform-attribute-" + acctest.RandString(10)
 	attributeValue := acctest.RandString(250)
@@ -256,7 +276,7 @@ func TestAccKeycloakUser_validateLowercaseUsernames(t *testing.T) {
 		CheckDestroy:      testAccCheckKeycloakUserDestroy(),
 		Steps: []resource.TestStep{
 			{
-				Config:      testKeycloakUser_basic(username, attributeName, attributeValue),
+				Config:      testKeycloakUser_basic(username, attributeName, attributeValue, "", ""),
 				ExpectError: regexp.MustCompile("expected username .+ to be all lowercase"),
 			},
 		},
@@ -317,6 +337,21 @@ func testAccCheckKeycloakUserExists(resourceName string) resource.TestCheckFunc 
 		_, err := getUserFromState(s, resourceName)
 		if err != nil {
 			return err
+		}
+
+		return nil
+	}
+}
+
+func testAccCheckKeycloakUserExistsWithUsername(resourceName, username string) resource.TestCheckFunc {
+	return func(s *terraform.State) error {
+		user, err := getUserFromState(s, resourceName)
+		if err != nil {
+			return err
+		}
+
+		if user.Username != username {
+			return fmt.Errorf("no user found for username %s", username)
 		}
 
 		return nil
@@ -390,6 +425,26 @@ func testAccCheckKeycloakUserDestroy() resource.TestCheckFunc {
 	}
 }
 
+func testAccCheckKeycloakUserNotDestroyed() resource.TestCheckFunc {
+	return func(s *terraform.State) error {
+		for _, rs := range s.RootModule().Resources {
+			if rs.Type != "keycloak_user" {
+				continue
+			}
+
+			id := rs.Primary.ID
+			realm := rs.Primary.Attributes["realm_id"]
+
+			user, _ := keycloakClient.GetUser(testCtx, realm, id)
+			if user == nil {
+				return fmt.Errorf("user %s does not exists", id)
+			}
+		}
+
+		return nil
+	}
+}
+
 func getUserFromState(s *terraform.State, resourceName string) (*keycloak.User, error) {
 	rs, ok := s.RootModule().Resources[resourceName]
 	if !ok {
@@ -407,10 +462,40 @@ func getUserFromState(s *terraform.State, resourceName string) (*keycloak.User, 
 	return user, nil
 }
 
-func testKeycloakUser_basic(username, attributeName, attributeValue string) string {
+func testKeycloakUser_basic(username, attributeName, attributeValue, firstName, lastName string) string {
 	return fmt.Sprintf(`
 data "keycloak_realm" "realm" {
 	realm = "%s"
+}
+
+resource "keycloak_realm_user_profile" "realm_user_profile" {
+	realm_id = data.keycloak_realm.realm.id
+		attribute {
+		name = "username"
+    }
+
+	attribute {
+		name = "email"
+    }
+
+	attribute {
+		name = "firstName"
+		display_name = "$${firstName}"
+		permissions {
+            view = ["admin", "user"]
+            edit = ["admin", "user"]
+        }
+    }
+
+	attribute {
+		name = "lastName"
+		display_name = "$${lastName}"
+		permissions {
+            view = ["admin", "user"]
+            edit = ["admin", "user"]
+        }
+    }
+	unmanaged_attribute_policy = "ENABLED"
 }
 
 resource "keycloak_user" "user" {
@@ -419,8 +504,27 @@ resource "keycloak_user" "user" {
 	attributes = {
 		"%s" = "%s"
 	}
+	first_name = "%s"
+	last_name = "%s"
+    depends_on = [
+	  keycloak_realm_user_profile.realm_user_profile
+    ]
 }
-	`, testAccRealm.Realm, username, attributeName, attributeValue)
+	`, testAccRealm.Realm, username, attributeName, attributeValue, firstName, lastName)
+}
+
+func testKeycloakUser_import(realmId, username string) string {
+	return fmt.Sprintf(`
+data "keycloak_realm" "realm" {
+	realm = "%s"
+}
+
+resource "keycloak_user" "user" {
+	realm_id = data.keycloak_realm.realm.id
+	username = "%s"
+	import = "true"
+}
+	`, realmId, username)
 }
 
 func testKeycloakUser_initialPassword(username string, password string, clientId string) string {
@@ -457,6 +561,36 @@ data "keycloak_realm" "realm" {
 	realm = "%s"
 }
 
+resource "keycloak_realm_user_profile" "realm_user_profile" {
+	realm_id = data.keycloak_realm.realm.id
+	attribute {
+		name = "username"
+    }
+
+	attribute {
+		name = "email"
+    }
+
+	attribute {
+		name = "firstName"
+		display_name = "$${firstName}"
+		permissions {
+            view = ["admin", "user"]
+            edit = ["admin", "user"]
+        }
+    }
+
+	attribute {
+		name = "lastName"
+		display_name = "$${lastName}"
+		permissions {
+            view = ["admin", "user"]
+            edit = ["admin", "user"]
+        }
+    }
+	unmanaged_attribute_policy = "ENABLED"
+}
+
 resource "keycloak_user" "user" {
 	realm_id       = data.keycloak_realm.realm.id
 	username       = "%s"
@@ -466,6 +600,9 @@ resource "keycloak_user" "user" {
 	last_name      = "%s"
 	enabled        = %t
 	email_verified = "%t"
+    depends_on = [
+	  keycloak_realm_user_profile.realm_user_profile
+    ]
 }
 	`, testAccRealm.Realm, user.Username, user.Email, user.FirstName, user.LastName, user.Enabled, user.EmailVerified)
 }

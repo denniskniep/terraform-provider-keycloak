@@ -3,7 +3,7 @@ package keycloak
 import (
 	"context"
 	"fmt"
-	"github.com/mrparkers/terraform-provider-keycloak/keycloak/types"
+	"github.com/denniskniep/terraform-provider-keycloak/keycloak/types"
 	"reflect"
 )
 
@@ -16,7 +16,6 @@ type IdentityProviderConfig struct {
 	ClientSecret                    string                    `json:"clientSecret,omitempty"`
 	DisableUserInfo                 types.KeycloakBoolQuoted  `json:"disableUserInfo"`
 	UserInfoUrl                     string                    `json:"userInfoUrl,omitempty"`
-	HideOnLoginPage                 types.KeycloakBoolQuoted  `json:"hideOnLoginPage"`
 	NameIDPolicyFormat              string                    `json:"nameIDPolicyFormat,omitempty"`
 	EntityId                        string                    `json:"entityId,omitempty"`
 	SingleLogoutServiceUrl          string                    `json:"singleLogoutServiceUrl,omitempty"`
@@ -68,6 +67,7 @@ type IdentityProvider struct {
 	TrustEmail                bool                    `json:"trustEmail"`
 	FirstBrokerLoginFlowAlias string                  `json:"firstBrokerLoginFlowAlias"`
 	PostBrokerLoginFlowAlias  string                  `json:"postBrokerLoginFlowAlias"`
+	HideOnLoginPage           bool                    `json:"hideOnLogin"`
 	Config                    *IdentityProviderConfig `json:"config"`
 }
 

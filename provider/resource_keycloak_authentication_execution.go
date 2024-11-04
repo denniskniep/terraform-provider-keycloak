@@ -5,11 +5,12 @@ import (
 	"errors"
 	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
+	"github.com/imdario/mergo"
 	"strings"
 
+	"github.com/denniskniep/terraform-provider-keycloak/keycloak"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"github.com/mrparkers/terraform-provider-keycloak/keycloak"
 )
 
 func resourceKeycloakAuthenticationExecution() *schema.Resource {
@@ -43,6 +44,18 @@ func resourceKeycloakAuthenticationExecution() *schema.Resource {
 				ValidateFunc: validation.StringInSlice([]string{"REQUIRED", "ALTERNATIVE", "OPTIONAL", "CONDITIONAL", "DISABLED"}, false), //OPTIONAL is removed from 8.0.0 onwards
 				Default:      "DISABLED",
 			},
+			"import": {
+				Type:     schema.TypeBool,
+				Optional: true,
+				Default:  false,
+				ForceNew: true,
+			},
+			"priority": {
+				Type:     schema.TypeInt,
+				Optional: true,
+				Default:  nil,
+				ForceNew: false,
+			},
 		},
 	}
 }
@@ -54,6 +67,7 @@ func mapFromDataToAuthenticationExecution(data *schema.ResourceData) *keycloak.A
 		ParentFlowAlias: data.Get("parent_flow_alias").(string),
 		Authenticator:   data.Get("authenticator").(string),
 		Requirement:     data.Get("requirement").(string),
+		Priority:        data.Get("priority").(int),
 	}
 
 	return authenticationExecution
@@ -66,6 +80,7 @@ func mapFromAuthenticationExecutionToData(data *schema.ResourceData, authenticat
 	data.Set("parent_flow_alias", authenticationExecution.ParentFlowAlias)
 	data.Set("authenticator", authenticationExecution.Authenticator)
 	data.Set("requirement", authenticationExecution.Requirement)
+	data.Set("priority", authenticationExecution.Priority)
 }
 
 func mapFromAuthenticationExecutionInfoToData(data *schema.ResourceData, authenticationExecutionInfo *keycloak.AuthenticationExecutionInfo) {
@@ -80,9 +95,29 @@ func resourceKeycloakAuthenticationExecutionCreate(ctx context.Context, data *sc
 
 	authenticationExecution := mapFromDataToAuthenticationExecution(data)
 
-	err := keycloakClient.NewAuthenticationExecution(ctx, authenticationExecution)
-	if err != nil {
-		return diag.FromErr(err)
+	if data.Get("import").(bool) {
+		realmId := data.Get("realm_id").(string)
+		parentFlowAlias := data.Get("parent_flow_alias").(string)
+		authenticator := data.Get("authenticator").(string)
+
+		existingAuthExecution, err := keycloakClient.GetAuthenticationExecutionFromAuthenticator(ctx, realmId, parentFlowAlias, authenticator)
+		if err != nil {
+			return handleNotFoundError(ctx, err, data)
+		}
+
+		if err = mergo.Merge(authenticationExecution, existingAuthExecution); err != nil {
+			return diag.FromErr(err)
+		}
+
+		err = keycloakClient.UpdateAuthenticationExecution(ctx, authenticationExecution)
+		if err != nil {
+			return diag.FromErr(err)
+		}
+	} else {
+		err := keycloakClient.NewAuthenticationExecution(ctx, authenticationExecution)
+		if err != nil {
+			return diag.FromErr(err)
+		}
 	}
 
 	mapFromAuthenticationExecutionToData(data, authenticationExecution)
@@ -124,6 +159,9 @@ func resourceKeycloakAuthenticationExecutionUpdate(ctx context.Context, data *sc
 
 func resourceKeycloakAuthenticationExecutionDelete(ctx context.Context, data *schema.ResourceData, meta interface{}) diag.Diagnostics {
 	keycloakClient := meta.(*keycloak.KeycloakClient)
+	if data.Get("import").(bool) {
+		return nil
+	}
 
 	realmId := data.Get("realm_id").(string)
 	id := data.Id()
@@ -147,6 +185,7 @@ func resourceKeycloakAuthenticationExecutionImport(ctx context.Context, d *schem
 
 	d.Set("realm_id", parts[0])
 	d.Set("parent_flow_alias", parts[1])
+	d.Set("import", false)
 	d.SetId(parts[2])
 
 	diagnostics := resourceKeycloakAuthenticationExecutionRead(ctx, d, meta)

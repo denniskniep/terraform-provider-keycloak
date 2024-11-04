@@ -2,9 +2,9 @@ package provider
 
 import (
 	"context"
+	"github.com/denniskniep/terraform-provider-keycloak/keycloak"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/mrparkers/terraform-provider-keycloak/keycloak"
 )
 
 func dataSourceKeycloakSamlClient() *schema.Resource {
@@ -30,6 +30,10 @@ func dataSourceKeycloakSamlClient() *schema.Resource {
 			},
 			"description": {
 				Type:     schema.TypeString,
+				Computed: true,
+			},
+			"always_display_in_console": {
+				Type:     schema.TypeBool,
 				Computed: true,
 			},
 			"include_authn_statement": {

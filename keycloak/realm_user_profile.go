@@ -41,8 +41,9 @@ type RealmUserProfileGroup struct {
 }
 
 type RealmUserProfile struct {
-	Attributes []*RealmUserProfileAttribute `json:"attributes"`
-	Groups     []*RealmUserProfileGroup     `json:"groups,omitempty"`
+	Attributes               []*RealmUserProfileAttribute `json:"attributes,omitempty"`
+	Groups                   []*RealmUserProfileGroup     `json:"groups"`
+	UnmanagedAttributePolicy *string                      `json:"unmanagedAttributePolicy,omitempty"`
 }
 
 func (keycloakClient *KeycloakClient) UpdateRealmUserProfile(ctx context.Context, realmId string, realmUserProfile *RealmUserProfile) error {
@@ -110,5 +111,6 @@ func (keycloakClient *KeycloakClient) GetRealmUserProfile(ctx context.Context, r
 			}
 		}
 	}
+
 	return &realmUserProfile, nil
 }

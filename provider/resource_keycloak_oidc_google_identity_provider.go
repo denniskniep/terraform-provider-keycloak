@@ -1,10 +1,10 @@
 package provider
 
 import (
+	"github.com/denniskniep/terraform-provider-keycloak/keycloak"
+	"github.com/denniskniep/terraform-provider-keycloak/keycloak/types"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/imdario/mergo"
-	"github.com/mrparkers/terraform-provider-keycloak/keycloak"
-	"github.com/mrparkers/terraform-provider-keycloak/keycloak/types"
 )
 
 func resourceKeycloakOidcGoogleIdentityProvider() *schema.Resource {
@@ -90,11 +90,10 @@ func getOidcGoogleIdentityProviderFromData(data *schema.ResourceData) (*keycloak
 	rec, defaultConfig := getIdentityProviderFromData(data)
 	rec.ProviderId = data.Get("provider_id").(string)
 	rec.Alias = "google"
-
+	rec.HideOnLoginPage = data.Get("hide_on_login_page").(bool)
 	googleOidcIdentityProviderConfig := &keycloak.IdentityProviderConfig{
 		ClientId:                    data.Get("client_id").(string),
 		ClientSecret:                data.Get("client_secret").(string),
-		HideOnLoginPage:             types.KeycloakBoolQuoted(data.Get("hide_on_login_page").(bool)),
 		HostedDomain:                data.Get("hosted_domain").(string),
 		UserIp:                      types.KeycloakBoolQuoted(data.Get("use_user_ip_param").(bool)),
 		OfflineAccess:               types.KeycloakBoolQuoted(data.Get("request_refresh_token").(bool)),
@@ -117,7 +116,7 @@ func setOidcGoogleIdentityProviderData(data *schema.ResourceData, identityProvid
 	setIdentityProviderData(data, identityProvider)
 	data.Set("provider_id", identityProvider.ProviderId)
 	data.Set("client_id", identityProvider.Config.ClientId)
-	data.Set("hide_on_login_page", identityProvider.Config.HideOnLoginPage)
+	data.Set("hide_on_login_page", identityProvider.HideOnLoginPage)
 	data.Set("hosted_domain", identityProvider.Config.HostedDomain)
 	data.Set("use_user_ip_param", identityProvider.Config.UserIp)
 	data.Set("request_refresh_token", identityProvider.Config.OfflineAccess)

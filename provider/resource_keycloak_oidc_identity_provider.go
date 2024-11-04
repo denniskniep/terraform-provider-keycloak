@@ -1,10 +1,10 @@
 package provider
 
 import (
+	"github.com/denniskniep/terraform-provider-keycloak/keycloak"
+	"github.com/denniskniep/terraform-provider-keycloak/keycloak/types"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/imdario/mergo"
-	"github.com/mrparkers/terraform-provider-keycloak/keycloak"
-	"github.com/mrparkers/terraform-provider-keycloak/keycloak/types"
 )
 
 func resourceKeycloakOidcIdentityProvider() *schema.Resource {
@@ -116,14 +116,13 @@ func getOidcIdentityProviderFromData(data *schema.ResourceData) (*keycloak.Ident
 	rec, defaultConfig := getIdentityProviderFromData(data)
 	rec.ProviderId = data.Get("provider_id").(string)
 	_, useJwksUrl := data.GetOk("jwks_url")
-
+	rec.HideOnLoginPage = data.Get("hide_on_login_page").(bool)
 	oidcIdentityProviderConfig := &keycloak.IdentityProviderConfig{
 		BackchannelSupported:        types.KeycloakBoolQuoted(data.Get("backchannel_supported").(bool)),
 		ValidateSignature:           types.KeycloakBoolQuoted(data.Get("validate_signature").(bool)),
 		AuthorizationUrl:            data.Get("authorization_url").(string),
 		ClientId:                    data.Get("client_id").(string),
 		ClientSecret:                data.Get("client_secret").(string),
-		HideOnLoginPage:             types.KeycloakBoolQuoted(data.Get("hide_on_login_page").(bool)),
 		TokenUrl:                    data.Get("token_url").(string),
 		LogoutUrl:                   data.Get("logout_url").(string),
 		UILocales:                   types.KeycloakBoolQuoted(data.Get("ui_locales").(bool)),
@@ -156,7 +155,7 @@ func setOidcIdentityProviderData(data *schema.ResourceData, identityProvider *ke
 	data.Set("client_id", identityProvider.Config.ClientId)
 	data.Set("disable_user_info", identityProvider.Config.DisableUserInfo)
 	data.Set("user_info_url", identityProvider.Config.UserInfoUrl)
-	data.Set("hide_on_login_page", identityProvider.Config.HideOnLoginPage)
+	data.Set("hide_on_login_page", identityProvider.HideOnLoginPage)
 	data.Set("token_url", identityProvider.Config.TokenUrl)
 	data.Set("login_hint", identityProvider.Config.LoginHint)
 	data.Set("ui_locales", identityProvider.Config.UILocales)

@@ -48,6 +48,7 @@ terraformClient=$(jq -n "{
     secret: \"${KEYCLOAK_CLIENT_SECRET}\",
     clientAuthenticatorType: \"client-secret\",
     enabled: true,
+    publicClient: false,
     serviceAccountsEnabled: true,
     directAccessGrantsEnabled: true,
     standardFlowEnabled: false

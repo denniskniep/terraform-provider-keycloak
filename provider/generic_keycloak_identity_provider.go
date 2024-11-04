@@ -3,10 +3,10 @@ package provider
 import (
 	"context"
 	"fmt"
+	"github.com/denniskniep/terraform-provider-keycloak/keycloak"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"github.com/mrparkers/terraform-provider-keycloak/keycloak"
 	"reflect"
 	"strings"
 )
@@ -114,7 +114,7 @@ func resourceKeycloakIdentityProvider() *schema.Resource {
 			"sync_mode": {
 				Type:         schema.TypeString,
 				Optional:     true,
-				Default:      "",
+				Default:      "LEGACY", // Default by KC impl: https://github.com/keycloak/keycloak/blob/af434d6bc1ae904da2538f207bf5313098757114/server-spi/src/main/java/org/keycloak/models/IdentityProviderMapperModel.java#L75
 				ValidateFunc: validation.StringInSlice(syncModes, false),
 				Description:  "Sync Mode",
 			},
