@@ -32,6 +32,10 @@ func dataSourceKeycloakSamlClient() *schema.Resource {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
+			"always_display_in_console": {
+				Type:     schema.TypeBool,
+				Computed: true,
+			},
 			"include_authn_statement": {
 				Type:     schema.TypeBool,
 				Computed: true,
