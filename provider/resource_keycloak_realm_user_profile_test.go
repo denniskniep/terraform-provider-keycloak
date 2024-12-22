@@ -363,6 +363,34 @@ func TestAccKeycloakRealmUserProfile_attributePermissions(t *testing.T) {
 	})
 }
 
+func TestAccKeycloakRealmUserProfile_unmanagedPolicyEnabled(t *testing.T) {
+	skipIfVersionIsLessThanOrEqualTo(testCtx, t, keycloakClient, keycloak.Version_14)
+
+	realmName := acctest.RandomWithPrefix("tf-acc")
+
+	unmanagedPolicyEnabled := &keycloak.RealmUserProfile{
+		Groups: []*keycloak.RealmUserProfileGroup{},
+		Attributes: []*keycloak.RealmUserProfileAttribute{
+			{Name: "username"}, {Name: "email"}, // Version >=23 needs these
+		},
+		UnmanagedAttributePolicy: stringPointer("ENABLED"),
+	}
+
+	resource.Test(t, resource.TestCase{
+		ProviderFactories: testAccProviderFactories,
+		PreCheck:          func() { testAccPreCheck(t) },
+		CheckDestroy:      testAccCheckKeycloakRealmUserProfileDestroy(),
+		Steps: []resource.TestStep{
+			{
+				Config: testKeycloakRealmUserProfile_template(realmName, unmanagedPolicyEnabled),
+				Check: testAccCheckKeycloakRealmUserProfileStateEqual(
+					"keycloak_realm_user_profile.realm_user_profile", unmanagedPolicyEnabled,
+				),
+			},
+		},
+	})
+}
+
 func testKeycloakRealmUserProfile_featureDisabled(realm string) string {
 	return fmt.Sprintf(`
 resource "keycloak_realm" "realm" {
@@ -386,6 +414,10 @@ resource "keycloak_realm" "realm" {
 
 resource "keycloak_realm_user_profile" "realm_user_profile" {
 	realm_id = keycloak_realm.realm.id
+
+	{{- if .userProfile.UnmanagedAttributePolicy }}
+	unmanaged_attribute_policy = "{{ .userProfile.UnmanagedAttributePolicy}}"
+	{{- end }}
 
 	{{- range $_, $attribute := .userProfile.Attributes }}
 	attribute {
