@@ -166,8 +166,6 @@ resource "keycloak_user" "test" {
 	username = "%s"
 
 	email      = "%s"
-	first_name = "Testy"
-	last_name  = "Tester"
 }
 
 resource "keycloak_openid_client_user_policy" "test" {
@@ -245,8 +243,6 @@ resource "keycloak_user" "test" {
 	username = "%s"
 
 	email      = "%s"
-	first_name = "Testy"
-	last_name  = "Tester"
 }
 
 resource "keycloak_openid_client_user_policy" "test" {

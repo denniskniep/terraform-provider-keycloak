@@ -88,8 +88,6 @@ resource "keycloak_user" "user" {
 	enabled    	= true
 
     email      	= "%s"
-    first_name 	= "Bob"
-    last_name  	= "Bobson"
 }
 
 data "keycloak_user" "user" {

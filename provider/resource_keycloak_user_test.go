@@ -16,7 +16,6 @@ import (
 )
 
 func TestAccKeycloakUser_basic_wo_attribute(t *testing.T) {
-	t.Parallel()
 	username := acctest.RandomWithPrefix("tf-acc")
 
 	resourceName := "keycloak_user.user"
@@ -41,10 +40,7 @@ func TestAccKeycloakUser_basic_wo_attribute(t *testing.T) {
 }
 
 func TestAccKeycloakUser_basic(t *testing.T) {
-	// TODO User attributes needs to be handled more elaborate
-	skipIfVersionIsGreaterThanOrEqualTo(testCtx, t, keycloakClient, keycloak.Version_24)
-
-	t.Parallel()
+	skipIfVersionIsLessThan(testCtx, t, keycloakClient, keycloak.Version_24)
 	username := acctest.RandomWithPrefix("tf-acc")
 	attributeName := acctest.RandomWithPrefix("tf-acc")
 	attributeValue := acctest.RandomWithPrefix("tf-acc")
@@ -71,10 +67,6 @@ func TestAccKeycloakUser_basic(t *testing.T) {
 }
 
 func TestAccKeycloakUser_withInitialPassword(t *testing.T) {
-	// TODO User attributes needs to be handled more elaborate
-	skipIfVersionIsGreaterThanOrEqualTo(testCtx, t, keycloakClient, keycloak.Version_24)
-
-	t.Parallel()
 	username := acctest.RandomWithPrefix("tf-acc")
 	password := acctest.RandomWithPrefix("tf-acc")
 	clientId := acctest.RandomWithPrefix("tf-acc")
@@ -98,9 +90,6 @@ func TestAccKeycloakUser_withInitialPassword(t *testing.T) {
 }
 
 func TestAccKeycloakUser_createAfterManualDestroy(t *testing.T) {
-	// TODO User attributes needs to be handled more elaborate
-	skipIfVersionIsGreaterThanOrEqualTo(testCtx, t, keycloakClient, keycloak.Version_24)
-	t.Parallel()
 	var user = &keycloak.User{}
 
 	username := acctest.RandomWithPrefix("tf-acc")
@@ -135,10 +124,6 @@ func TestAccKeycloakUser_createAfterManualDestroy(t *testing.T) {
 }
 
 func TestAccKeycloakUser_updateUsername(t *testing.T) {
-	// TODO User attributes needs to be handled more elaborate
-	skipIfVersionIsGreaterThanOrEqualTo(testCtx, t, keycloakClient, keycloak.Version_24)
-
-	t.Parallel()
 	usernameOne := acctest.RandomWithPrefix("tf-acc")
 	usernameTwo := acctest.RandomWithPrefix("tf-acc")
 	attributeName := acctest.RandomWithPrefix("tf-acc")
@@ -170,10 +155,6 @@ func TestAccKeycloakUser_updateUsername(t *testing.T) {
 }
 
 func TestAccKeycloakUser_updateWithInitialPasswordChangeDoesNotReset(t *testing.T) {
-	// TODO User attributes needs to be handled more elaborate
-	skipIfVersionIsGreaterThanOrEqualTo(testCtx, t, keycloakClient, keycloak.Version_24)
-
-	t.Parallel()
 	username := acctest.RandomWithPrefix("tf-acc")
 	passwordOne := acctest.RandomWithPrefix("tf-acc")
 	passwordTwo := acctest.RandomWithPrefix("tf-acc")
@@ -201,7 +182,6 @@ func TestAccKeycloakUser_updateWithInitialPasswordChangeDoesNotReset(t *testing.
 }
 
 func TestAccKeycloakUser_updateInPlace(t *testing.T) {
-	t.Parallel()
 	userOne := &keycloak.User{
 		RealmId:       "terraform-" + acctest.RandString(10),
 		Username:      "terraform-user-" + acctest.RandString(10),
@@ -242,10 +222,6 @@ func TestAccKeycloakUser_updateInPlace(t *testing.T) {
 }
 
 func TestAccKeycloakUser_unsetOptionalAttributes(t *testing.T) {
-	// TODO User attributes needs to be handled more elaborate
-	skipIfVersionIsGreaterThanOrEqualTo(testCtx, t, keycloakClient, keycloak.Version_24)
-
-	t.Parallel()
 	attributeName := acctest.RandomWithPrefix("tf-acc")
 	userWithOptionalAttributes := &keycloak.User{
 		RealmId:   "terraform-" + acctest.RandString(10),
@@ -287,7 +263,6 @@ func TestAccKeycloakUser_unsetOptionalAttributes(t *testing.T) {
 }
 
 func TestAccKeycloakUser_validateLowercaseUsernames(t *testing.T) {
-	t.Parallel()
 	username := "terraform-user-" + strings.ToUpper(acctest.RandString(10))
 	attributeName := "terraform-attribute-" + acctest.RandString(10)
 	attributeValue := acctest.RandString(250)
@@ -462,11 +437,53 @@ resource "keycloak_user" "user" {
 	`, testAccRealm.Realm, username)
 }
 
+func userProfileIfKeycloakHasSupport(realmRef string) (string, string) {
+	ok, _ := keycloakClient.VersionIsGreaterThanOrEqualTo(testCtx, keycloak.Version_24)
+	if !ok {
+		return "", ""
+	}
+
+	return fmt.Sprintf(`
+resource "keycloak_realm_user_profile" "realm_user_profile" {
+	realm_id = %s
+	attribute {
+		name = "username"
+    }
+	attribute {
+		name = "email"
+    }
+	attribute {
+		name = "firstName"
+		display_name = "$${firstName}"
+		permissions {
+            view = ["admin", "user"]
+            edit = ["admin", "user"]
+        }
+    }
+	attribute {
+		name = "lastName"
+		display_name = "$${lastName}"
+		permissions {
+            view = ["admin", "user"]
+            edit = ["admin", "user"]
+        }
+    }
+	unmanaged_attribute_policy = "ENABLED"
+}
+`, realmRef), `
+depends_on = [
+    keycloak_realm_user_profile.realm_user_profile
+  ]`
+}
+
 func testKeycloakUser_basic(username, attributeName, attributeValue string) string {
+	userProfile, dependsOn := userProfileIfKeycloakHasSupport("data.keycloak_realm.realm.id")
 	return fmt.Sprintf(`
 data "keycloak_realm" "realm" {
 	realm = "%s"
 }
+
+%s
 
 resource "keycloak_user" "user" {
 	realm_id = data.keycloak_realm.realm.id
@@ -474,15 +491,20 @@ resource "keycloak_user" "user" {
 	attributes = {
 		"%s" = "%s"
 	}
+    %s
 }
-	`, testAccRealm.Realm, username, attributeName, attributeValue)
+	`, testAccRealm.Realm, userProfile, username, attributeName, attributeValue, dependsOn)
 }
 
 func testKeycloakUser_initialPassword(username string, password string, clientId string) string {
+	userProfile, dependsOn := userProfileIfKeycloakHasSupport("data.keycloak_realm.realm.id")
 	return fmt.Sprintf(`
 data "keycloak_realm" "realm" {
 	realm = "%s"
 }
+
+
+%s
 
 resource "keycloak_openid_client" "client" {
 	realm_id                     = data.keycloak_realm.realm.id
@@ -502,15 +524,19 @@ resource "keycloak_user" "user" {
 		value = "%s"
 		temporary = false
 	}
+	%s
 }
-	`, testAccRealm.Realm, clientId, username, password)
+	`, testAccRealm.Realm, userProfile, clientId, username, password, dependsOn)
 }
 
 func testKeycloakUser_fromInterface(user *keycloak.User) string {
+	userProfile, dependsOn := userProfileIfKeycloakHasSupport("data.keycloak_realm.realm.id")
 	return fmt.Sprintf(`
 data "keycloak_realm" "realm" {
 	realm = "%s"
 }
+
+%s
 
 resource "keycloak_user" "user" {
 	realm_id       = data.keycloak_realm.realm.id
@@ -521,16 +547,20 @@ resource "keycloak_user" "user" {
 	last_name      = "%s"
 	enabled        = %t
 	email_verified = "%t"
+	%s
 }
-	`, testAccRealm.Realm, user.Username, user.Email, user.FirstName, user.LastName, user.Enabled, user.EmailVerified)
+	`, testAccRealm.Realm, userProfile, user.Username, user.Email, user.FirstName, user.LastName, user.Enabled, user.EmailVerified, dependsOn)
 }
 
 func testKeycloakUser_FederationLink(sourceRealmUserName, destinationRealmId string) string {
+	userProfile, dependsOn := userProfileIfKeycloakHasSupport("keycloak_realm.source_realm.id")
 	return fmt.Sprintf(`
 resource "keycloak_realm" "source_realm" {
   realm   = "source_test_realm"
   enabled = true
 }
+
+%s
 
 resource "keycloak_openid_client" "destination_client" {
   realm_id                 = "${keycloak_realm.source_realm.id}"
@@ -550,6 +580,7 @@ resource "keycloak_user" "source_user" {
     value     = "source"
     temporary = false
   }
+  %s
 }
 
 resource "keycloak_realm" "destination_realm" {
@@ -575,6 +606,7 @@ resource "keycloak_user" "destination_user" {
     user_id           = "${keycloak_user.source_user.id}"
     user_name         = "${keycloak_user.source_user.username}"
   }
+  %s
 }
-	`, sourceRealmUserName, destinationRealmId)
+	`, userProfile, sourceRealmUserName, dependsOn, destinationRealmId, dependsOn)
 }
