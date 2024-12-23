@@ -364,7 +364,7 @@ func TestAccKeycloakRealmUserProfile_attributePermissions(t *testing.T) {
 }
 
 func TestAccKeycloakRealmUserProfile_unmanagedPolicyEnabled(t *testing.T) {
-	skipIfVersionIsLessThanOrEqualTo(testCtx, t, keycloakClient, keycloak.Version_14)
+	skipIfVersionIsLessThanOrEqualTo(testCtx, t, keycloakClient, keycloak.Version_23)
 
 	realmName := acctest.RandomWithPrefix("tf-acc")
 

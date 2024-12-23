@@ -1,6 +1,7 @@
 package provider
 
 import (
+	"context"
 	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
@@ -14,6 +15,15 @@ import (
 	"strings"
 	"testing"
 )
+
+func unmanagedAttributePolicyIfKeycloakHasSupport(value string) string {
+	ok, _ := keycloakClient.VersionIsGreaterThanOrEqualTo(context.Background(), keycloak.Version_24)
+
+	if ok {
+		return fmt.Sprintf(`unmanaged_attribute_policy = "%s"`, value)
+	}
+	return ""
+}
 
 func TestAccKeycloakUser_basic_wo_attribute(t *testing.T) {
 	username := acctest.RandomWithPrefix("tf-acc")
@@ -466,7 +476,7 @@ resource "keycloak_realm_user_profile" "realm_user_profile" {
             edit = ["admin", "user"]
         }
     }
-	unmanaged_attribute_policy = "ENABLED"
+	%s
 }
 
 resource "keycloak_user" "user" {
@@ -481,7 +491,7 @@ resource "keycloak_user" "user" {
 	  keycloak_realm_user_profile.realm_user_profile
     ]
 }
-	`, testAccRealm.Realm, username, attributeName, attributeValue)
+	`, testAccRealm.Realm, unmanagedAttributePolicyIfKeycloakHasSupport("ENABLED"), username, attributeName, attributeValue)
 }
 
 func testKeycloakUser_initialPassword(username string, password string, clientId string) string {
@@ -515,7 +525,7 @@ resource "keycloak_realm_user_profile" "realm_user_profile" {
             edit = ["admin", "user"]
         }
     }
-	unmanaged_attribute_policy = "ENABLED"
+	%s
 }
 
 resource "keycloak_openid_client" "client" {
@@ -540,7 +550,7 @@ resource "keycloak_user" "user" {
 	  keycloak_realm_user_profile.realm_user_profile
     ]
 }
-	`, testAccRealm.Realm, clientId, username, password)
+	`, testAccRealm.Realm, unmanagedAttributePolicyIfKeycloakHasSupport("ENABLED"), clientId, username, password)
 }
 
 func testKeycloakUser_fromInterface(user *keycloak.User) string {
@@ -573,7 +583,7 @@ resource "keycloak_realm_user_profile" "realm_user_profile" {
             edit = ["admin", "user"]
         }
     }
-	unmanaged_attribute_policy = "ENABLED"
+	%s
 }
 
 resource "keycloak_user" "user" {
@@ -589,7 +599,7 @@ resource "keycloak_user" "user" {
 	  keycloak_realm_user_profile.realm_user_profile
     ]
 }
-	`, testAccRealm.Realm, user.Username, user.Email, user.FirstName, user.LastName, user.Enabled, user.EmailVerified)
+	`, testAccRealm.Realm, unmanagedAttributePolicyIfKeycloakHasSupport("ENABLED"), user.Username, user.Email, user.FirstName, user.LastName, user.Enabled, user.EmailVerified)
 }
 
 func testKeycloakUser_FederationLink(sourceRealmUserName, destinationRealmId string) string {
@@ -623,7 +633,7 @@ resource "keycloak_realm_user_profile" "realm_user_profile" {
             edit = ["admin", "user"]
         }
     }
-	unmanaged_attribute_policy = "ENABLED"
+	%s
 }
 
 resource "keycloak_openid_client" "destination_client" {
@@ -676,5 +686,5 @@ resource "keycloak_user" "destination_user" {
     keycloak_realm_user_profile.realm_user_profile
   ]
 }
-	`, sourceRealmUserName, destinationRealmId)
+	`, unmanagedAttributePolicyIfKeycloakHasSupport("ENABLED"), sourceRealmUserName, destinationRealmId)
 }
