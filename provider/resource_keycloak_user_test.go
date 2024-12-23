@@ -15,15 +15,6 @@ import (
 	"testing"
 )
 
-func unmanagedAttributePolicyIfKeycloakHasSupport(value string) string {
-	ok, _ := keycloakClient.VersionIsGreaterThanOrEqualTo(testCtx, keycloak.Version_24)
-
-	if ok {
-		return fmt.Sprintf(`unmanaged_attribute_policy = "%s"`, value)
-	}
-	return ""
-}
-
 func TestAccKeycloakUser_basic_wo_attribute(t *testing.T) {
 	username := acctest.RandomWithPrefix("tf-acc")
 
@@ -446,14 +437,15 @@ resource "keycloak_user" "user" {
 	`, testAccRealm.Realm, username)
 }
 
-func testKeycloakUser_basic(username, attributeName, attributeValue string) string {
-	return fmt.Sprintf(`
-data "keycloak_realm" "realm" {
-	realm = "%s"
-}
+func userProfileIfKeycloakHasSupport(realmRef string) (string, string) {
+	ok, _ := keycloakClient.VersionIsGreaterThanOrEqualTo(testCtx, keycloak.Version_24)
+	if !ok {
+		return "", ""
+	}
 
+	return fmt.Sprintf(`
 resource "keycloak_realm_user_profile" "realm_user_profile" {
-	realm_id = data.keycloak_realm.realm.id
+	realm_id = %s
 	attribute {
 		name = "username"
     }
@@ -476,8 +468,22 @@ resource "keycloak_realm_user_profile" "realm_user_profile" {
             edit = ["admin", "user"]
         }
     }
-	%s
+	unmanaged_attribute_policy = "ENABLED"
 }
+`, realmRef), `
+depends_on = [
+    keycloak_realm_user_profile.realm_user_profile
+  ]`
+}
+
+func testKeycloakUser_basic(username, attributeName, attributeValue string) string {
+	userProfile, dependsOn := userProfileIfKeycloakHasSupport("data.keycloak_realm.realm.id")
+	return fmt.Sprintf(`
+data "keycloak_realm" "realm" {
+	realm = "%s"
+}
+
+%s
 
 resource "keycloak_user" "user" {
 	realm_id = data.keycloak_realm.realm.id
@@ -485,48 +491,20 @@ resource "keycloak_user" "user" {
 	attributes = {
 		"%s" = "%s"
 	}
-	first_name = ""
-	last_name = ""
-    depends_on = [
-	  keycloak_realm_user_profile.realm_user_profile
-    ]
+    %s
 }
-	`, testAccRealm.Realm, unmanagedAttributePolicyIfKeycloakHasSupport("ENABLED"), username, attributeName, attributeValue)
+	`, testAccRealm.Realm, userProfile, username, attributeName, attributeValue, dependsOn)
 }
 
 func testKeycloakUser_initialPassword(username string, password string, clientId string) string {
+	userProfile, dependsOn := userProfileIfKeycloakHasSupport("data.keycloak_realm.realm.id")
 	return fmt.Sprintf(`
 data "keycloak_realm" "realm" {
 	realm = "%s"
 }
 
 
-resource "keycloak_realm_user_profile" "realm_user_profile" {
-	realm_id = data.keycloak_realm.realm.id
-	attribute {
-		name = "username"
-    }
-	attribute {
-		name = "email"
-    }
-	attribute {
-		name = "firstName"
-		display_name = "$${firstName}"
-		permissions {
-            view = ["admin", "user"]
-            edit = ["admin", "user"]
-        }
-    }
-	attribute {
-		name = "lastName"
-		display_name = "$${lastName}"
-		permissions {
-            view = ["admin", "user"]
-            edit = ["admin", "user"]
-        }
-    }
-	%s
-}
+%s
 
 resource "keycloak_openid_client" "client" {
 	realm_id                     = data.keycloak_realm.realm.id
@@ -546,45 +524,19 @@ resource "keycloak_user" "user" {
 		value = "%s"
 		temporary = false
 	}
-	depends_on = [
-	  keycloak_realm_user_profile.realm_user_profile
-    ]
+	%s
 }
-	`, testAccRealm.Realm, unmanagedAttributePolicyIfKeycloakHasSupport("ENABLED"), clientId, username, password)
+	`, testAccRealm.Realm, userProfile, clientId, username, password, dependsOn)
 }
 
 func testKeycloakUser_fromInterface(user *keycloak.User) string {
+	userProfile, dependsOn := userProfileIfKeycloakHasSupport("data.keycloak_realm.realm.id")
 	return fmt.Sprintf(`
 data "keycloak_realm" "realm" {
 	realm = "%s"
 }
 
-resource "keycloak_realm_user_profile" "realm_user_profile" {
-	realm_id = data.keycloak_realm.realm.id
-	attribute {
-		name = "username"
-    }
-	attribute {
-		name = "email"
-    }
-	attribute {
-		name = "firstName"
-		display_name = "$${firstName}"
-		permissions {
-            view = ["admin", "user"]
-            edit = ["admin", "user"]
-        }
-    }
-	attribute {
-		name = "lastName"
-		display_name = "$${lastName}"
-		permissions {
-            view = ["admin", "user"]
-            edit = ["admin", "user"]
-        }
-    }
-	%s
-}
+%s
 
 resource "keycloak_user" "user" {
 	realm_id       = data.keycloak_realm.realm.id
@@ -595,46 +547,20 @@ resource "keycloak_user" "user" {
 	last_name      = "%s"
 	enabled        = %t
 	email_verified = "%t"
-	depends_on = [
-	  keycloak_realm_user_profile.realm_user_profile
-    ]
+	%s
 }
-	`, testAccRealm.Realm, unmanagedAttributePolicyIfKeycloakHasSupport("ENABLED"), user.Username, user.Email, user.FirstName, user.LastName, user.Enabled, user.EmailVerified)
+	`, testAccRealm.Realm, userProfile, user.Username, user.Email, user.FirstName, user.LastName, user.Enabled, user.EmailVerified, dependsOn)
 }
 
 func testKeycloakUser_FederationLink(sourceRealmUserName, destinationRealmId string) string {
+	userProfile, dependsOn := userProfileIfKeycloakHasSupport("keycloak_realm.source_realm.id")
 	return fmt.Sprintf(`
 resource "keycloak_realm" "source_realm" {
   realm   = "source_test_realm"
   enabled = true
 }
 
-resource "keycloak_realm_user_profile" "realm_user_profile" {
-	realm_id = keycloak_realm.source_realm.id
-	attribute {
-		name = "username"
-    }
-	attribute {
-		name = "email"
-    }
-	attribute {
-		name = "firstName"
-		display_name = "$${firstName}"
-		permissions {
-            view = ["admin", "user"]
-            edit = ["admin", "user"]
-        }
-    }
-	attribute {
-		name = "lastName"
-		display_name = "$${lastName}"
-		permissions {
-            view = ["admin", "user"]
-            edit = ["admin", "user"]
-        }
-    }
-	%s
-}
+%s
 
 resource "keycloak_openid_client" "destination_client" {
   realm_id                 = "${keycloak_realm.source_realm.id}"
@@ -682,9 +608,7 @@ resource "keycloak_user" "destination_user" {
     user_id           = "${keycloak_user.source_user.id}"
     user_name         = "${keycloak_user.source_user.username}"
   }
-  depends_on = [
-    keycloak_realm_user_profile.realm_user_profile
-  ]
+  %s
 }
-	`, unmanagedAttributePolicyIfKeycloakHasSupport("ENABLED"), sourceRealmUserName, destinationRealmId)
+	`, userProfile, sourceRealmUserName, destinationRealmId, dependsOn)
 }
