@@ -580,9 +580,7 @@ resource "keycloak_user" "source_user" {
     value     = "source"
     temporary = false
   }
-  depends_on = [
-    keycloak_realm_user_profile.realm_user_profile
-  ]
+  %s
 }
 
 resource "keycloak_realm" "destination_realm" {
@@ -610,5 +608,5 @@ resource "keycloak_user" "destination_user" {
   }
   %s
 }
-	`, userProfile, sourceRealmUserName, destinationRealmId, dependsOn)
+	`, userProfile, sourceRealmUserName, dependsOn, destinationRealmId, dependsOn)
 }
