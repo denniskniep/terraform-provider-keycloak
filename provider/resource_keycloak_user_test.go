@@ -1,7 +1,6 @@
 package provider
 
 import (
-	"context"
 	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
@@ -17,7 +16,7 @@ import (
 )
 
 func unmanagedAttributePolicyIfKeycloakHasSupport(value string) string {
-	ok, _ := keycloakClient.VersionIsGreaterThanOrEqualTo(context.Background(), keycloak.Version_24)
+	ok, _ := keycloakClient.VersionIsGreaterThanOrEqualTo(testCtx, keycloak.Version_24)
 
 	if ok {
 		return fmt.Sprintf(`unmanaged_attribute_policy = "%s"`, value)
@@ -50,6 +49,7 @@ func TestAccKeycloakUser_basic_wo_attribute(t *testing.T) {
 }
 
 func TestAccKeycloakUser_basic(t *testing.T) {
+	skipIfVersionIsLessThan(testCtx, t, keycloakClient, keycloak.Version_24)
 	username := acctest.RandomWithPrefix("tf-acc")
 	attributeName := acctest.RandomWithPrefix("tf-acc")
 	attributeValue := acctest.RandomWithPrefix("tf-acc")
