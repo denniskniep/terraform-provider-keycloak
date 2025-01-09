@@ -304,21 +304,65 @@ func resourceKeycloakRoleDelete(ctx context.Context, data *schema.ResourceData, 
 }
 
 func resourceKeycloakRoleImport(ctx context.Context, d *schema.ResourceData, meta interface{}) ([]*schema.ResourceData, error) {
-	keycloakClient := meta.(*keycloak.KeycloakClient)
-
 	parts := strings.Split(d.Id(), "/")
-	if len(parts) != 2 {
-		return nil, fmt.Errorf("Invalid import. Supported import format: {{realm}}/{{roleId}}.")
+	if len(parts) == 3 && parts[0] == "byId" {
+		return resourceKeycloakRoleImportById(ctx, d, meta, parts[1], parts[2])
 	}
 
-	_, err := keycloakClient.GetRole(ctx, parts[0], parts[1])
+	if len(parts) == 3 && parts[0] == "byName" {
+		return resourceKeycloakRoleImportByName(ctx, d, meta, parts[1], "", parts[2])
+	}
+
+	if len(parts) == 4 && parts[0] == "byName" {
+		return resourceKeycloakRoleImportByName(ctx, d, meta, parts[1], parts[2], parts[3])
+	}
+
+	if len(parts) == 2 {
+		return resourceKeycloakRoleImportById(ctx, d, meta, parts[0], parts[1])
+	}
+
+	return nil, fmt.Errorf("Invalid import. Supported import format: {{realm}}/{{roleId}} or {{byId|byName}}/{{realm}}/{{roleId|roleName}} or {{byName}}/{{realm}}/{{clientId}}/{{roleName}}.")
+}
+
+func resourceKeycloakRoleImportByName(ctx context.Context, d *schema.ResourceData, meta interface{}, realmId, clientId, roleName string) ([]*schema.ResourceData, error) {
+	keycloakClient := meta.(*keycloak.KeycloakClient)
+	idOfClient := ""
+	if clientId != "" {
+		existingClient, err := keycloakClient.GetGenericClientByClientId(ctx, realmId, clientId)
+		if err != nil {
+			return nil, err
+		}
+		idOfClient = existingClient.Id
+	}
+
+	existingRole, err := keycloakClient.GetRoleByName(ctx, realmId, idOfClient, roleName)
 	if err != nil {
 		return nil, err
 	}
 
-	d.Set("realm_id", parts[0])
+	d.Set("realm_id", realmId)
 	d.Set("import", false)
-	d.SetId(parts[1])
+	d.SetId(existingRole.Id)
+
+	diagnostics := resourceKeycloakRoleRead(ctx, d, meta)
+	if diagnostics.HasError() {
+		return nil, errors.New(diagnostics[0].Summary)
+	}
+
+	return []*schema.ResourceData{d}, nil
+}
+
+func resourceKeycloakRoleImportById(ctx context.Context, d *schema.ResourceData, meta interface{}, realmId, roleId string) ([]*schema.ResourceData, error) {
+	keycloakClient := meta.(*keycloak.KeycloakClient)
+
+	_, err := keycloakClient.GetRole(ctx, realmId, roleId)
+	if err != nil {
+		return nil, err
+	}
+
+	d.Set("realm_id", realmId)
+	d.Set("import", false)
+	d.SetId(roleId)
 
 	diagnostics := resourceKeycloakRoleRead(ctx, d, meta)
 	if diagnostics.HasError() {

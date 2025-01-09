@@ -34,6 +34,29 @@ func TestAccKeycloakRole_basicRealm(t *testing.T) {
 	})
 }
 
+func TestAccKeycloakRole_basicRealmImportByName(t *testing.T) {
+	t.Parallel()
+	roleName := acctest.RandomWithPrefix("tf-acc")
+
+	resource.Test(t, resource.TestCase{
+		ProviderFactories: testAccProviderFactories,
+		PreCheck:          func() { testAccPreCheck(t) },
+		CheckDestroy:      testAccCheckKeycloakRoleDestroy(),
+		Steps: []resource.TestStep{
+			{
+				Config: testKeycloakRole_basicRealm(roleName),
+				Check:  testAccCheckKeycloakRoleExists("keycloak_role.role"),
+			},
+			{
+				ResourceName:      "keycloak_role.role",
+				ImportState:       true,
+				ImportStateVerify: true,
+				ImportStateId:     "byName/" + testAccRealm.Realm + "/" + roleName,
+			},
+		},
+	})
+}
+
 func TestAccKeycloakRole_basicRealmUrlRoleName(t *testing.T) {
 	t.Parallel()
 	roleName := acctest.RandomWithPrefix("tf-acc")
@@ -76,6 +99,30 @@ func TestAccKeycloakRole_basicClient(t *testing.T) {
 				ImportState:         true,
 				ImportStateVerify:   true,
 				ImportStateIdPrefix: testAccRealm.Realm + "/",
+			},
+		},
+	})
+}
+
+func TestAccKeycloakRole_basicClientByName(t *testing.T) {
+	t.Parallel()
+	clientId := acctest.RandomWithPrefix("tf-acc")
+	roleName := acctest.RandomWithPrefix("tf-acc")
+
+	resource.Test(t, resource.TestCase{
+		ProviderFactories: testAccProviderFactories,
+		PreCheck:          func() { testAccPreCheck(t) },
+		CheckDestroy:      testAccCheckKeycloakRoleDestroy(),
+		Steps: []resource.TestStep{
+			{
+				Config: testKeycloakRole_basicClient(clientId, roleName),
+				Check:  testAccCheckKeycloakRoleExists("keycloak_role.role"),
+			},
+			{
+				ResourceName:      "keycloak_role.role",
+				ImportState:       true,
+				ImportStateVerify: true,
+				ImportStateId:     "byName/" + testAccRealm.Realm + "/" + clientId + "/" + roleName,
 			},
 		},
 	})
